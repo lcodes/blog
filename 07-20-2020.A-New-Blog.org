@@ -1,0 +1,358 @@
+* About Me
+
+My oldest memory with code is back as a teenager, when I first used Flash to
+help me understand trigonometry after school. I was instantly sold for life.
+There, after only a few minutes spent writing code, I could [[https://upload.wikimedia.org/wikipedia/commons/b/bd/Sine_and_cosine_animation.gif][visualize equations!]]
+I stood there, enlightened, understanding their meaning. Weeks of long hard
+[[https://kennywerner.com/effortless-mastery][concentration]] instantly folded into mere minutes of timeless fun! Computers have
+effectively turned learning into a game, and so a new life goal became a quest.
+
+From now on, for every class I didn't like in the slightest, I would simply just
+skip. I'd walk home and learn to get better at programming by myself. I had no
+choice really. For one they didn't [[https://www.youtube.com/watch?v=8pTEmbeENF4][teach programming]] at school back then. More
+importantly, because I wasn't allowed in the computer lab anymore. I banked so
+much suspension time from missed classes it would probably not be funny today.
+
+The high-school director would call to see me through the intercom almost every
+day, someone had to manage that time. By the last year I was used to go to
+suspension while everyone else went home. Now there's a story!
+
+Years before, the only computer I had access to at home was rather old. It had a
+blindingly beautiful monitor offering four high-quality shades of, well, green.
+Always the explorer, I decided to install the SVGA games I couldn't boot at home
+on the computers at school. Those had the fancy expensive color displays. They
+didn't even use them to play games, what a waste!
+
+Little did I know I was overwriting their install of Windows 95 with MS-DOS. In
+the end I spent my suspension time reading. I had realized I could print out the
+entirety of [[https://www.youtube.com/watch?v=rHIkrotSwcc][cplusplus.com]] and read it there. Learning what pointers are and how
+they work without a computer. It would be a interesting challenge now if only
+forgetting their meaning wasn't an even bigger one! You can forget a definition
+and lose its meaning, but once meaning is internalized you'll always have a new
+definition even if the wording evolves.
+
+The place where I most remember learning the basics of programming, ironically
+enough, is inside [[https://i.imgur.com/cbfAR0K.jpg][the original StarCraft editor]]. Now I knew I wanted to do game
+development the very second I saw [[https://www.youtube.com/watch?v=uskPV4KCjn8][Super Mario 64]]. I only had a few moments to
+see it at a demo booth during a family vacation to the city, [[https://www.youtube.com/watch?v=HavZVLMEuMY][so far away]]. So
+this editor became a pretty big deal, more fun than the actual game itself. I
+spent countless hours making Zerglings explode to nuclear landmines and whatnot,
+all while learning about [[https://www.youtube.com/watch?v=lCxINyXWvLU][variables, loops and branches]]. The only inconvenience
+was having to relaunch the game between every edit, then having to replay the
+map to where I wanted to test it, in order to make more edits. Overall the
+entire experience was so magical, and with [[https://www.youtube.com/watch?v=T59jVASGXUk][loud music]] driving me, it really
+didn't bother. Yet.
+
+Now that I think about it, this desire to be able to iterate in StarCraft with
+the speed and ease of feedback I had experienced in Flash is probably what
+seeded a lifelong goal inside me. I didn't understand [[https://www.youtube.com/watch?v=WDIkqP4JbkE][technical limitations]] at
+all at the time. Everyone had heard the stories behind our [[https://www.youtube.com/watch?v=pYmyD-hR5Fc][favourite games]] and
+how small their development teams were. I simply asked myself; this is so much
+fun, how hard can game development be? [[https://www.youtube.com/watch?v=ROor6_NGIWU][Well]]...
+
+Over the following two decades I had the privilege to work in game development
+at both Frima Studio and Ubisoft Quebec. In between I had the privilege to work
+analytics at Curbside, before its acquisition by Rakuten. Throughout this
+journey I met so many exceptional people it would be hard for me to name
+everyone without forgetting anyone. All I can say is that I consider myself
+blessed to have so many unique opportunities and experiences even if I often
+learn their true value only in [[https://www.youtube.com/watch?v=GY0HnqnYMO8][hindsight]].
+
+During these years, I would often spend my evenings and weekends experimenting
+with different designs of my own. I still had a goal to achieve, even if I
+couldn't be afforded the time to research it at work. I certainly am not going
+to give up by myself! Over time this method evolved into a unique combo; my
+side-projects are throwaway prototypes for the sole purpose of learning and
+perfecting ideas, usually until refactoring yields diminished returns. Daily
+life became a dichotomy between using ideas at work and researching more ideas
+at home.
+
+Every now and then, inspiration comes at unpredicted times, [[https://www.youtube.com/watch?v=8xRBzkJOFBU][out of nowhere]]. I
+would look at my current home tech, both frustrated of having so much work to
+throw away. Yet always more fascinated, already [[https://www.youtube.com/watch?v=0nTDFLMLX9k][trying to understand]] how it all
+worked. If I could make sense of pointers without a computer, I can definitely
+try to [[https://www.youtube.com/watch?v=NP9AIUT9nos][imagine]] how new tech works. Especially when it [[https://www.youtube.com/watch?v=28mn_fJlmbo][blows my mind]] for weeks.
+
+Unknowingly, I put myself in a position to experience the full contrast between
+production and research. Fixing bugs to meet [[https://xkcd.com/303/][deadlines]] at work while free to
+experiment with different hypotheses at home. [[https://www.youtube.com/watch?v=a-BOSpxYJ9M][Working overtime]] never made sense
+to me; why bash my head on a problem when I could have fun [[https://www.youtube.com/watch?v=Cym4TZwTCNU][imagining solutions]]
+without any of the current technical limitations? Besides, I know I'll wake up
+with a [[https://www.youtube.com/watch?v=f84n5oFoZBc][solution for work tomorrow]], I always do.
+
+And there I ended, prototyping systems at home where the problems of work simply
+could not emerge from their design. At least, that's what always felt like the
+goal of these side projects really was. The result, I realize now, is that I
+never worried about publishing them, or anything really. The insights I gained
+made it to the next work projects, yielding new problems, and.. wait, there's a
+feedback loop! A timeline and potential criticism forces ideas to organize.
+
+Goal. That's right, StarCraft! Goals are a special kind of memory. I can forget
+why I'm having them, I can [[https://gist.github.com/nifl/1178878][stop thinking about them]], yet they never become
+forgotten in and of themselves. In reality, I think they're like a C# background
+task, always running, [[https://archive.org/details/GDC2015Gyrling_201508][always spawning sub-tasks]], always computing possibilities
+until they inevitably reach completion. Actually, having now written that I see
+Erlang processes are a better metaphor. A C# process can fail, in which case the
+result is an error code. A [[https://www.youtube.com/watch?v=R2Aa4PivG0g][supervised actor]] will retry over and over and over
+until it succeeds, [[https://www.youtube.com/watch?v=ndnvOElnyUg][managing the resources]] it requires on the way.
+
+One can be their own guide when hitchhiking to the end of the galaxy. Now
+there's an insight I will credit to [[https://www.youtube.com/watch?v=lKXe3HUG2l4][Joe Armstrong]].
+
+So here I am, on one side still just as fascinated by [[https://www.youtube.com/watch?v=TPbroUDHG0s][how incredible]] computers
+are as ever. And just as curious to understand how everything works as well.
+Never afraid of new challenges, I am trying to learn quantum physics and
+chemistry with the free time I can now afford, curious to see how [[https://www.youtube.com/watch?v=QCwqnjxqfmY][composition]]
+and [[https://www.youtube.com/watch?v=FITJMJjASUs][bootstraps]] are handled by reality.
+
+However, not being able to [[https://www.youtube.com/watch?v=8-HYS456aZo][interactively visualize]] every new equation I
+encounter in relation to the various data I find is severely limiting my ability
+to learn and slowing my very amateur exploration into the physical sciences.
+
+And so on the other side is the realization our iteration times [[https://www.youtube.com/watch?v=Y7-OoXqNYgY][have improved]]
+throughout the computer industry as a whole, but at a speed not nearly as
+explosive as all the incredible programs and platforms we built during that
+time.
+
+Halfway through I found something which [[https://www.youtube.com/watch?v=wYa8tHPhbDo][changed everything]]. A simple blog entry
+from someone I had grown fond of reading. Finally, I was thinking, someone out
+there could elegantly describe the very problems annoying me so deeply. The
+entire experience felt enlightening. Any time earlier I would not have had the
+experience to [[https://www.youtube.com/watch?v=-6BsiVyC1kM][understand the value]], and any time later I would've been too busy
+to notice it.
+
+While I cannot recommend his entire writings highly enough, the specific entry I
+am refering to is Steve Yegge's [[http://steve-yegge.blogspot.com/2007/01/pinocchio-problem.html][The Pinocchio Problem]].
+
+Which leads me to the problem I observe. [[https://www.youtube.com/watch?v=OyfBQmvr2Hc][I now understand]] why he only spent 5
+hours a month to blogging.
+
+To continue on his metaphor, I'll keep growing Pinocchio's nose.
+
+* The Iteration Problem
+
+Programmer feedback is [[https://www.youtube.com/watch?v=vzfy4EKwG_Y][not realtime]], even in realtime applications. In essence
+this is pretty much is the main problem I have always been trying to solve and
+keep coming back to. The one I became conscious of after reading Steve's blog.
+The one problem for which I keep on assembling knowledge and experiments with
+the dream of finding a solution to someday.
+
+Along the way, I noticed the more seniority a developer has, the more they seek
+new languages to solve the more [[https://www.youtube.com/watch?v=P6UKhR0T6cs][complex development problems]] we're all still
+facing day to day. Its ironic because conventional wisdom predict hard times by
+choosing the technologies few others are using, so we make the easy decisions.
+Or is that corporate wisdom? It certainly is the opposite of [[http://www.paulgraham.com/avg.html][Startup Wisdom]]. No
+matter the cause, the effect is the same. Besides, hard choices in the present
+yield easy times in the future. A motivating thought at worst!
+
+There's monumental work being done to support the popular languages, because
+almost everyone use them. Its ironic, the very languages we're ultimately trying
+to escape are the very ones most actively being developed right now, because
+they're also the ones sucking everyone else in! [[https://www.youtube.com/watch?v=YR5WdGrpoug][Maybe]] I'm seeing a problem where
+none is. Maybe its a very subtle problem and we haven't [[https://www.youtube.com/watch?v=LKtk3HCgTa8][worded it thoroughly]]
+enough yet to be visible at scale. Maybe the words to define it [[https://www.youtube.com/watch?v=lw6TaiXzHAE][have not been
+grown to this day.]]
+
+A partial solution exists in the [[https://www.youtube.com/watch?v=Mfsnlbd-4xQ][design of Lisp]]. Now I have to be careful what I
+say next, for Lisp seems to cause one of two reactions in developers, with zero
+gray area in between. Either they notice all the [[https://xkcd.com/859/][parentheses]] and nothing else,
+in which case that's all Lisp is and ever will be. Or something wonderful
+happens: the parentheses become like [[https://xkcd.com/297/][the force]] and magically disappears. They're
+just waves, the atoms they curry inside are what really matters.
+
+I knew learning quantum mechanics wouldn't go to waste. At the very least it
+makes for interesting metaphors. Besides, how else can I read [[https://www.youtube.com/watch?v=j-kj2qwJa_E][modern GLSL]]?
+
+Speaking of things Lisp is about to eat, its undeniable nowadays how much the
+ideas behind the language itself have spread. Even knowledge of the name Lisp
+itself. I used to have a hard time coming across a coworker who had even heard
+of it. Now its not rare they've either dabbled in it, or know someone who does.
+We've gotten a fair amount of features from it over the years. However, the most
+profound ones have yet to completely make it to the mainstream surface. The two
+in particular I'm thinking about are its REPL and compiler macros.
+
+They're really two sides of the same coin. Like [[https://www.youtube.com/watch?v=FvMuPtuvP5w][( and )]] being the two opposite
+sides of an expression. But these two features are special, at least to me they
+are. You see, they both offer solutions to our iteration problems from opposite
+directions. The REPL allows [[https://www.youtube.com/watch?v=tJr_TD1BtF0][development at runtime]] while macros greatly speed up
+development [[https://www.youtube.com/watch?v=HXfDK1OYpco][before compilation]].
+
+Many languages have adopted what is also called a REPL, it has been widespread
+practice for quite many years. New languages seem to get one every time I look
+around. But as far as I know, only Lisp has the philosophy of designing it by
+threading user data through user functions called [[https://www.youtube.com/watch?v=noiGVQoyYHw][read, eval and print in loop]].
+
+Suddenly, Lisp's visibly weakest point becomes its strongest one [[https://www.youtube.com/watch?v=dOfucXtyEsU][at the core]].
+Nobody complains about "" being around [[https://www.youtube.com/watch?v=PNRju6_yn3o][string literals]], just thinking about how
+one could is a challenge. JSON, if we also think about it, is the Lisp-y data
+format extracted from JavaScript, somewhat. The text/data separation is not
+being consciously made by the language itself. The result is that every tool in
+the chain also has to be made out of [[https://www.youtube.com/watch?v=2EWejmkKlxs][text parsers and printers]].
+
+The complexity of adding a REPL to [[https://www.youtube.com/watch?v=bSkpMdDe4g4][JavaScript]], surprisingly, ends up being the
+same one as tooling it, when seen from a different scale. Text, it turns out, is
+too complex a protocol even [[https://www.youtube.com/watch?v=qOmmqu6_g3s][for us humans]]. The simplicity of Lisp's REPL rests
+on the fact its syntax is based on data, not text - to the point I'm not sure I
+would should call it syntax. The artifact of that indirection becomes the '()'
+characters we see everywhere. Text is a representation of data, but not data
+itself. Once we realize that, features start emerging out of nothing. They
+weren't planned, no meetings were made to decide of their existence.
+
+Lisp's compiler macros are one such emerging feature. The very indirection which
+simplified the design of its REPL now also simplifies the design of a feature
+allowing users to customize the compiler within their own programs. It should
+then come to no surprise that such attempts outside lisp have been met with the
+same complexity we've seen with the REPL. Treating code as data is fundamental
+to the [[https://www.youtube.com/watch?v=KgcU2HBOXAw][architecture]] of both features, they are fundamental to iteration times.
+
+But macros aren't the only way to add flexibility to a language's expressions.
+If they were I wouldn't be writing this paragraph right now! In truth, macros
+are lifting the interpretation of an expression from static code to programmable
+data. Macros embody the [[https://www.youtube.com/watch?v=43XaZEn2aLc][Las Vegas principle]]; what happens inside parentheses,
+stays inside parentheses. So if macros transform expressions from within, then
+what transforms them from without? In theory there should exist the lifting of
+programmable code to static data.
+
+[[https://www.youtube.com/watch?v=ytPAlhnAKro][Type systems]]! The one thing which is [[https://www.youtube.com/watch?v=dtGzfYvBn3w][really, really hard]] to add on top of Lisp.
+And rightly so, languages with type systems didn't just load a library and bam,
+types! In lisp we can [[https://www.youtube.com/watch?v=TVJa-V6U-XI][load entire languages]] as libraries, but types are tightly
+coupled with the interpretation of expressions. This is still a privilege
+exclusive to the [[https://www.youtube.com/watch?v=uR_VzYxvbxg][realm of the compiler]].
+
+We're thinking of types in terms of dispatch today, because they often combine
+related code and data together. But it wasn't always the case. OOP was a
+solution, I think, to the [[https://www.youtube.com/watch?v=6mTbuzafcII][explosion of distinct structures and functions]] at a
+program's top-level. It makes sense if I also imagine modules to be an idea of
+the future back then. We used objects for scaffholding and encapsulation the
+same way Lisp used macros and lambdas. But now they're often used as
+indirections as well, which we too often erronously call abstractions.
+
+As a [[https://www.youtube.com/watch?v=nD-QHbRWcoM][game developer]], indirection is not a word I like to throw around without
+weighting its tradeoffs first, then second, and finally one more time. Types
+might be used for correctness and flexibility elsewhere, but here they mean
+performance and performance is my business. Or at least, the priority of these 3
+qualities change. If types are to be used, we might as well [[https://www.youtube.com/watch?v=IOiZatlZtGU][use them completely]].
+And so it is we end up with enornous, highly performant but also highly static
+systems. And they [[https://www.youtube.com/watch?v=prXuyMCgbTc][run the world]]. Or the game worlds we end up living in. Either
+way, they run.
+
+What also runs is time. Time spent compiling and linking. Time spent preparing
+data. Time spent restarting the application. Time spent loading all the content.
+Time spent [[https://www.youtube.com/watch?v=X-iSQQgOd1A][navigating]] to the appropriate state. Time spent meeting up to talk
+about planning these steps to know where time should probably be spent next.
+
+I am still the same kid who just wants to edit his own StarCraft maps [[https://www.youtube.com/watch?v=PUv66718DII][instantly]].
+The only difference is I now I wish the [[https://www.youtube.com/watch?v=dQw4w9WgXcQ][rest of the world]] to be able to
+[[https://www.youtube.com/watch?v=iRmRGP9hzy8][experience that feeling]] as well.
+
+* Current Iteration
+
+This inevitably leads me to what has now grown to building a language able to
+grow itself into a [[https://www.destroyallsoftware.com/talks/the-birth-and-death-of-javascript][decentralized platform over time]]. As I'm currently working
+alone on this, I try to leverage as much as I can to speed up prototyping to
+either clarify or throw away design ideas.
+
+For this current iteration I'm building on top of the .net runtime. This was
+decided to leverage its existing ecosystem and target existing game engines like
+[[https://www.youtube.com/watch?v=rc03b4089Dw][Unity3D]] and [[https://www.st.cs.uni-saarland.de/edu/seminare/2005/advanced-fp/docs/sweeny.pdf][Unreal]], using UnrealCLR. A standalone client pretty much emerges for
+free from the architecture as well.
+
+Which leads me to the main point; the architecture is [[https://fabiensanglard.net/quake3/index.php][networked]] from the bottom
+up. The compiler process runs as a daemon hosting various language services. It
+receives evaluation requests from REPL clients and matches them to Eval clients.
+A handler emits assemblies for all the relevant targets, with clients ranging
+from net472 to net6+. It then [[https://www.youtube.com/watch?v=FaA2VkKUvbI][orchestrates the dispatch]] of these micro binaries
+for evaluation while forwarding their results back to the requesting REPL. In
+this design, the standalone doubles as a built-in client within the host
+process. offering a command-line REPL and the crucial Eval runtime required to
+enable user customizations.
+
+Speaking of which, external code is loaded directly from managed assemblies to
+[[https://www.youtube.com/watch?v=dCuZkaaou0Q][AST form]]. This allows the entire implementation to source itself like any other
+system, user or third-party library. Each assembly and source file contributes a
+compile unit, kept in memory in immutable [[https://www.youtube.com/watch?v=rX0ItVEVjHc][data-oriented design]]. They also
+contain typesystem and control flow graph structures. Early profiles could spit
+out assemblies from trivial expressions in a few microseconds. Large projects
+could in theory iterate with times in the milliseconds, or seconds. The compiler
+no longer has to prepare everything an expression depends on, which can quite
+easily become massive with quick one-liners. All the required dependencies are
+already indexed in memory persistent compile units.
+
+[[https://www.youtube.com/watch?v=VGt-BZ-SxGI][Some unknowns are left to explore]] in how far the .net runtime will take it.
+Especially over time after thousands upon thousands of live evaluations.
+
+Next in the server is an army of smaller services to support the compiler daemon
+and its clients. It maintains the solution database in sqlite, loads project
+definitions from MSBuild and then loads the appropriate sources and dependencies
+into compile units. Keeping an immutable AST also maintains a log of macro
+expansions for free all the way back to the original user source forms. The same
+is true of type variable expansions. And given how every compiler entity cannot
+change anyways, I don't really feel the downsides of [[https://www.youtube.com/watch?v=yy8jQgmhbAU][immutability]].
+
+Smaller tools include a tiny WinForms wrapper, to temporarily display dot files
+generated from the output of the syntax parser, type inferer or flow analyzer. I
+was happy when I realized I can also use that wrapper to show a browser window
+of the all the compile units loaded in memory and their contents. The closest
+experience I can think of is SmallTalk's object browser, or StarCraft's, or
+database control panels, or wikipedia; okay not the [[https://github.com/nornagon/jonesforth/blob/master/jonesforth.S][most uncommon]] of
+experiences, but still neat to have inside a compiler process.
+
+Included in the compile pipeline is a linter step, a linker acting as a
+map-reduce task to convert the output of the functionally pure compile tasks
+into a unified view, which codegen can then efficiently dump using multiple
+threads into a managed assembly. This all ties nicely into MSBuild externally.
+
+Finally, the clients who consume it all are seen as lightweight terminals. Built
+on top the same foundations as the daemon, should a client live on a .net
+runtime. Leveraging JSON-RPC over a Language Server Protocol everywhere else.
+These clients can opt to use any service they require. I've already mentioned
+the REPL and Eval services. But there are also Data and Lang ones. Allowing
+simulations, editors and standalone applications to be equal players in the
+ecosystem.
+
+Ideally I want to be able to turn editors into notebooks like Mathematica or
+Jupyter while game engines are refreshing their cells at [[https://www.youtube.com/watch?v=6a8bc-V6seo][full FPS]] on the other
+end. Live introspection of a live simulation also being developed while it runs.
+
+Emacs can already do much of this, especially in org-mode. VSCode has a Notebook
+API I'm currently exploring. Visual Studio could probably be hacked around by
+trying to make code lenses do more than they were intended to be in the first
+place. That seems to be a common theme wherever I go.
+
+I am far from having all of this from working. To be honest, the entire thing is
+currently wide open from one end to the other like a [[https://www.youtube.com/watch?v=2QBhssdZVEA][broken egg]] I'm trying to
+turn back into a chicken. However, that would definitely resume the gist of the
+picture as I currently imagine it. Every day a baby step closer.
+
+* Previous Iteration
+
+To complete this entry, I am including the implementation of my previous
+attempt, [[https://www.youtube.com/watch?v=KAWA1DuvCnQ][Written in the D programming language.]] I named it [[https://www.youtube.com/watch?v=vbZhpf3sQxQ][VILE]] as a pun on
+IDEs; "VILE: Integrated Lisp Environment."
+
+Now this one is a bit of a mess and wont compile without its dependencies.
+However, it shows the state of things as they were over three years ago.
+
+I use it as a proof of concept, before its single-file prototype design started
+cracking from everywhere. I made it launch a [[https://nehe.gamedev.net/tutorial/creating_an_opengl_window_(win32)/13001/][display render loop]] with a shaded
+triangle under Windows/D3D12, Linux/Vulkan and macOS/Metal. The process starts
+with a [[https://www.youtube.com/watch?v=gn9hGfOy6vU][blank state]] and evaluates the entire programs at runtime. I used a very
+simple emacs major mode to send evaluation forms to it from the commented out
+source in the same file.
+
+That whole process ended up both [[https://www.youtube.com/watch?v=r9LCwI5iErE][enlightening]] and a regret for writing a parser
+to clang's raw AST output. Doing such things gives me a [[https://www.youtube.com/watch?v=w1-bDwNtG-I][deeper appreciation]] of
+relational databases. In the end, I had a pipeline from native header files to
+in-memory ASTs. The very same ones the language's sources parse to. Completing
+this was a libffi binding generator to expose the native C and objc functions
+just loaded from their matching dynamic libraries to the interpreter.
+
+Finally a language server protocol implementation filled enough "I need to
+think" periods to end up barely working enough to support the REPL link. I dare
+not count how many evenings and weekends went into it. It ended up being one of
+the insights I enjoyed the most in hindsight.
+
+As a fun note, I will be reviewing that file for the first time in years after
+writing this. It is also the very first time I share it.
+
+[[https://www.youtube.com/watch?v=rhzmNRtIp8k][May it inspire.]]
