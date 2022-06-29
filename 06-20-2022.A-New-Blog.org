@@ -2,20 +2,19 @@
 
 My oldest memory with code is back as a teenager, when I first used Flash to
 help me understand trigonometry after school. I was instantly sold for life.
-There, after only a few minutes spent writing code, I could [[https://upload.wikimedia.org/wikipedia/commons/b/bd/Sine_and_cosine_animation.gif][visualize equations!]]
+There, after only a few minutes spent writing code, I could [[https://upload.wikimedia.org/wikipedia/commons/b/bd/Sine_and_cosine_animation.gif][visualize equations]]!
 I stood there, enlightened, understanding their meaning. Weeks of long hard
 [[https://kennywerner.com/effortless-mastery][concentration]] instantly folded into mere minutes of timeless fun! Computers have
 effectively turned learning into a game, and so a new life goal became a quest.
 
-From now on, for every class I didn't like in the slightest, I would simply just
+From then on, for every class I didn't like in the slightest, I would simply just
 skip. I'd walk home and learn to get better at programming by myself. I had no
 choice really. For one they didn't [[https://www.youtube.com/watch?v=8pTEmbeENF4][teach programming]] at school back then. More
 importantly, because I wasn't allowed in the computer lab anymore. I banked so
-much suspension time from missed classes it would probably not be funny today.
-
+much detention time from missed classes it would probably not be funny today.
 The high-school director would call to see me through the intercom almost every
 day, someone had to manage that time. By the last year I was used to go to
-suspension while everyone else went home. Now there's a story!
+detention while everyone else went home. Now there's a story!
 
 Years before, the only computer I had access to at home was rather old. It had a
 blindingly beautiful monitor offering four high-quality shades of, well, green.
@@ -24,9 +23,9 @@ on the computers at school. Those had the fancy expensive color displays. They
 didn't even use them to play games, what a waste!
 
 Little did I know I was overwriting their install of Windows 95 with MS-DOS. In
-the end I spent my suspension time reading. I had realized I could print out the
+the end I spent my detention time reading. I had realized I could print out the
 entirety of [[https://www.youtube.com/watch?v=rHIkrotSwcc][cplusplus.com]] and read it there. Learning what pointers are and how
-they work without a computer. It would be a interesting challenge now if only
+they work without a computer. It would be an interesting challenge now if only
 forgetting their meaning wasn't an even bigger one! You can forget a definition
 and lose its meaning, but once meaning is internalized you'll always have a new
 definition even if the wording evolves.
@@ -124,7 +123,7 @@ to notice it.
 While I cannot recommend his entire writings highly enough, the specific entry I
 am refering to is Steve Yegge's [[http://steve-yegge.blogspot.com/2007/01/pinocchio-problem.html][The Pinocchio Problem]].
 
-Which leads me to the problem I observe. [[https://www.youtube.com/watch?v=OyfBQmvr2Hc][I now understand]] why he only spent 5
+Which leads me to the problem I observe. [[https://www.youtube.com/watch?v=OyfBQmvr2Hc][I now understand]] why he only spent 4
 hours a month to blogging.
 
 To continue on his metaphor, I'll keep growing Pinocchio's nose.
@@ -151,13 +150,13 @@ to escape are the very ones most actively being developed right now, because
 they're also the ones sucking everyone else in! [[https://www.youtube.com/watch?v=YR5WdGrpoug][Maybe]] I'm seeing a problem where
 none is. Maybe its a very subtle problem and we haven't [[https://www.youtube.com/watch?v=LKtk3HCgTa8][worded it thoroughly]]
 enough yet to be visible at scale. Maybe the words to define it [[https://www.youtube.com/watch?v=lw6TaiXzHAE][have not been
-grown to this day.]]
+grown to this day]].
 
 A partial solution exists in the [[https://www.youtube.com/watch?v=Mfsnlbd-4xQ][design of Lisp]]. Now I have to be careful what I
 say next, for Lisp seems to cause one of two reactions in developers, with zero
 gray area in between. Either they notice all the [[https://xkcd.com/859/][parentheses]] and nothing else,
 in which case that's all Lisp is and ever will be. Or something wonderful
-happens: the parentheses become like [[https://xkcd.com/297/][the force]] and magically disappears. They're
+happens: the parentheses become like [[https://xkcd.com/297/][the force]] and magically disappear. They're
 just waves, the atoms they curry inside are what really matters.
 
 I knew learning quantum mechanics wouldn't go to waste. At the very least it
@@ -185,7 +184,7 @@ threading user data through user functions called [[https://www.youtube.com/watc
 Suddenly, Lisp's visibly weakest point becomes its strongest one [[https://www.youtube.com/watch?v=dOfucXtyEsU][at the core]].
 Nobody complains about "" being around [[https://www.youtube.com/watch?v=PNRju6_yn3o][string literals]], just thinking about how
 one could is a challenge. JSON, if we also think about it, is the Lisp-y data
-format extracted from JavaScript, somewhat. The text/data separation is not
+format extracted from JavaScript, somewhat. That text/data separation is not
 being consciously made by the language itself. The result is that every tool in
 the chain also has to be made out of [[https://www.youtube.com/watch?v=2EWejmkKlxs][text parsers and printers]].
 
@@ -193,7 +192,7 @@ The complexity of adding a REPL to [[https://www.youtube.com/watch?v=bSkpMdDe4g4
 same one as tooling it, when seen from a different scale. Text, it turns out, is
 too complex a protocol even [[https://www.youtube.com/watch?v=qOmmqu6_g3s][for us humans]]. The simplicity of Lisp's REPL rests
 on the fact its syntax is based on data, not text - to the point I'm not sure I
-would should call it syntax. The artifact of that indirection becomes the '()'
+should still call it syntax. The artifact of that indirection becomes the '()'
 characters we see everywhere. Text is a representation of data, but not data
 itself. Once we realize that, features start emerging out of nothing. They
 weren't planned, no meetings were made to decide of their existence.
@@ -201,7 +200,7 @@ weren't planned, no meetings were made to decide of their existence.
 Lisp's compiler macros are one such emerging feature. The very indirection which
 simplified the design of its REPL now also simplifies the design of a feature
 allowing users to customize the compiler within their own programs. It should
-then come to no surprise that such attempts outside lisp have been met with the
+then come to no surprise that such attempts outside Lisp have been met with the
 same complexity we've seen with the REPL. Treating code as data is fundamental
 to the [[https://www.youtube.com/watch?v=KgcU2HBOXAw][architecture]] of both features, they are fundamental to iteration times.
 
@@ -215,7 +214,7 @@ programmable code to static data.
 
 [[https://www.youtube.com/watch?v=ytPAlhnAKro][Type systems]]! The one thing which is [[https://www.youtube.com/watch?v=dtGzfYvBn3w][really, really hard]] to add on top of Lisp.
 And rightly so, languages with type systems didn't just load a library and bam,
-types! In lisp we can [[https://www.youtube.com/watch?v=TVJa-V6U-XI][load entire languages]] as libraries, but types are tightly
+types! In Lisp we can [[https://www.youtube.com/watch?v=TVJa-V6U-XI][load entire languages]] as libraries, but types are tightly
 coupled with the interpretation of expressions. This is still a privilege
 exclusive to the [[https://www.youtube.com/watch?v=uR_VzYxvbxg][realm of the compiler]].
 
@@ -264,7 +263,7 @@ A handler emits assemblies for all the relevant targets, with clients ranging
 from net472 to net6+. It then [[https://www.youtube.com/watch?v=FaA2VkKUvbI][orchestrates the dispatch]] of these micro binaries
 for evaluation while forwarding their results back to the requesting REPL. In
 this design, the standalone doubles as a built-in client within the host
-process. offering a command-line REPL and the crucial Eval runtime required to
+process, offering a command-line REPL and the crucial Eval runtime required to
 enable user customizations.
 
 Speaking of which, external code is loaded directly from managed assemblies to
@@ -297,10 +296,11 @@ experience I can think of is SmallTalk's object browser, or StarCraft's, or
 database control panels, or wikipedia; okay not the [[https://github.com/nornagon/jonesforth/blob/master/jonesforth.S][most uncommon]] of
 experiences, but still neat to have inside a compiler process.
 
-Included in the compile pipeline is a linter step, a linker acting as a
-map-reduce task to convert the output of the functionally pure compile tasks
-into a unified view, which codegen can then efficiently dump using multiple
-threads into a managed assembly. This all ties nicely into MSBuild externally.
+Included in the compile pipeline are linter and linker steps. The latter acting
+as a map-reduce task to convert the output of the functionally pure compile
+tasks into a unified view, which codegen can then efficiently dump using
+multiple threads into a managed assembly. This all ties nicely into MSBuild
+externally.
 
 Finally, the clients who consume it all are seen as lightweight terminals. Built
 on top the same foundations as the daemon, should a client live on a .net
@@ -326,7 +326,7 @@ picture as I currently imagine it. Every day a baby step closer.
 
 * Previous Iteration
 
-To complete this entry, I am including the implementation of my previous
+To complete this entry, I am [[vile.d][including the implementation]] of my previous
 attempt, [[https://www.youtube.com/watch?v=KAWA1DuvCnQ][Written in the D programming language.]] I named it [[https://www.youtube.com/watch?v=vbZhpf3sQxQ][VILE]] as a pun on
 IDEs; "VILE: Integrated Lisp Environment."
 
@@ -335,10 +335,10 @@ However, it shows the state of things as they were over three years ago.
 
 I use it as a proof of concept, before its single-file prototype design started
 cracking from everywhere. I made it launch a [[https://nehe.gamedev.net/tutorial/creating_an_opengl_window_(win32)/13001/][display render loop]] with a shaded
-triangle under Windows/D3D12, Linux/Vulkan and macOS/Metal. The process starts
+triangle under Windows/D3D12, Linux +/Vulkan+ and macOS +/Metal+. The process starts
 with a [[https://www.youtube.com/watch?v=gn9hGfOy6vU][blank state]] and evaluates the entire programs at runtime. I used a very
 simple emacs major mode to send evaluation forms to it from the commented out
-source in the same file.
+source in the same file. 
 
 That whole process ended up both [[https://www.youtube.com/watch?v=r9LCwI5iErE][enlightening]] and a regret for writing a parser
 to clang's raw AST output. Doing such things gives me a [[https://www.youtube.com/watch?v=w1-bDwNtG-I][deeper appreciation]] of
@@ -356,3 +356,15 @@ As a fun note, I will be reviewing that file for the first time in years after
 writing this. It is also the very first time I share it.
 
 [[https://www.youtube.com/watch?v=rhzmNRtIp8k][May it inspire.]]
+
+
+** Edit Note
+
+Memory failed me momentarily, I had loaded Vulkan/Metal in the AST but didn't
+get around to turn them to a rendered triangle. Makes sense, the Apple hardware
+I had at the time didn't even support Metal and linux was hosted in VirtualBox!
+
+I had also forgotten how many libraries I exposed to FFI in there. At the time,
+I thought it would be fun to review APIs I was using in other projects, while
+also stressing the AST parser with every combination of nodes I could get clang
+to emit.
