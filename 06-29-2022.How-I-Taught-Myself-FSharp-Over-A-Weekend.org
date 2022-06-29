@@ -1,0 +1,175 @@
+* What?
+
+A few months ago, I taught myself how to read and write F# over a weekend.
+
+Its always a great experience. To jump headfirst into the unknown. To feel my
+zone of comfort, made out of everything I already know and understand, fade away
+in the distance. To create my very own adventure as I explore along the unknown.
+
+I was the one kid who had the itch to take everything apart, just to see how it
+works. Half the time, I was even able to put it back together! Some other times,
+well lets just say I ruined a few of my dad's own repair projects by accident
+and more of my own toys than I can remember to count. Still, I ended up making a
+small amount of money repairing toys for friends. Mostly glueing back broken
+parts, replacing belts, lubricating gears and very basic soldering jobs I could
+do with some confidence of success given my beginner skills at the time.
+
+But software is different. When I soldered in the wrong resistor as a kid,
+another seemingly unrelated part fried up. Without replacements, that was it for
+that day's adventure in electronics. Or the week when I got grounded.
+
+The equivalent situation happens inside a computer. But when it does, it
+thankfully doesn't blow anything up. Imagine if crashing a program also meant
+having to replace hardware. Now, I can see how code behaving unexpectedly can
+cause damage in the physical sense, especially when used to control mechanical
+devices. A bug in the code means we're not going to space today, which is better
+than not returning from space.
+
+However, F# is pure and kind, it plays nicely in a managed sandbox. Failure
+still isn't an option, but here it can freely be seen as progress towards
+success; nothing to be feared. I say not an option, because it will happen so
+often while learning I might as well say its required, see it as a part of the
+process and then embrace it.
+
+* Learning to Learn
+
+So there I sat, ready to start. Then I realized the obvious.
+
+I knew nothing about F#.
+
+Now that's a pretty big failure already. And I hadn't even started yet! I set
+out to learn a new subject, and the very first thing I did about it was realize
+I know absolutely nothing. Well, that's it then, this is going to take months of
+hard work, time to play some Minecraft on the new community server. There are
+horses to tame!
+
+Fortunately, I had been using C# for enough years by then that it got me
+thinking. When I first used the language, I didn't know much about functional
+programming. Then, when I did I know more I still had this image of F# as a
+weird Scala-like hybrid monster between OOP and FP. I was perfectly comfortable
+with LINQ and loops. So I kept using C#, too busy debugging Unity behaviors and
+playing Minecraft. Something about breaking blocks and organizing them
+differently makes me think of solutions to the problems I'm trying to solve.
+
+And then it hit me. There I was, trying to use C# as a functional language able
+to interop with existing OOP libraries. Well, that's precisely what F# is for!
+
+Now I had a good reason to learn it. C# is a nice language to use, but I've also
+experienced many other great languages since first using it and I miss their
+features when I come back. Its no longer a complete home. Suddenly, I'm no
+longer thinking about Minecraft. There could be value in learning F# - a game in
+and of itself.
+
+* FTUE -> RTFM!
+
+"Its called a tutorial!" I used to say when I heard coworkers talk about
+building a "First Time User Experience."
+
+Even the concept of a tutorial feels weird to me, now that I think about it.
+Tutors tell us to concentrate harder but can't experience learning in our place.
+
+Maybe it was growing up having only two main activities to do: playing [[https://www.youtube.com/watch?v=eM8Z9e-WoFs][Super
+Mario Brothers 3]], which didn't have a tutorial, or playing "that's enough
+Nintendo" outside, which also didn't come with a tutorial. And both were fun!
+
+Now where's the tutorial to teach moms a PlayStation is not called a Nintendo?
+
+We made use of the one console we had for however many friends we were, all
+sitting around the television. Seeing each other play was all the tutorial we
+needed, and the faster they died, the quicker the controller would make its
+rotation back to us. Some of us still skip tutorials even in modern games!
+
+That's precisely how I want to learn F#. Lets go read F# code to learn F#!
+
+Except I don't know how to speak the language, let alone read it. Hrm.
+
+I think growing up in the Canadian province of Quebec ultimately helped me.
+English was too hard to understand properly at the time and I still wanted to
+read the manuals for the few games I had. So I'd call Mr. Nintendo on the phone
+to ask, as if he was a real life Santa, to please send me their translated
+manuals. Which he did! Beautiful black-and-white books arrived in the mail,
+completely free! I might have called back for manuals of many more games I
+didn't own, please [[https://www.youtube.com/watch?v=IOsvuEA2h4w][don't tell Nintendo]].
+
+Going for the reference manual first is usually what I do first. I can read the
+entire feature sets in a few hours now, creating relation with existing concepts
+I know and taking notes of the new ones I encounter on the way. At this point I
+try to resist the itch to go code something with my newfound powers. Something
+something great responsibility.
+
+Before long, the language's reference is fully consumed, but still undigested,
+its library still completely unknown for the most part. The very first time I
+did this, it took me months to go through an entire language's reference manual.
+Its no surprise, most words were new, every concept was something to be imagined
+for the first time. Even english itself was hard.
+
+At this point the itch gets really unbearable and it was time to scratch it. I
+played a bit with its command-line REPL to get a feel of the language and then I
+was off to write a Lisp interpreter.
+
+* Toy Programs
+
+They're called toy programs because they're fun to play with. Just like we all
+still enjoy playing with Legos, but I didn't say that. What makes this specific
+case a toy for me is that I've already implemented quite a few Lisp interpreters
+in the past. Picking the same idea over and over has a few advantages here.
+
+First, I don't spend time trying to figure out what to do. Trying to find a
+project in the moment is almost the same experience as using a modern character
+creator in video games. By the time I finally start playing, the free time I had
+to play is gone. Doing the same thing over and over let me focus on what I want
+to learn and practice instead of what I need to use as a canvas for it.
+
+Second, and more importantly, it let me see clearly how F# wants to solve this
+problem. The domain is familiar, I already know more than a few solutions and
+therefore can focus on what F# brings to the table. There's a clear goal with a
+short and well known path to it. The risk is minimal, but since much is new the
+rewards are still huge.
+
+Finally, I really like the design of Lisp. A chance to think of new approaches
+to implement it or just to gain more familiarity with the language internals is
+always welcome.
+
+In this case, I started by retyping an existing Scheme interpreter I found on
+GitHub. Now I could have simply cloned the project and started from there, but I
+generally find that boring. As I retype I have to read through it all, I can
+think about the constructs, how they compose and what else I could do with them.
+By the end I've usually added a handful of new features and changed a few design
+aspects of the original.
+
+Doing so also allows me to try something new on the way, just to keep that zone
+of comfort at a safe distance. This time around, I wanted to structure the
+source file as if it were an in-editor presentation.
+
+I was teaching myself, after all.
+
+* Having Fun in Lisp
+
+Now the real fun could begin. Getting a simple Scheme to work, especially from
+an existing starting point, is rather simple.
+
+The real difference is at that point, I now have a good enough idea of how F#
+works, having googled, stackoverflowed, read and hacked my way through. What I
+really like about building interpreters that way is that reaching this goal then
+automatically yields a new one I usually can't think of ahead of time. Playing
+with its live user interface is inspiring. The end really is a new beginning.
+
+So I type expressions at the REPL, and soon enough I need more power, more
+expressivity, more toys to play with.
+
+No worries, I know F# now!
+
+During that time period I was also trying to understand how logic engines are
+implemented, after a few failed attempts in the past, and was consuming plenty
+of content about the subject as well.
+
+And so after [[https://www.youtube.com/watch?v=AffW-7ika0E][a full night of sleep]] I had only one thing in mind; write yet
+another microKanren implementation. This Lisp was the perfect sandbox for it!
+
+A sandbox within a sandbox.
+
+Everything became throwaway at that point. I just wanted to see how far I could
+push it for the rest of the day, seeing my main goal already reached. And so
+the refactors began, which surprisingly F# plays very pleasantly with!
+
+The end result was the [[Lisp.fs][attached F# file]]. I hope it can be of use.
