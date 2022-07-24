@@ -1,0 +1,921 @@
+#+TITLE: Notes on the Development of Applications
+
+* The Crate Review System
+
+#+BEGIN_QUOTE
+/Conan, what is hardest in artificial life?/
+
+To resolve your ideas,\\
+to see them realized before you,\\
+and to hear the commentary of their meaning.
+#+END_QUOTE
+
+Software design is continuously increasing in complexity. Our computers of today
+are several orders of magnitude more powerful than they were a few short decades
+ago. Our languages and tools haven't improved nearly as quickly in simplifying
+the design process, however. It's been optimized to be /quick and easy to learn/,
+which is certainly better than /easy to learn and hard to master/ found in game
+design. Nevertheless, it could always be worse, music instruments are /hard to
+learn and hard to master!/ Then why is playing music more expressive than both
+programming and gaming? Aren't they all just different forms of communications
+of forms? Why are so many programmers also gamers and musicians? It's all fun!
+
+I'm currently working on a research problem, and taking a step back helps me
+reason about it. The more questions I ask in search for its solution, the more
+steps back I end up taking. This reverse walk quickly turns into an adventure,
+travelling left and right in time, a journey into the history of computability.
+I need to analyse the present situation, if I am to better put it to experiment.
+Organizing the past to better imagine the future. It's a very simple problem as
+well, meaning the answer space is potentially infinite. So here I am, pondering.
+
+Orbiting, searching for what is essentially a design. No, a diagram. No, a
+pattern. No, what's the formal name of this concept, a model? I'm not exactly
+sure what to call such an idea. An =API=? No, that's not it either. In a nutshell,
+I find myself in a situation where multiple interactive processes have to talk
+with one another, independently and using different languages and types; actors.
+Normally it isn't a big problem, the usual approach being to declare structures,
+generate as much code for them as possible and finally get back to business.
+
+The issue is that here I'm in a place where types can't be completely defined.
+Consider the intermediate service of transporting resources. It has to inspect
+individual resources beforehand, at least parts of them, to ensure safe routing
+and proper care. Mastering this process is highly valuable. Quite critical to
+ending up with the best suppliers and the shortest paths. Such a service can't
+modify these resources, otherwise consumers complain about producing the wrong
+contents. Labels and other decorations may be added, packages can be embedded
+inside other packages, and even damaged by accident. However, the contents of
+these packages must absolutely not change. They are the sender's properties.
+
+Would such a service require the complete schematics for the contents of every
+package it processes? Of course not. The way packages are assembled or work
+isn't important, so long as the service can observe the few attributes it cares
+about. The size of boxes can be measured, for example. Past a certain threshold
+it becomes far more efficient to rent storage, and then move lightweight keys.
+
+A useful decision has been taken by observing packages without understanding
+their contents. Nobody had to be notified of such an event. Furthermore, should
+a large amount of small and similar packages be transported at once, it becomes
+more efficient to process in batches. More value for a faster, cheaper service.
+
+A faster, cheaper service doesn't necessarily translate to more value. But here,
+users, the consumers of our hypothetical service, only need to communicate these
+few properties during the creation of their packages. A valuable standard.
+
+[[./assets/crates.jpg]]
+
+* We're goin' straight to the Wild Wild Web
+
+#+BEGIN_QUOTE
+/The Web is like a box of standards. You never know which API you're gonna get./
+#+END_QUOTE
+
+The previous example of a transport service isn't that far removed from the idea
+of computer networks. In fact, that's very much what I had in mind while writing
+it. Not trucks and physical boxes, but rather control interfaces and data types.
+They are the standards regulating the /Internet/ as a transport service. Programs
+are made of interfaces and types, so obviously this =Internet= came preloaded with
+typed interfaces we can all use to develop applications with. It does, right?
+
+Just add a dependency to the library exposing the =TransmissionControl interface=,
+and the =Internet interface=. And then send what? Receive what? Nobody made these
+interfaces generic, yet here they are without any specialization of their own.
+They allow me to locate routes and open communication channels once I resolve a
+domain =Identity=, but I still don't know how to say what I have in memory, nor
+do I know how to interpret any of what I'm hearing.
+
+Actually, I feel you say, those are not interfaces, they're literally protocols.
+Okay, my mistake. I can easily create one. Now, this has the disadvantage that
+only my own stuff can speak =TransmissionControl<Protocol>=, and things depending
+on the library defining this stuff. How is that going to work out for everyone
+else? Huh, what? Why would I create a new protocol? Because its the only way to
+precisely match the message data types and carefully optimized frame layouts.
+
+What is this =HyperTextTransfer interface= you speak of? Everything is plain text.
+Hey, I just found a =FileTransfer interface=, does it still work? Nevermind, also
+text-based. It's not the same one as the =FileStream interface=, hell it's not
+even compatible. These two want a =URI= instead of a =File=. Do I really want to
+generate more serialization wrappers? Look at how many I have already. No good.
+
+Besides, these interfaces all have that same general nature about them. Requests
+have been decoupled from messages without specializing their data type. Should I
+use a distinct =HyperTextTransfer<Protocol>= type per client or per request? HTTP
+handles the framing of streams, but otherwise little of the problem was solved.
+
+Use =JSON=? But I'm not writing =JavaScript= at all, the Icarus of design languages.
+Sure, I'll search for a serialization library. Okay, I'll research the tradeoffs
+between the many serialization libraries. Curses, the one I picked has too big
+an impedence mismatch with the current system. Why don't I just write my own?
+
+Previously all I had to do was ask the user for an =IP= address, a port number,
+then load assets from local files. It feels like orders of magnitude ago. Why
+does it matter? Networks are bigger, algorithms leave the runtime during their
+processes, and we all require more features interacting with more data sources.
+How did this change in requirements change the way we develop applications?
+
+Well, a local =Path= is now a global =URI=. A =FileSystem= is now a trusted =Authority=.
+The =I/O= subsystem has been abstracted into a =Scheme=. A =Path= is still called a
+=Path=, so we have that going for us, which is nice. There's also new components
+called =Query= and =Fragment=. A lot of information is packed into a single =Symbol=.
+Hum. Names, schemes, common parts... oh hi Lisp! Didn't see you hidden in here.
+
+Isn't the presence of a dynamic authority essentially giving us access to a near
+infinite amount of hard drives? Who's in charge of everything? Nobody? Good God!
+The Web really does obey Greenspun's tenth rule of programming. It's alien tech.
+
+The =Drive= works in the small; we own all data files hosted on the local system.
+There's only a single authority; the =Admin=. There's a single identity; the =User=.
+The operating system even asks the admin's permission before executing changes.
+In reality it's not quite so easy, still close enough to illustrate the thought.
+
+But in the large nothing is absolute. =Ownership= becomes relative to authority.
+The concept of ownership can't be decoupled from the concept of authority. They
+are so close together, in fact, that every single identity must be authorized.
+It's hidden from the URI, but still exists as a subcomponent of the Authority.
+
+[[./assets/standards.png]]
+
+* There is a place and value for everything
+
+#+BEGIN_QUOTE
+How many threads does it take to change one lightbulb?\\
+How many threads does it take to change two lightbulbs?\\
+How many threads does it take to change all lightbulbs?
+#+END_QUOTE
+
+Where else can we find the concept of ownership? Maybe some place without users.
+They do need careful precautions to protect themselves from other users. In the
+safe haven that is the environment of the process, how can anything bad happen?
+Users can't easily get intel of what's going on inside. There is only a single
+runtime. Everything is built using the one type system. The one memory model.
+The one thread. The one thread?! Oh no. That's not right. Not right at all.
+
+Multiple threading, it's virtually the same as users in a time-sharing network.
+Just a bit more abstract. What do multiple users do? They all input events at
+the same time and expect simultaneous evaluations. What do multiple threads do?
+They all execute effects at the same time and change outputs simultaneously.
+Curiously interesting. One question then logically follows; if our users own
+their /resources/, what do the /threads/ own?
+
+Why, /variables/ of course. It's just unclear which thread owns which variable at
+which moment in which timeline. So far as the OS is concerned, the complete
+running program is only one unit of process, only one unit of memory, and a
+number of kernel handles. When you think about it, handles are variables owned
+by an external authority. Sharing. That's why variables are hard. No worry, I
+know synchronization! I'll just give every shared place its own mutex and...
+
+[long pause... still waiting...]
+
+Yeah, not exactly scalable. Without even having to leave the perimeter of the
+local environment. What is it like outside? If we squint really hard, URIs and
+files are variables too. Even processes themselves. All of them have the common
+attribute of being a location where concurrent actors race to lock themselves in
+ownership of the state. What good does it do? Well, borrowed ownership empowers
+one with the responsibility of integrating the succession of accepted mutations.
+
+How does it work? Who knows. Sharing allows multiple invididuals to consume a
+single resource simultaneously. However, should any single individual borrow
+ownership, even temporarily for a moment, the shared object becomes invisible.
+Unless you were trying to look at it, that is. Or worse, trying to borrow its
+ownership. For trying to look is easy, just wait until nobody owns the borrow.
+But when someone want to borrow a thing, they have to wait until there is noone
+else looking. A suspiscious method of conducting honorable business among us.
+
+What else can we do? Variables have to, well, vary. D'uh! There's even a quick
+to start and easy to use API: =get= and =set=. That's it. Processes have a bit more
+knobs, however. If we reduce them all then we can see their I/O is driven from
+two functions: =recv= and =send=. These two duals, get/set and recv/send, are almost
+the same idea. One is a place with a history of states and the other is a place
+with a stream of changes. It's all basic data. I know this! I'll use a database.
+
+Databases are a well researched area. Databases are also shared places. They're
+a gigantic variable at the other end of a network connection. So how did these
+data services solve the issue of borrowing ownership? Isn't a global transaction
+the same as a local borrow? Does it make a difference whether it is a compile
+time checker or a runtime planner enforcing the rules? Both are configured from
+the use of language. I most certainly prefer the one using relational algebra as
+one of its foundations, even when the other ones can be functional and pure.
+
+That doesn't sound very practical to do in applications. There are variables
+/everywhere/. Applications have components of UI, actors in a simulation, devices
+to connect to, and all sorts of stateful independent actors. This also is a well
+researched area. One, however, in which there's much less consensus on how state
+should be organized than there is in the area of databases. There are changes to
+observe all over the place and events to react to all the time. Pure chaos.
+
+[[./assets/perpetual.jpg]]
+
+* Motion in the Kingdom of Rest
+
+#+BEGIN_QUOTE
+Software development is like going on a long adventure into the desert. The
+further we walk into it, the more our familiar tools randomly stop working.
+#+END_QUOTE
+
+There's a logical reason why we don't all use /Prolog/ to develop applications.
+Relations form a complete algebra of /query/ when the view of data is consistent.
+When data is at rest. But when is a system ever at rest? Everything appears to
+always be in constant motion. There's no algebra of /change/. Not that I know of.
+
+Clearly, there is a difference between how applications and databases handle
+state. But why is that? Aren't the concerns of both processes the same? Don't
+they both try to be as efficient as they possibly can? They both produce change
+in response to consumer events. They index past relations for future analysis.
+They just happen to have vastly different approaches to it. Let's have a look.
+
+Applications have the luxury of specific use-cases. They have the choice between
+static and dynamic types, between at least twice as many programming paradigms,
+countless more data formats, and they need to decide on which new features to
+build over the next two weeks. If programs do the running, why are developers
+sprinting? There's a ton of components to link together, control flow to graph
+everywhere. And so the pipeline churns, the toolchain builds, and the agility
+burns down the drain. Some adventures are charted only as a warning to others:
+here be dragons. And that's all I have to say about that.
+
+Databases have a foreign constraint relative to applications. They must solve it
+all in a generic way. I don't recall having ever seen a =SQL<Protocol>= interface.
+Objective relations are the subject of absolute misfortune; an ancient proverb
+shining light on the dangers of using an =ORM=. There's only one =SQL= and that's
+it. As if the query part of a URI was a complete /relational algebra language/.
+Why isn't that? Well, the /Web/ doesn't know about every single possible data
+type, every single possible change. And it can't, at least not in the static
+sense of a =Type=. We'd have an entire universe of painful refactorings to do and
+constant downtimes to deal with, that's why.
+
+When do we want to recompile and schedule a restart of the database? Every time
+the type definitions change! When do we want to rewrite the indexer algorithms?
+Every time the data layouts change! How do we replicate its state? Manually! How
+do we know when something has changed? It will tell you everything about itself!
+
+What a chilling paragraph to write. Obviously that's not how databases work. The
+problem is solved once and life keeps moving on. There's an impressive number of
+subsystems at work to ensure everything lives smoothly. If a system can abstract
+away the inner workings of its hardware, then a database quite nicely abstracts
+away the inner workings of its software. All this monumental effort only so we
+developers and users can focus on growing the language while also speaking it.
+They baked the cake we're now eating. What of applications as /database systems/?
+
+It seems the more a system is to survive in the harsh undefined chaos that is
+the behavior of the world wild web, the more it has to embrace schemas instead
+of types and protocols instead of interfaces. A language of forms is a kind of
+=Protocol=. That must be why there's no SQL interface. The =Language= itself is the
+communication protocol. The =Schema= itself is the functioning type system. Just
+needs the one global runtime specification, any day now. How can one design it?
+
+Are the concerns and requirements of applications that different from those of a
+database? For years I thought they were. Applications have state, and databases
+have data. It's in the name. D'uh. Applications control the execution, databases
+evaluate the queries. And then over those years they ended up scaling to greater
+lengths with the effect of exposing their designs in greater detail. Both have
+to deal with larger assets requirements and also a much greater query volume.
+
+How many independent components pull from external data sources, have some logic
+evaluated over them, whose results is finally pushed back into the user's hands?
+Pretty much all of them. These are every UI widgets, simulated actors, connected
+devices and other stateful objects around us. Lets be honest, outside of the few
+sub-systems of change, that's pretty much the only thing applications ever do.
+
+These facts alone can't be the problem. Indeed, without the concept of /change/,
+both storage and query immediately become infinitely scalable. Without change,
+there's no reason to write these notes, there would be no time flowing at all.
+We know change well; it's what variables do. They vary. They change. But why?
+
+[[./assets/ni.jpg]]
+
+* In the event of side-effects
+
+#+BEGIN_QUOTE
+Change... Change never changes.
+#+END_QUOTE
+
+Change is the source of all complexity. We've been trying to hide it, tame it,
+fight it, ignore it, abstract it, encapsulate it, move it away, and it's still
+here. Change is immutable. Change causes mutations. But what is change, really?
+
+A simple definition would be to express this statement: change is observing a
+single object being unequal between two successive frames of reference from a
+single timeline. That's not the same as saying change has to be observed in
+order to happen, unless we're writing Haskell. But rather that the number of
+times an object changes between observations cannot be observed. Why is it then
+the last statement doesn't sound true at all? Must be because it's false.
+
+Computer programming isn't an uncertain reality. We are the ones throwing each
+of the dices, without exception. If a feature isn't there we can just implement
+it ourselves. So how is it that we can observe change? We write everything about
+it. I'm serious. We write to high-performance append-only logs, message queues,
+event channels and many other variations of journaling change. Their scalability
+is surprisingly good, excellent even. Huh? How interesting. Directly observing
+changes hardly scales at all, but communicating their description ends up doing
+it effortlessly. How? What sorcery is this?
+
+The same phenomenon can be seen with version control. It only started seriously
+scaling after it switched to store evaluated deltas instead of the results of
+their execution. The method is more important than the result, it turns out. I
+remember hearing that from my math teacher after I figured I could use a TI-82
+to solve all the math problems for me. Then all my programs were erased before
+the final exam. I did not get a passing grade that day. But I learned a lesson.
+
+What makes this seemingly small difference have so big a consequence? It allows
+history repeat itself wherever it was left at, independently of other actors. We
+stores the causes instead of their effects. The inputs are now replayed instead
+of the outputs being replicated. That's all good, what does it have to do with
+variables? Our files? Our URIs? They each only store a single, complete value. A
+database store the entirely realized data set and goes as far as to renormalize
+it in indexes. Even git communicates with the user with a working directory, the
+state of every source file is the main view developers care about, not history.
+
+There is a duality between an object and the changes it undergoes. They both
+only truly scale when described using simple language. They both are different
+ways to describe the same entity from dual perspectives. One is relative to its
+place, the other to its value. Objects don't go on the wire or in files, their
+serialized representation does. Is a variable an observer of events, or is it a
+sequence of events being observed? Is it better to have one observer with many
+streams of events? Or many observers and one stream of events? One is definitely
+simpler to work with and scale than the other. Yet seldom used in applications.
+
+Again, databases seem to have figured this out. Materialized views aren't the
+most important data, they can get lost for all we care. In very much the same
+way peers in a replication network don't care for the latest snapshot, they can
+always deterministically run towards it. No matter the viewpoint, a database is
+a single source of events. It is a single variable, as far as clients on the
+other side can see.
+
+A variable is a database. Now there's a realization. How many of them do we want
+to juggle with now? What about variables within variables? This second keeps on
+getting recursively worse. Functions of variables? What fresh higher-order hell
+is this. We're going from change, to embedding changes within change, to having
+change affect even more changes on an unpredictable timeline. Where does it end?
+
+Without a timeline. There is only the present now. Every change means the end of
+the world; children most definitely take it for granted, until they grow up and
+flip out. Then they can't wait for change, it can't happen too fast. Either way,
+every ending is a new beginning, a brand new world to explore, unknowns which
+were previously not known, meta-ignorance being lost. The ticking of imaginary
+time has been slowed down to a very real moment. Everything stands at a rest.
+
+Isn't that when most applications spend their time? The CPU certainly enjoys the
+company of its /idle/ processes. I know there is much more I wanted to say at this
+point, so while waiting on memory to come back I'll just get started where I am.
+It just feels right. The task manager won't even see I'm not working.
+
+[[./assets/one-louder.jpg]]
+
+* To Seed or not to Seed, Why is the Question
+
+#+BEGIN_QUOTE
+When I don't understand something, I just go on a journey to rediscover it.
+
+At which point it feels like I knew it all along. Such is the value of change.
+#+END_QUOTE
+
+Getting started, isn't that the same thing we're continuously trying to do with
+variables? They don't have a timeline to call their own, at least not the ones
+found in programming languages. Every moment could be their first or last for
+all they know. A variable holds on to the current value of the present. Nothing
+more, nothing less. Values don't change. But now I want it all to mean something
+else, to be the materialized view of such a relativistic sequence of events.
+
+First-class time is the modern holy grail of computing. Everyone's languages and
+their mother's tongue is learning =async/await= nowadays. I never enjoyed waiting;
+observing is much more fun than waiting, and to the same effect. Besides, a =Task=
+is a unit of work to be executed on a =Thread=, it's not the =Function= evaluating
+the actual work to do. A =Code= form is a parameter of =Work=, but we also need a
+parameter of our own as well. A =Data= form is this parameter for the work to do.
+
+I did mention =Haskell=, didn't I? Data is simple there. It just doesn't change.
+Code is simple there. It just doesn't do anything. Pure immutable rest. Sweet.
+It simplifies the development of programs where very complex logic takes place.
+Execution is delegated to the external world. Haskell does one thing and it does
+it very well: it evaluates. It's a modern Lisp dialect with types. I really like
+studying the languages, where else do we find such a lazy model of execution?
+
+Lazy, not in the sense of doing nothing, but in doing the minimum amount of work
+necessary. A noble goal in a world of low-power mobile devices never moving away
+from our hands. Unfortunately, it takes a lot more energy to decide what to do
+than it does to actually do it. Deciding what to work on is, well, work in and
+of itself. Haskell and its lower level runtime have to perform both these tasks.
+The comfort of safe habits has a cost in both space and time much greater than
+just running around with scissors, having fun with the infinite possibilities of
+undefined behavior here and then. Learn in a sandbox, then perform to audiences.
+
+There is the newer =Rust=, more or less =C++= trying to be another Lisp dialect. It
+has a different approach to safety, this time across the lifetime of variables.
+It lets you run around with scissors, but they've been strictly dulled. Free fun
+has been reduced to play dates. Haskell does not have to change, meanwhile Rust
+very carefully tries to control all its changes. They both end up manipulating
+state as an effect. Ironically, they both came up with more or less equivalent
+entities as a result and for entirely different reasons.
+
+=IORef= enables Haskell to introduce state under a purely good functional kingdom.
+=RefCell= enables Rust to introduce mutation outside the strict rule of its borrow
+checker. State and mutation. Why would we ever want such chaotic imaginations?
+They're the very variables these entire languages were built to escape. I think.
+I'm going back to Lisp. I miss the hammock design of =Clojure= and =ClojureScript=.
+
+There is still the same idea here, but it is seen slightly differently. There's
+a more general concept of =Identity=. It is a =Place= where a =Name= and a =Value= meet,
+even if only for a very short time. Its specialization is a =Sync= contract. For
+example, an =Atom= does compare-and-swap, an =Agent= runs a queue of changes, a =Ref=
+can only change as part of a transaction, a =Var= lifts common variables into the
+same mechanism. The big realization in going to the more abstract meaning behind
+specific types like =IORef= and =RefCell= is seeing the method begins to emerge from
+everywhere. If a variable is an identity, then so is a file, and an URI. Then it
+follows that entire databases, such as =Datomic=, also fits this idea of identity.
+
+There's one of my missing links. An =Application= should be a single identity. But
+then new problems emerge, and they're all related around the same idea. All of
+this still needs an initial value. Previously there was a large number of small
+one-to-one relations between names and values. Now there's only a single giant
+relation. It goes many-to-one to reduce events into the current value, and goes
+one-to-many to observe their effects. How will event handlers know what to do?
+How can components observe it all happening? How is this system bootstrapped?
+
+Reduction is easy, its the functional =reduce= form. It's parameterized on both
+=Code= and =Data=, but then it goes of and does its own thing, only to come back
+with the final result: =42=. It's really the synchronous form of =Async=. Or is it?
+They both take the same two arguments of code and data. Ah, but the reduction
+operator has to be invoked for each element of data, rather than once over it.
+What else has a similar function signature, but yields a sequence of results
+from an initial seed value?
+
+Iteration is probably what I'm looking at. Iterative software design is what we
+do all day, every day. This is clearly reflected in the functional =iterate= form.
+That's progress, but still not very interactive. Stillness is now animated, but
+it doesn't respond to any user command. It doesn't react to any external change.
+I did mention =Lisp=, didn't I? It has an interesting set of functions solving it.
+
+Lisp already has the ability to =integrate= a timeline of the entire application.
+Its called the =REPL=. Well, it doesn't exactly keep the timeline around, but the
+current state is a function of all previous user forms having been evaluated.
+That's already closer than using one set of methods to create a seed, the first
+state of the system, then use a completely different set of methods to grow it.
+Sounds odd? What's a game level then if not a giant static seed? Already baked!
+
+One doesn't even have to get into game development to see this in action. Our
+toolchains produce static artifacts which are then responsible of growing their
+internal state at runtime. Often they will seed that state from external files.
+What if the =await= of an =async= function needs a step to be paused and resumed?
+For example, it just wants to sit there and wait, but the user needs to restart.
+
+How can Lisp get around it then? That's where it gets a bit tricky. I'm not
+entirely sure where the initial state is. At first glance, the output of the
+compiler is the original value, whatever ends up in the =text= and =data= segments.
+But then I realized =eval= can keep growing the runtime as freely as the compiler
+could. Heck, it's even better at it. There will also sometimes be an =uneval= to
+dump the entire world state to disk, effectively creating a brand new program.
+That's fairly close to Prolog's application-as-a-database design I'm searching.
+
+Lisp's REPL is a fascinating discovery. It waits to =read= the user's input data,
+evaluates it as code, and =print= its result back to the user. And does it again,
+and again, and so on. It does so in a =loop= until asked to stop. Can this be made
+more general? The current type makes =Unix= looks like another Lisp dialect. Well
+almost, Lisp doesn't burden every program evaluation with text manipulations.
+
+What is happening there? First there's a perception of the world, a sensing of
+every elements of causality. Then there's evaluation whose result is producing
+an effect. Finally there's the execution, or making sure the world knows about
+it. This sounds like functional programming. Coming back to Haskell for a short
+moment, it's type would be =Comonad -> Monad=. Oh no! The REPL is really impure.
+
+I've just used the dirty blogging word. Now I have to write a tutorial about my
+current understanding of category theory. Those are the unwritten rules. Worse
+still, there's two inflections of that =Word= here. How can I leave this tarpit?
+How does one break down the REPL? I know, I'll defer to ancient wisdom. /All
+problems in computer science can be/ /solved by another level of indirection./
+
+#+BEGIN_SRC rust
+  read  : String -> Data
+  eval  : Data -> Data
+  print : Data -> String
+#+END_SRC
+
+[[./assets/meta.png]]
+
+* System-ΦλΔγ
+
+#+BEGIN_QUOTE
+Lambdaman runs into the room of classes, screams =A= and =B= loudly, then leaves.
+
+His change here has been spoken. Students heard symbols and went type struct.
+#+END_QUOTE
+
+Every iteration of the REPL is a relative change. Between changes, the system as
+a whole only ever observes the current snapshot. However, not only are the exact
+types unspecified, the whole pipeline is still using text at the very extremes.
+Clojure is a huge step forward, with its emphasis on immutable, persistent data
+structures. A big idea came with the thought of =Spec= as being runtime, dynamic
+type definitions. Sort of, kind of, if we squint really hard, don't listen to
+Rich when he says they are not types, and ignore everything else they can do.
+
+Still, some amount of /typing/ would be nice to have. Performance aside, the good
+aspect of types is that they provide a contract, a specification of the values
+which are safely allowed to inhabit a place. They limit the range of a domain.
+The problem with designing static types is that they inevitably end up having to
+change. There's no variable type system. There is such a thing as type variable,
+that is true, but those can only vary at compile time. Ironic how one possible
+implementation of static polymorphism is dynamically monomorphic in nature.
+
+What could be the more general type to =eval= then? On one hand there is =Category=
+theory to solve this, and on the other side data could be literally =Any= object.
+One is too static, the other is too dynamic. Should I try to discover kinematic
+types? Is there even such a thing? I'm just borrowing from physics objects now.
+Let's take another step back, how does a physics integration solve this problem?
+
+#+BEGIN_SRC rust
+  step : World -> World
+#+END_SRC
+
+That looks expensive to run and costly to implement. Big Oh-My-God complexity.
+But physics engines, at least those found in games, can't afford either of that,
+otherwise the simulation is jittery and the virtual world full of glitches to be
+exploited by speedrunners. Not only does it break the 4th wall of immersion, the
+entire =Void= of uncertainty is exposed, or repeats itself, or freezes hell over.
+Who knows? Who cares? We didn't define any of this behavior. It can't happen.
+
+How ironic, back in the day overclocking was all the rage. Making the CPU run
+the game as fast as possible. Speedrunning is when a player attempts the same.
+The goal is to reach the ending credits as fast as possible. Less time means
+less CPU cycles. More CPU cycles means more time. It's all really the same.
+
+Do gameplay developers all work on one giant =step= function? How could it ever
+account for every single entity type? Entities are usually decomposed into
+smaller components, and in this simplified example the physics subsystem only
+cares about =Body= and =Collider= components. Much like the transport service I
+hypothetically started with, the system only needs a partial entity. Moreover,
+these components are small enough to be batched together; basic =ECS= theory.
+
+Gameplay, the application logic, can then focus on implementing new, original
+systems of entity components. The existing =Code= and =Data= types can be reused and
+responsible of simulating physics. One small issue remains, however. The entire
+timeline can't be deterministic. Otherwise gamers would just be watching a very
+predictable movie. What happens inside the program is not specified at launch
+time. External events have to be integrated into the process before computing
+new frames of reference.
+
+Applications have a great deal of logic to implement. It's their main business.
+Clearly, they can't =step= the world everytime an event shows up, unless ticks are
+also a high frequency event. Even if systems could afford to step all the time,
+not every event can be handled from a single function. Otherwise we've bounced
+right back to =eval=. A middle ground has to be found. The old =WNDPROC= fits the
+role, being a single message handler for an entire window class, of which there
+is usually only one. I can't specify every event as just two integers, might as
+well use =Any= other type. Desktop apps have been largely abandonned in favor of
+Web apps for various reasons, so how does the Web solve this problem?
+
+A Web application, most often on the server-side of the stack, is really just a
+collection of event handlers between =REST=-ful routes and a database. The whole
+process between the wires is only concerned with =Motion=, ironically; it crosses
+the chasm between step and eval with smaller composable event handlers. They are
+combined together exactly like functions, lists, or tasks: through a =Combinator=.
+Just the same as a =Monad= structure. Here's that dreadfully fancy word again.
+
+#+BEGIN_SRC rust
+  serve : Request -> Response
+#+END_SRC
+
+For now, let's just picture the application as the combination of every =serve=
+function. Indeed, most of the scaffolding glueing together a web service is to
+fit the same signature outside-in. Every event handler has the one signature,
+which is also the signature of the whole service; a partially unspecified =API=.
+Service hosts can then do the same at a different scales; they'll instead route
+on the =Authority= rather than the =Path= of the requested resource. So is the =Web=
+formed. Within applications, its also not rare to group related handlers into
+related paths. Regardless of where you look at it from, composition is the same.
+
+It all forms one giant, highly dynamic tree on top of the entire Internet. Only
+when execution reaches the leaf handlers is the full schema of the requests and
+responses required. Every intermediate handler only needs to partially intercept
+the messages. Then, when control finally reaches these leaves, they usually do
+more than translate the request to a response as a purely functional operation.
+Just like the game engine, here the entire =World= has to pause so the handler can
+run, only then the =World= may resume. It's no different than the global =GC= pause.
+
+But wait, that's completely wrong. There's no such thing as pausing the world,
+or global GC pauses. Undefined behavior is only possible within a local runtime.
+There are only local pauses. Besides, the handler needs to be a pure function. I
+guess I do have to write that category theory tutorial now. Let me first take a
+detour again using Clojure. There, the general wisdom is to first try and model
+the domain with =Data=, if that doesn't work, try again with =Code=, and if all that
+fails, we fallback onto =Lisp=. I mean code generation. So let's start with data.
+
+That's fitting, in order to stay pure, effect handlers have no choice but to be
+stateless functions. Where does that lead me? Right back to =Data -> Data=, eval.
+Except it can be seen differently now. Handlers don't want to look at the =World=
+directly, they can be told about it. They also don't want to change the world,
+just describe what needs to be executed. This all sounds perfect for data now.
+One issue remains, what type can exist between the generic data and the specific
+application? How can we generalize cause and effect using bare data structures?
+
+We keep breaking it apart. Unlike the real world, here it works better that way.
+
+#+BEGIN_SRC rust
+  pull: Void -> Causes
+  work: Causes -> Effects
+  push: Effects -> Void
+#+END_SRC
+
+So we have a first function, =pull=, responsible to do stateful observations about
+the world. It just pulls that data right out of its intuition. It is describing
+every bit of information the event handler, =work=, needs in order to imagine the
+new state of the world. That description is then fed to the executor, =push=, who
+is now playing back the resulting data.
+
+The =Domain= of these observations, described here by =Causes=, is the =Comonad= data
+structure. The =Codomain= of the resulting changes, described here by =Effects=, is
+the =Monad= data structure. What a pleasing system of dual dualities. So there, a
+=Category= is plain old =Data=. Hopefully nobody was expecting formal mathematics in
+this explanation. Design is the informal organization of ideas, not their forms.
+
+All of this abstract lexicon is really there to lift a generic =Data -> Data= type
+into a partially specialized =Causes -> Effects=. But one which can now be called
+purely functional, and with all the exotic properties such a statement implies.
+There is still much to discuss on the subject of =Causes<T>= to =Effects<T>= as well
+as their possible combinators, which I leave to another essay entirely. It feels
+as if that one is going to be another long adventure of its own.
+
+To resume, the very building blocks of the Lisp REPL can be lifted to the purely
+functional counterparts, or rather the purely conceptual ones. Types have been
+specialized, but only partially. I enjoy organizing such ideas in a table, where
+new patterns of design are seen emerging:
+
+| Combinator | Lisp REPL | Pure PEER  | Function     | Form | State |
+|------------+-----------+------------+--------------+------+-------|
+| =Φ=          | Read      | Perception | Pull Causes  | Data | Void  |
+| =λ=          | Eval      | Evaluation | Logical Work | Code | Pure  |
+| =Δ=          | Print     | Execution  | Push Effects | Data | Void  |
+| =γ=          | Loop      | Recursion  | Do it again  | ??   | ??    |
+
+So there's my current generalization of the =REPL=, now as a smaller =PEER= in a
+larger system. If only everything was that simple. But now what is to happen at
+the end of this unlifted =Loop= step? Previously the cycle was either =Text -> Text=
+or =Data -> Data=, a meaningful loop. How can =Effects= feed back recursively into
+=Causes=? They just come in and out of the greater undefined =Void=. Are we doomed
+to lose homoiconicity in this unreal transition? Is there no escape from =Any= of
+this? How do I observe the results of these changes? Learn to code, they said!
+
+[[./assets/scotty.jpg]]
+
+* Graphics follow Gameplay
+
+#+BEGIN_QUOTE
+What do players want? Better looking cars.\\
+What do lispers want? Better looking cdrs.
+#+END_QUOTE
+
+Something fundamental is now different. So let's recap before going any further.
+So far there is a model to handle change in a purely functional manner, leaving
+behind a log of events relative to a snapshot of the world. The playback of this
+log deterministically reconstructs the total state of the application up to now.
+However, a problem was previously avoided, how is that central database queried?
+
+Indeed, up to this point no specific data type has been specified. How do types
+specify change anyways? They describe the observed relations of change, which is
+not change itself. The type of the function =add= is the same as the function =sub=.
+Both are =Num -> Num -> Num= over some numeric trait. I will leave dependent types
+out of the current scope, also being slightly outside of my understanding still.
+
+Good thing is, there's no more changes on this side. Everything is at rest, pure
+and immutable until the next frame of reference, an infinity of time away. Well
+almost. If applications don't ultimately interact with their users, what are we
+even making them for? That interaction event is a side-effect. More precisely,
+the =Cause= to an =Effect=. Users are really actors of the =Effect -> Void -> Cause=
+form, the missing link in the previous section. =Void= is really everything else.
+
+I know, I should not statically type the users. For now, they have nothing to
+interact with. All I have is a log of events and a normalized view of the world.
+These alone won't directly translate to visuals on the monitors, sounds in the
+speakers and packets over the network. None of these subsystems care about /every/
+effect which just happened, for one. And the entire world is far too big to run
+through every component and try to spot the differences in, too innefficient.
+
+But aren't those the building blocks of a database? Querying is their strength.
+Query power is exactly what's needed here. Previously the application was a bag
+of independent components, each varying with their own state at their own will.
+A direct relationship between the place of a value and the form to its function.
+Now not only is all state stripped from the place, it's been moved into another
+value. The state of every component is there, safely namespaced. Sounds crazy?
+
+Modern game engine developers are probably screaming =ECS= right now, and rightly
+so. It effectively sees the entire game world as a single variable. Not how you
+would've described it? Yeah, me neither, not too long ago. The database simile
+doesn't end there, there are also schemas and protocols to ECS. I must be mad.
+What of archetypes and jobs then? They're not in the acronym but very critical.
+Those are consuming tables and queries. The entire game universe is a centrally
+normalized store. But in most implementations, everything is statically defined.
+
+How do databases solve this? They use a query language, like =Datalog= or =Prolog=.
+Well, really it's still mostly plain old =SQL= and =Text=. No matter, the important
+idea is that they are all are variants of relational algebra. While we can't all
+agree on what the =Query= part of a =URI= means, we certainly can decide what is the
+one to use in here. At any rate, all of that isn't very useful without relations
+to leverage. Neither the flat log nor the recursive data structure tell me where
+precisely to look for the few bits and pieces of information a component needs.
+
+Here I think is where databases start having a bit of trouble. They are heavily
+optimized at modeling a moment in time. The world is now changing at a pace far
+too rapid to keep polling the database, and it is not well equipped to push back
+only the specific changes we care about. It's one thing to solve this issue for
+users and programs as units, it's much more complex for individual components.
+
+You see, in a database, at least the traditional ones, there are two fundamental
+units; tables and indices, and then variations of them or tools to support them.
+The database doesn't know about the application's currently displayed controls.
+It doesn't know the user has now changed to a different view, or has closed it.
+But that's no big deal, components just pull all this information into their
+model view, or is it their view model? It's all so complicated, how can users
+customize any of their components? Oh, they can't? Well, problem solved then.
+
+The downside of building applications from the composition of stateful objects
+is that every component change also changes the shape of the application. Gone
+is the beauty of =Request -> Response= modeling entire server-side clouds. How can
+data queries compose? How will components receive only the information they are
+interested in? It's not common practice to create new indices on the fly, or
+even compose them. Indeed, the current application model has a type signature:
+
+#+BEGIN_SRC rust
+  tradition : Tables -> Indexes -> Query -> Component
+#+END_SRC
+
+Imagine a simple user login button, the quintessential component example. What
+pieces of information does it need to render itself? The state of the user's
+session comes first, obviously. Depending on that state, the button either acts
+as a login or a logout. When the user is logged in, it's convenient to display
+their name and profile picture, a notifications count and... Yeah it grows out
+of scope really fast. Then users also ask to customize how the button looks and
+which features they want disabled. I made that notification! Why try to hide it?
+
+Suddenly, everything is variable again, yet I just said nothing changes anymore.
+When the common example isn't enough to properly fit the problem, going to the
+very extremes can be a useful twist in the journey. I've already used =Physics= as
+an example sub-system of change in the previous section, but here things are not
+the same; the world has already been changed. What observes change in such a
+simulation? The =Graphics= and =Acoustics= subsystems, obviously! Their output is
+directly seen and heard by the users themselves. How can they not react to that?
+
+Here too there can be multiple data sources. There's the system data, the game's
+assets, the user's mods, the network packets from other peers in the simulation.
+In the past, every game object would handle it all by themselves. The engine was
+just a big loop asking every object to move itself a little bit at every time.
+What is different now? Graphs. Lots of graphs. There are graphs everywhere. Of
+all kinds too. There's a shader graph, a render graph, a widget graph, an audio
+graph, a scene graph, a network graph. They are organized in a graph of graphs.
+
+There sure is a lot of graphics required to simply observe the user's gameplay.
+But these aren't our statically typed graphs of control flow. Oh no, they're the
+dual concept, its opposite; dynamically constructed graphs of data flow. Another
+inversion. But graphs aren't tables and indices, they're nodes and edges. How do
+we query a graph? This is an interesting idea, simply =Name= all nodes and leaves.
+Databases already do this, its the process of indexing, of organizing relations.
+This still does not yield composable queries. Changes are not being propagated.
+
+But the ideas of names, queries, graphs and dataflow is interesting. Now having
+the fundamental unit of storage be an append-only log of events makes sense. If
+the tables and indices are materialized views, why aren't the queries as well?
+These views are merely a mapping of new relations from existing views. Now it's
+queries everywhere; the state is a query of the event log, the index is a query
+of the state, and the components are queries of the indices. Isn't this looking
+like the idea of functional components? They're not objects. They're not even
+data. They're just lambda forms; code. Function composition is simple and easy.
+
+#+BEGIN_SRC rust
+  query : Names -> Observable
+#+END_SRC
+
+A query then becomes a named value stream. Each query is registered to a name,
+and defined as the functional transformation of preregistered queries. This is
+similar to the last section and its composition of =work= with routes, except here
+we are flowing values instead of routing events. Routing is a tree problem while
+dataflow is a graph problem. Events are first pushed into the system, then the
+observations of their effets is pulled by registering queries. At least in the
+wiring, once wired the arrows flip like a door. Pull is push and push is pull.
+
+Indeed, when an event arrives the system has to pull in the state of the world.
+The execution of their effects causes a cascade of reactions. Every time the
+value of a relation is refreshed in such a reaction, it pushes the materialized
+effects further into the graph. Ultimately this process reaches the leaves, or
+reaches a query where the previous changes causes no new relations to emerge.
+The lazy evaluation of Haskell emerges again; components don't do work if their
+dependencies don't change. The browser's =DOM= is efficient and responsive again.
+
+This makes the =EventLog= the root of such a graph, and the =Components= its leaves.
+And wiring it all is one big graph connecting the materialized views of =Queries=.
+But is /component/ the right word? =ECS= wording suddenly feels weird, data lives in
+materialized views now, queries, not in the components. The queries are named,
+however they're not entities by themselves. Components are now named entities
+too. That sounds like a more appropriate name. An =Entity= is a composition of
+ideas taking form. There's already our top level =Identity= as the local world.
+
+#+BEGIN_SRC rust
+  entity : Observables -> Model
+#+END_SRC
+
+These entities produce the view models. Changing the current set of all active
+entities yields a different graph of materialized queries. Components are added
+and removed as side effects, intermediate queries enable or disable themselves
+in turn. This is very convenient, on every frame of reference we know precisely
+what has changed, down to the last relation. Even better, the entire graph is
+made out of pure functions, including the components I just renamed to entities.
+
+This is great, but the monitor is still black, the speaker still silent. Fair,
+however we now have complete data models for every entity. Whether it is meshes
+and materials or controls and styles, the remaining work is again well studied.
+I therefore won't go into it to much detail, other than to say these areas have
+also seen design changes in recent years. For instance, graphics have moved from
+the comfort of the well-managed =D3D11= and =OpenGL= to the unsafe =D3D12= and =Vulkan=.
+User interfaces have moved from the statically typed desktop of =Win32= and =Cocoa=
+into the dynamically typed web of =HTML=, =CSS= and =JavaScript=. It's all entangled.
+
+The primary feature all of these paradigm shifts is always a relaxation of the
+rules. It becomes more complex for application developers to directly program.
+However, they are not the target audience of these systems. Engine developers
+are. This is where domain knowledge becomes critically important to understand.
+The good thing is, just like causes and effects, their number is tiny next to
+the countless number of possible changes and entities. The stateful parts are
+pushed to the edges and solved once. Where they can be transported in batches.
+
+Does the UI developer care how the browser implements its documents and styles?
+Does the gameplay developer care how the engine implements its assets? Knowing
+of their existence is useful at a high level, but domain knowledge isn't needed.
+All we care about at this level is that our entity models are visible to the
+user, so they may interact with them. It's all returning into the great =Void=.
+
+#+BEGIN_SRC rust
+  domain : Models -> Void
+#+END_SRC
+
+I don't know what will happen next. Isn't this exciting? I sure hope I'll get to
+find out soon. Hey, what's that little red button over there? Says /Don't Panic!/
+
+[[./assets/ludicrous.jpg]]
+
+* The Design Of Everyday Design
+
+#+BEGIN_QUOTE
+/Indeed, since the book was published, a whole academic field has grown up around/
+/the idea of "design methods" - and I have been hailed as one of the leading/
+/exponents of these so-called design methods. I am very sorry that this has/
+/happened, and want to state, publicly, that I reject the whole idea of design/
+/methods as a subject of study, since I think it is absurd to separate the study/
+/of designing from the practice of design. In fact, people who study design/
+/methods without also practicing design are almost always frustrated designers/
+/who have no sap in them, who have lost, or never had, the urge to shape things./
+/Such a person will never be able to say anything sensible about "how" to shape/
+/things either./
+#+END_QUOTE
+
+Was it [[https://www.amazon.com/Design-Essays-Computer-Scientist/dp/0201362988][Fred Brooks]], [[https://www.amazon.com/Design-Everyday-Things-Revised-Expanded/dp/0465050654][Don Norman]] or [[https://www.amazon.com/Notes-Synthesis-Form-Christopher-Alexander/dp/0674627512][Christopher Alexander]] who wrote this one book
+I'm refering to? I should not have consumed them all at the same time. They most
+certainly helped me better organize my ideas, so in the end it did work out. Now
+I'm seeing abstract forms and functions everywhere. There's a lot of ideas left
+to organize, and concrete implementations to prototype and experiment with.
+
+This is a good time to end, I've already written quite a lot more than I did set
+out to. What I've covered here gives me much to think about, more questions to
+find the answers to, and more research to do. Solutions are scattered all over
+the place, the works of so many brilliant individuals before me. I am is merely
+trying to glue it together differently. A nice form of indirect collaboration.
+
+Now there's an emerging buzzword. /Collaboration/. The idea of sharing the design
+process. Everyone working simultaneously on the same system, live without pause.
+Continuously adding more definitions of =work=, crafting a new =entity= one after
+another. It's all safe now, they're pure enough to test independently in the
+small before pushing them into the larger system.
+
+To conclude, the following is a potential set of schematics to such a system.
+It's a generalization of the design of [[https://day8.github.io/re-frame/re-frame/][re-frame]], whose diagram and ideas is
+continuously repeated over and over the previously mentioned books of design.
+
+Not a design or a pattern, an actual software scale:
+
+#+BEGIN_SRC rust
+  // Void of the undefined universe, non-deterministic
+  world : IO
+
+  // Change Integration (IO -> Server -> Identity)
+  pull : Void -> Causes
+  work : Causes -> Effects
+  push : Effects -> Void
+
+  // Application as a global history, deterministic
+  local : Identity
+
+  // Change Differentiation (Identity -> Client -> IO)
+  query  : Symbol -> Observable
+  entity : Observables -> Model
+  domain : Models -> Void
+#+END_SRC
+
+Because it scales. D'uh! From systems in the small to systems in the large.
+
+I want to build this instrument, design applications using it, see how they
+sounds. No time to get excited, there is much work and research left to do.
+
+What happens when all the intermediate steps of an algorithm can be networked?\\
+What if every peer is free to choose its implementation runtime and language?
+
+I'm right back where I started! Now I definitely want to revisit these ideas of
+=Protocol= and =Schema=. But this will be for a next time. I need a long rest from
+all this co-motion. After all this talk of virtual worlds, I'm [[https://www.amazon.com/Sciences-Artificial-Herbert-Simon/dp/0262193744][going outside]]!
+
+Wish me luck. And thanks for reading!
+
+[[./assets/tripot.jpg]]
