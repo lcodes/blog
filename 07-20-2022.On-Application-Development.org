@@ -5,8 +5,10 @@
 #+BEGIN_QUOTE
 /Conan, what is hardest in artificial life?/
 
-To resolve your ideas,\\
-to see them realized before you,\\
+To resolve your ideas,
+
+to see them realized before you,
+
 and to hear the commentary of their meaning.
 #+END_QUOTE
 
@@ -137,8 +139,10 @@ It's hidden from the URI, but still exists as a subcomponent of the Authority.
 * There is a place and value for everything
 
 #+BEGIN_QUOTE
-How many threads does it take to change one lightbulb?\\
-How many threads does it take to change two lightbulbs?\\
+How many threads does it take to change one lightbulb?
+
+How many threads does it take to change two lightbulbs?
+
 How many threads does it take to change all lightbulbs?
 #+END_QUOTE
 
@@ -657,7 +661,8 @@ this? How do I observe the results of these changes? Learn to code, they said!
 * Graphics follow Gameplay
 
 #+BEGIN_QUOTE
-What do players want? Better looking cars.\\
+What do players want? Better looking cars.
+
 What do lispers want? Better looking cdrs.
 #+END_QUOTE
 
@@ -909,7 +914,8 @@ Because it scales. D'uh! From systems in the small to systems in the large.
 I want to build this instrument, design applications using it, see how they
 sounds. No time to get excited, there is much work and research left to do.
 
-What happens when all the intermediate steps of an algorithm can be networked?\\
+What happens when all the intermediate steps of an algorithm can be networked?
+
 What if every peer is free to choose its implementation runtime and language?
 
 I'm right back where I started! Now I definitely want to revisit these ideas of
