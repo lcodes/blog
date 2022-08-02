@@ -1,0 +1,968 @@
+** Software Development as an Interactive Activity
+
+#+BEGIN_QUOTE
+We were after the C++ programmers. We managed to drag a lot of them about
+halfway to Lisp. -- Guy Steele
+#+END_QUOTE
+
+A curated set of references towards a language for live development. No reboots.
+
+Getting to a working implementation of such a language on .NET is ideally the
+goal. Not reinventing the wheel, instead being backwards compatible to existing
+technologies. A new link from IDEs to Unity and Unreal for experts and indies.
+Instant feedback to simplify education, observation, creation and optimization.
+
+/Note: only the first author is cited for brevity, apologies to the uncited./
+
+*** *TL;DR*: Simplicity is hard, being concise harder, conveying ideas hardest.
+
+#+BEGIN_QUOTE
+Do we have any software that complicated today? Complex enough and self-aware
+enough to be considered conscious from an ethical standpoint? Probably not. But
+I think we'll get there someday, and by then I sure hope we're not developing
+software the way we do today, with a compile/reboot cycle. -- Steve Yegge
+#+END_QUOTE
+
+I tried to pick some of the most influential references to this work:
+
+- Chris Ford's [[https://www.youtube.com/watch?v=Mfsnlbd-4xQ][Functional Composition]] :: Paul Graham wrote about [[http://www.paulgraham.com/hp.html][Hackers &
+  Painters]], this is the missing live demo. From sine wave to music; no restarts.
+- Steve Yegge's [[http://steve-yegge.blogspot.com/2007/01/pinocchio-problem.html][The Pinocchio Problem]] :: Describes /living software/. Steve's blog
+  introduced me to Emacs, Lisp, Clojure, and thinking of systems in meta terms.
+- Andy Gavin's [[https://all-things-andy-gavin.com/2011/03/12/making-crash-bandicoot-gool-part-9/][Making Crash Bandicoot: GOOL]] :: Lisp for gamedev. /Allow the
+  language to be brought up to the level of the problem./ See also Dan Liebgold's
+  [[https://www.youtube.com/watch?v=oSmqbnhHp1c][Racket on the Playstation 3]] and Jason Gregory's [[https://www.amazon.com/Engine-Architecture-Third-Jason-Gregory/dp/1138035459][Game Engine Architecture]].
+- Mike Acton's [[https://www.youtube.com/watch?v=rX0ItVEVjHc][Data-Oriented Design and C++]] :: High-performance from systematic
+  understanding of hardware and the domain. Value of measurements and alternate
+  implementations. See also John Carmack's [[https://www.youtube.com/watch?v=P6UKhR0T6cs][Physics of Light and Rendering]].
+- Rich Hickey's [[https://www.youtube.com/watch?v=ROor6_NGIWU][Language of the System]] :: Open scale problems. See also [[https://www.youtube.com/watch?v=QCwqnjxqfm][Design,
+  Composition and Performance]], [[https://www.youtube.com/watch?v=f84n5oFoZBc][Hammock Driven Development]] and [[https://www.infoq.com/presentations/Are-We-There-Yet-Rich-Hickey/][Are We There Yet?]].
+  Tim Sweeney's [[https://www.st.cs.uni-saarland.de/edu/seminare/2005/advanced-fp/docs/sweeny.pdf][Next Mainstream Programming Language]] is also of interest.
+- Guy Steele's [[https://www.youtube.com/watch?v=dCuZkaaou0Q][It's Time for a New Old Language]] :: /The most popular programming/
+  /language in computer science has no compiler, interpreter or specification./
+  See also [[https://www.youtube.com/watch?v=lw6TaiXzHAE][Growing a Language]] and Joe Armstrong's [[https://www.youtube.com/watch?v=lKXe3HUG2l4][Mess We're In]].
+- Bret Victor's [[https://www.youtube.com/watch?v=agOdP2Bmieg][Humane Representation of Thought]] :: A unique perpective on the
+  need for interactivity at every level. See also Alan Kay's [[https://www.youtube.com/watch?v=gTAghAJcO1o][Future Doesn't Have
+  to be Incremental]] and Gerald Sussman's [[https://www.youtube.com/watch?v=HB5TrK7A4pI][We Really Don't Know How to Compute!]]
+- Kálmán Réti's [[https://www.youtube.com/watch?v=jACcgLfyiyM][History of Symbolics Lisp Machines]] :: The [[https://www.amazon.com/Dream-Machine-Licklider-Revolution-Computing/dp/0670899763][Dream Machine]]. Lisp at
+  the hardware, operating system and application level. The first game engine.
+
+Such a short list is surprisingly easy to grow. Everything is a rabbit hole.
+
+*** Preface
+
+#+BEGIN_QUOTE
+The best way to predict the future is to invent it. -- Alan Kay
+#+END_QUOTE
+
+Old ideas are especially interesting to me, for the resources they had access
+to, both the literature and hardware power, were a small drop in the ocean we
+enjoy today. They needed to imagine, discover, invent and design every bit of
+software on top of every bit of hardware, and every single bit was important.
+
+Archaic ideas, long before the short time since our invention of Science, have
+reached us through tinkering and artwork. Timeless, ancient arts of hacking.
+Certainly, computers have enabled the creation of great artistic productions.
+Somewhere along the way, however, complexity grew so large it became the main
+object developers talk of; solving it incrementally one small leak at a time.
+Developer conferences seldom talk of the dream machine and its possibilities.
+
+Modern ideas have come a long way, and I am grateful for countless experiences
+and opportunities to work with them at scale, both in the large and the small.
+However, it also makes me realize that software, as an intustry, has gone from
+the invention of cars to the continuous delivery of faster horses; a diminished
+Return On Iteration.
+
+When I use low-level languages I quickly miss the high-level ones as wiring.
+When I use static type systems I quickly miss the flexibility of dynamic ones.
+When I contribute to large interactive productions I quickly miss Clojure's best
+features: simplicity, robustness, stability. When I work on applications without
+/re-frame/ I quickly miss responsive time-travel. When debugging or iterating on
+problems I quickly miss the REPL to drive development. Nothing just works.
+
+The goal of this research is to re-imagine software development, inspired from
+old and proved ideas, leveraging what is now almost a century of previous work,
+and with hindsights from decades of experience across different domains, using
+every part of computers at all levels of scale on most current platforms. It
+leaves behind all preconceptions of development processes and familiarity, and
+instead tries to imagine the software of the next century on our devices.
+
+I truly believe computing as a whole, from development to usage, is still just
+the tip of a much simpler and larger iceberg. We've only scratched the surface.
+The more I dig the more a picture forms, so I must be on to something. Besides,
+someone has to remove the word /Science/ from /Computer/ or invent one and name it.
+Real world software should be made more impressive than what is seen in movies.
+
+I think.
+
+*** Introduction
+
+#+BEGIN_QUOTE
+Everything should be made as simple as possible, but not any simpler. -- Albert
+Einstein
+#+END_QUOTE
+
+This document is an ever growing collection of resources, originally scattered
+around notes, code comments and even plain old memory for the longest of time.
+
+I certainly admit to not having consumed all this material, yet. This research
+is an ongoing work in progress, with this document acting both as its citations
+and backlog. My very own Jira without leaving the comfort of Emacs. Some books
+haven't been ordered, such as the molecular biology ones, for both being already
+halfway through an entire bookshelf, and having little funds to grow it any
+faster. Time is the one resource I possess in greatest quantity at the moment.
+
+There exists no active medium allowing us to design our own ways of looking at
+information. Not from the point of view of application users as far as I know.
+Once an application is running, it's no longer possible to break it down into
+parts to see how it works or rearrange the components, feed more data sources,
+change how it looks. Worse, individual objects can't be directly manipulated.
+
+Tinkering ignores syntactic structures, instead going deep into the way things
+are, taking them apart, trying to fit them in a semantic kind of relationship.
+The process of persistently asking /why/ followed by /what if/, then taking a step
+forward to observe how these relationships change, and adjust the data models.
+
+The most wonderful creations from the use of computers were not made by trained
+architects but by the people. The idea that people should design for themselves
+their own devices, applications, and content production. Everyone an indie dev,
+composing with forms of functionality made by both domain and language experts.
+
+This library has only a few guiding principles:
+- Change of thought :: mind bending, game changing, or just exposes the [[http://www.paulgraham.com/schlep.html][schlep]].
+- Match experiences :: ideas are good, knowledge better, perspectives are best.
+- Highly performant :: scale orders of magnitude, either in the large or small.
+- Syntax comes last :: semantics, composition, simplicity, performance instead.
+- Method and result :: imagine the process behind the result, no methodologies.
+- Ignore all trends :: no time spent on blockchain, nfts, web3, ads, metaverse.
+- Follow my passion :: curiously enjoyable content, doing it all day every day.
+
+Composing from the unique perspective of decades of experiences, both personal
+and professional, with inspirations from every corner of software development:
+
+- Forth, Lisp, SmallTalk :: simplicity, bootstrap, first-class compiler, codegen
+- JavaScript, TypeScript :: prototype inheritance, gradual types, union types
+- F#, Haskell, Idris :: managed effects, categories, algebraic & dependent types
+- Prolog, Datomic :: app-as-a-db, introspection, relational information model
+- Clojure :: model of spacetime, persistent data structures, hammock philosophy
+- Rust :: model of ownership, mid-level IR, traits (also typeclasses, protocols)
+- C++, Carbon, Fortran, D, Nim, Julia :: high-performance, push-to-the-limits
+- LLVM, CLR, JVM, WASM :: runtime env, threading model, memory model, JIT, ASM
+- Desktop, Console, Mobile, Web :: user env, native libraries, UX idioms & feels
+- CPU, GPU, FPGA :: I/O env, physical constraints & limits, machine data model
+
+And last but not least, *Emacs* as a modern example of /living software/ and *vi* as
+a modern example of /composable language/. The spaces-vs-tabs debate is ignored.
+
+P.S. Some innovative Emacs packages include the [[https://github.com/doomemacs/doomemacs][Doom Emacs]] and [[https://github.com/syl20bnr/spacemacs][Spacemacs]] setups,
+     the [[https://magit.vc/][Magit]] interactive Git porcelain and the incredible [[https://orgmode.org/features.html][Org Mode]] organizing
+     these notes. Org-mode also supports polyglot literate notebooks with [[https://orgmode.org/worg/org-contrib/babel/][Babel]].
+     See also [[https://www.youtube.com/watch?v=JWD1Fpdd4Pc][Evil Mode: Or, How I learned to Stop Worrying and Love Emacs]]. This
+     is the first editor to support, no question. Emacs is dead, long live Emacs.
+
+** References
+
+*** Languages
+
+#+BEGIN_QUOTE
+You wanted a banana but what you got was a gorilla holding the banana and the
+entire jungle. -- Joe Armstrong
+#+END_QUOTE
+
+**** Scratch the Surface
+
+[[https://github.com/LLK/][Scratch]]
+
+[[https://day8.github.io/re-frame/re-frame/][re-frame]]
+
+[[https://www.wolframalpha.com/][Wolfram Alpha]]
+
+[[https://observablehq.com/staff-picks][Observable HQ]]
+
+[[https://blueprintsfromhell.tumblr.com/][Visual Scripting]]
+
+[[https://i.imgur.com/cbfAR0K.jpg][StarCraft's Trigger Editor]]
+
+**** Existing Works
+
+[[https://github.com/damelang/nile][Nile]]
+
+[[https://github.com/LuaJIT/LuaJIT][LuaJIT]], [[https://github.com/mozillazg/pypy][PyPy]]
+
+[[https://github.com/v8/v8][JavaScript]], [[https://github.com/microsoft/TypeScript][TypeScript]], [[https://github.com/elm][Elm]], [[https://github.com/clojure/clojurescript][ClojureScript]]
+
+[[https://github.com/openjdk/][OpenJDK - Java]], [[https://github.com/clojure][Clojure]]
+
+[[https://github.com/dotnet][.NET Platform - C#, F#]]
+
+[[https://github.com/erlang][BEAM - Erlang]]
+
+[[https://github.com/emacs-mirror/emacs][Emacs]], [[https://github.com/racket][Racket]], [[https://github.com/JuliaLang/julia][Julia]]
+
+[[https://github.com/llvm/llvm-project][LLVM - C++]], [[https://liveplusplus.tech/][Live++]], [[https://github.com/carbon-language][Carbon]], [[https://github.com/dlang][D]], [[https://github.com/nim-lang][Nim]], [[https://github.com/rust-lang/rust][Rust]]
+
+[[https://github.com/bsnes-emu/bsnes][bsnes]], [[https://github.com/qemu/qemu][qemu]]
+
+*** Papers
+
+#+BEGIN_QUOTE
+Any sufficiently complicated C or Fortran program contains an ad hoc,
+informally-specified, bug-ridden, slow implementation of half of Common Lisp. --
+Greenspun's tenth rule of programming
+#+END_QUOTE
+
+**** Software Design
+
+[[https://www.cs.tufts.edu/~nr/cs257/archive/john-mccarthy/recursive.pdf][John McCarthy - Recursive Functions of Symbolic Expressions and Their Computation by Machine, Part I - 1960]]
+
+[[http://www.softwarepreservation.org/projects/LISP/book/LISP%201.5%20Programmers%20Manual.pdf][John McCarthy - LISP 1.5 Programmer's Manual - 1962]]
+
+[[https://www.scribd.com/doc/61812037/Barton-B5000][R. S. Barton - A New Approach to the Functional Design of a Digital Computer - 1961]]
+
+[[http://www.ibm-1401.info/Meta-II-schorre.pdf][D. V. Schorre - META II: A Syntax-oriented Compiler Writing Language - 1964]]
+
+[[http://www.cba.mit.edu/events/03.11.ASE/docs/Minsky.pdf][Marvin L Minsky - Computation: Finite and Infinite Machines - 1967]]
+
+[[https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.376.2375&rep=rep1&type=pdf][David A. Fisher - Control Structures for Programming Languages - 1970]]
+
+[[https://wiki.eecs.yorku.ca/course_archive/2015-16/W/3342/_media/wiki:hoare-turing-1980.pdf][C.A.R. Hoare - The Emperor's Old Clothes - 1980]]
+
+[[http://www-scf.usc.edu/~csci201/lectures/Lecture11/boehm1988.pdf][Barry W. Boehm - A Spiral Model of Software Development and Enhancement - 1988]]
+
+[[https://cr.yp.to/bib/1995/wirth.pdf][Niklaus Wirth - A Plea for Lean Software - 1995]]
+
+[[https://www2.ccs.neu.edu/racket/pubs/icfp99-ffkf.pdf][Matthew Flatt - Programming Languages as Operating Systems (or Revenge of the Son of the Lisp Machine) - 1999]]
+
+[[https://www.ics.uci.edu/~fielding/pubs/dissertation/fielding_dissertation.pdf][Roy Thomas Fielding - Architectural Styles and the Design of Network-based Software Architectures - 2000]]
+
+[[https://erlang.org/download/armstrong_thesis_2003.pdf][Joe Armstrong - Making Reliable Distributed Systems in the Presence of Software Errors - 2003]]
+
+[[http://curtclifton.net/papers/MoseleyMarks06a.pdf][Ben Moseley - Out of the Tar Pit - 2006]]
+
+[[https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.448.497&rep=rep1&type=pdf][Robert Grimm - Better Extensibility through Modular Syntax - 2006]]
+
+[[http://www.tinlizzie.org/~awarth/papers/dls07.pdf][Alessandro Warth - OMeta: an Object-Oriented Language for Pattern Matching - 2007]]
+
+[[https://www.cs.tufts.edu/comp/150FP/archive/luc-maranget/jun08.pdf][Luc Maranget - Compiling Pattern Matching to good Decision Trees - 2008]]
+
+[[https://users.cs.northwestern.edu/~robby/pubs/papers/jfp2009-sdfsfmkcr.pdf][Michael Sperber - Revised Report on the Algorithmic Language Scheme - 2009]]
+
+**** Systems
+
+[[https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.175.1230&rep=rep1&type=pdf][J.M.P. van Waveren - The Quake III Arena Bot - 2001]]
+
+[[https://github.com/nornagon/jonesforth/blob/master/jonesforth.S][Richard W.M. Jones - Jonesforth - 2009]]
+
+[[https://www.gamedevs.org/uploads/tribes-networking-model.pdf][Mark Frohnmayer - The TRIBES Engine Networking Model - 2009]]
+
+*** Documents
+
+#+BEGIN_QUOTE
+It all depends on how we look at things, and not on how they are in themselves.
+-- Carl Jung
+#+END_QUOTE
+
+**** Design
+
+[[http://www.paulgraham.com/avg.html][Paul Graham - Beating the Averages - 2001]]
+
+[[http://www.paulgraham.com/langdes.html][Paul Graham - Five Questions about Language Design - 2001]]
+
+[[http://www.paulgraham.com/diff.html][Paul Graham - What Made Lisp Different - 2002]]
+
+[[http://www.paulgraham.com/icad.html][Paul Graham - Revenge of the Nerds - 2002]]
+
+[[http://www.paulgraham.com/desres.html][Paul Graham - Design and Research - 2003]]
+
+[[http://www.paulgraham.com/hundred.html][Paul Graham - The Hundred-Year Language - 2003]]
+
+[[http://www.paulgraham.com/hp.html][Paul Graham - Hackers and Painters - 2003]]
+
+[[http://www.paulgraham.com/schlep.html][Paul Graham - Schlep Blindness - 2012]]
+
+[[https://www.joelonsoftware.com/2002/11/11/the-law-of-leaky-abstractions/][Joel Spolsky - The Law of Leaky Abstractions - 2002]]
+
+[[https://www.joelonsoftware.com/2005/12/29/the-perils-of-javaschools-2/][Joel Spolsky - The Perils of JavaSchools - 2005]]
+
+[[https://www.st.cs.uni-saarland.de/edu/seminare/2005/advanced-fp/docs/sweeny.pdf][Tim Sweeney - The Next Mainstream Programming Language - 2006]]
+
+[[http://steve-yegge.blogspot.com/2006/03/execution-in-kingdom-of-nouns.html][Steve Yegge - Execution in the Kingdom of Nouns - 2006]]
+
+[[http://steve-yegge.blogspot.com/2007/02/next-big-language.html][Steve Yegge - The Next Big Language - 2007]]
+
+[[http://steve-yegge.blogspot.com/2007/01/pinocchio-problem.html][Steve Yegge - The Pinocchio Problem - 2007]]
+
+[[http://steve-yegge.blogspot.com/2008/06/done-and-gets-things-smart.html][Steve Yegge - Done, and Gets Things Smart - 2008]]
+
+[[http://steve-yegge.blogspot.com/2008/10/universal-design-pattern.html][Steve Yegge - The Universal Design Pattern - 2008]]
+
+[[http://steve-yegge.blogspot.com/2008/10/programmers-view-of-universe-part-1.html][Steve Yegge - A programmer's view of the Universe, part 1: The fish - 2008]]
+
+[[http://steve-yegge.blogspot.com/2008/12/programmers-view-of-universe-part-2.html][Steve Yegge - A programmer's view of the Universe, part 2: Mario Kart - 2008]]
+
+[[http://steve-yegge.blogspot.com/2009/05/programmers-view-of-universe-part-3.html][Steve Yegge - A programmer's view of the Universe, part 3: The Death of Richard Dawkins - 2009]]
+
+[[https://gist.github.com/chitchcock/1281611][Steve Yegge - Google Platforms Rant - 2011]]
+
+[[http://steve-yegge.blogspot.com/2012/03/borderlands-gun-collectors-club.html][Steve Yegge - The Borderlands Gun Collector's Club - 2012]]
+
+[[https://www.gamedeveloper.com/programming/opinion-parallel-implementations][John Carmack - Opinion: Parallel Implementations - 2011]]
+
+[[https://www.gamedeveloper.com/programming/in-depth-functional-programming-in-c-][John Carmack - In-depth: Functional programming in C++ - 2012]]
+
+**** Systems
+
+[[https://www.gamedeveloper.com/programming/1500-archers-on-a-28-8-network-programming-in-age-of-empires-and-beyond][Paul Bettner - 1500 Archers on a 28.8: Network Programming in Age of Empires and Beyond - 2001]]
+
+[[https://all-things-andy-gavin.com/2011/10/25/lispings-ala-john-mccarthy/][Andy Gavin - Lispings ala John McCarthy - 2011]]
+
+[[https://all-things-andy-gavin.com/2011/03/12/making-crash-bandicoot-gool-part-9/][Andy Gavin - Making Crash Bandicoot: GOOL (part 9) - 2012]]
+
+[[https://www.jagregory.com/abrash-black-book/][Michael Abrash - Graphics Programming Black Book - 1997]]
+
+[[https://fabiensanglard.net/quakeSource/][Fabien Sanglard - Quake Engine Code Review - 2009]]
+
+[[https://fabiensanglard.net/quake2/][Fabien Sanglard - Quake 2 Source Code Review - 2011]]
+
+[[https://fabiensanglard.net/quake3/index.php][Fabien Sanglard - Quake 3 Source Code Review - 2012]]
+
+[[https://fabiensanglard.net/doom3/][Fabien Sanglard - Doom3 Source Code Review - 2012]]
+
+[[https://fabiensanglard.net/doom3_bfg/][Fabien Sanglard - Doom3 BFG Source Code Review - 2013]]
+
+[[https://gafferongames.com/categories/networked-physics/][Glenn Fiedler - Networked Physics - 2004]]
+
+[[https://blog.datomic.com/2017/01/the-ten-rules-of-schema-growth.html][Datomic Blog - The Ten Rules of Schema Growth - 2016]]
+
+[[https://en.wikibooks.org/wiki/Write_Yourself_a_Scheme_in_48_Hours][WikiBooks - Write Yourself a Scheme in 48 Hours]]
+
+[[https://llvm.org/docs/tutorial/][Kaleidoscope: Implementing a Language with LLVM]]
+
+[[https://www.linuxfromscratch.org/blfs/][Gerard Beekmans - Beyond Linux From Scratch - 1998]]
+
+**** Implementations
+
+[[https://developer.valvesoftware.com/wiki/Latency_Compensating_Methods_in_Client/Server_In-game_Protocol_Design_and_Optimization][Yahn W. Bernier - Latency Compensating Methods in Client/Server In-game Protocol Design and Optimization - 2001]]
+
+[[https://developer.valvesoftware.com/wiki/Source_Multiplayer_Networking][Valve - Source Multiplayer Networking - ??]]
+
+[[https://preshing.com/20111118/locks-arent-slow-lock-contention-is/][Jeff Preshing - Locks Aren't Slow; Lock Contention Is - 2011]]
+
+[[https://preshing.com/20120208/a-look-back-at-single-threaded-cpu-performance/][Jeff Preshing - A Look Back at Single-Threaded CPU Performance - 2012]]
+
+[[https://preshing.com/20120913/acquire-and-release-semantics/][Jeff Preshing - Acquire and Release Semantics - 2012]]
+
+[[https://preshing.com/20120930/weak-vs-strong-memory-models/][Jeff Preshing - Weak vs. Strong Memory Models - 2012]]
+
+[[https://preshing.com/20121019/this-is-why-they-call-it-a-weakly-ordered-cpu/][Jeff Preshing - This Is Why They Call It a Weakly-Ordered CPU - 2012]]
+
+[[https://preshing.com/20120612/an-introduction-to-lock-free-programming/][Jeff Preshing - An Introduction to Lock-Free Programming - 2012]]
+
+[[https://preshing.com/20120710/memory-barriers-are-like-source-control-operations/][Jeff Preshing - Memory Barriers Are Like Source Control Operations - 2012]]
+
+[[https://preshing.com/20120625/memory-ordering-at-compile-time/][Jeff Preshing - Memory Ordering at Compile Time - 2012]]
+
+[[https://preshing.com/20120515/memory-reordering-caught-in-the-act/][Jeff Preshing - Memory Reordering Caught in the Act - 2012]]
+
+[[https://preshing.com/20130618/atomic-vs-non-atomic-operations/][Jeff Preshing - Atomic vs. Non-Atomic Operations - 2013]]
+
+[[https://preshing.com/20130702/the-happens-before-relation/][Jeff Preshing - The Happens-Before Relation - 2013]]
+
+[[https://preshing.com/20130823/the-synchronizes-with-relation/][Jeff Preshing - The Synchronizes-With Relation - 2013]]
+
+[[https://preshing.com/20150402/you-can-do-any-kind-of-atomic-read-modify-write-operation/][Jeff Preshing - You Can Do Any Kind of Atomic Read-Modify-Write Operation - 2015]]
+
+**** Miscellaneous
+
+[[https://gist.github.com/nifl/1178878][Jim Dennis - Your problem with Vim is that you don't grok vi - Stack Overflow]]
+
+[[https://www.seebs.net/faqs/hacker.html][Peter Seebach - The Hacker FAQ - 1995]]
+
+[[https://www.seebs.net/faqs/manager.html][Peter Seebach - The Manager FAQ - 2000]]
+
+[[https://nehe.gamedev.net/tutorial/lessons_01__05/22004/][NeHe Productions - Legacy OpenGL Tutorials - 1997]]
+
+[[https://www.jwz.org/doc/java.html][Jamie Zawinski - java sucks. - 1997]]
+
+[[http://ravimohan.blogspot.com/2007/04/learning-from-sudoku-solvers.html][Ravi Mohan - Learning From Sudoku Solvers - 2007]]
+
+[[https://blog.osteele.com/2004/11/ides][Oliver Steele - The IDE Divide - 2004]]
+
+[[http://harmful.cat-v.org/software/ruby/rails/is-a-ghetto][Zed Shaw - Rails Is A Ghetto - 2007]]
+
+[[https://97-things-every-x-should-know.gitbooks.io/97-things-every-programmer-should-know/content/en/thing_27/][Anders Norås - Don't Just Learn the Language, Understand its Culture - 2010]]
+
+[[https://97-things-every-x-should-know.gitbooks.io/97-things-every-programmer-should-know/content/en/thing_72/][Jason P Sage - Reinvent the Wheel Often - 2010]]
+
+[[https://97-things-every-x-should-know.gitbooks.io/97-things-every-programmer-should-know/content/en/thing_53/][Walter Bright - The Linker Is Not a Magical Program - 2010]]
+
+[[https://eev.ee/blog/2012/04/09/php-a-fractal-of-bad-design/][Eevee - PHP: A Fractal of Bad Design - 2012]]
+
+https://wiki.c2.com/?UnskilledAndUnawareOfIt
+
+*** Books
+
+#+BEGIN_QUOTE
+The best book on programming for the layman is 'Alice in Wonderland', but that's
+because it's the best book on anything for the layman. -- Alan Perlis
+#+END_QUOTE
+
+**** Design
+
+[[https://www.amazon.com/Structure-Scientific-Revolutions-50th-Anniversary-dp-0226458121/dp/0226458121/][Thomas S. Kuhn - The Structure of Scientific Revolutions - 1962]]
+
+[[https://www.amazon.com/Programming-Language-Kenneth-Iverson/dp/0471430145][Kenneth E. Iverson - A Programming Language - 1962]]
+
+[[https://www.amazon.com/Notes-Synthesis-Form-Harvard-Paperbacks/dp/0674627512][Christopher Alexander - Notes on the Synthesis of Forms - 1964]]
+
+[[https://www.amazon.com/Pattern-Language-Towns-Buildings-Construction/dp/0195019199][Christopher Alexander - A Pattern Language - 1977]]
+
+[[https://www.amazon.com/Mythical-Man-Month-Software-Engineering-Anniversary/dp/0201835959/][Frederick Brooks Jr. - The Mythical Man-Month - 1975]]
+
+[[https://www.amazon.com/Design-Essays-Computer-Scientist/dp/0201362988][Frederick Brooks Jr. - The Design of Design - 2010]]
+
+[[https://www.amazon.com/Design-Everyday-Things-Revised-Expanded/dp/0465050654][Donald Norman - The Design of Everyday Things - 1988]]
+
+[[https://www.amazon.com/Sciences-Artificial-MIT-Press/dp/0262537532][Herbert A. Simon - The Sciences of the Artificial - 1996]]
+
+[[https://www.amazon.com/Dream-Machine-Licklider-Revolution-Computing/dp/0670899763][M. Mitchell Waldrop - The Dream Machine: J.C.R. Licklider and the Revolution That Made Computing Personal - 2001]]
+
+**** Systems
+
+[[https://www.amazon.com/Advances-Programming-Non-Numerical-Computation-Fox/dp/1483126773][L.Fox - Advances in Programming and Non-Numerical Computation - 1966]]
+
+[[https://www.amazon.com/Little-Schemer-Daniel-P-Friedman/dp/0262560992][Daniel P. Friedman - The Little Schemer - 1974]]
+
+[[https://www.amazon.com/Seasoned-Schemer-MIT-Press/dp/026256100X][Daniel P. Friedman - The Seasoned Schemer - 1995]]
+
+[[https://www.amazon.com/Reasoned-Schemer-Daniel-P-Friedman/dp/0262562146][Daniel P. Friedman - The Reasoned Schemer - 2005]]
+
+[[https://www.amazon.com/Little-Prover-Daniel-P-Friedman/dp/0262527952][Daniel P. Friedman - The Little Prover - 2015]]
+
+[[https://www.amazon.com/Little-Typer-MIT-Press/dp/0262536439][Daniel P. Friedman - The Little Typer - 2018]]
+
+[[https://www.amazon.com/Algorithms-Structures-Programs-Niklaus-Wirth/dp/0130224189][Niklaus Wirth - Algorithms + Data Structures = Programs - 1976]]
+
+[[https://www.amazon.com/Structure-Interpretation-Computer-Programs-Engineering/dp/0262510871][Harold Abelson - Structure and Interpretation of Computer Programs - 1984]]
+
+[[https://www.amazon.com/Thinking-Forth-Leo-Brodie/dp/0976458705][Leo Brodie - Thinking Forth - 1984]]
+
+[[https://www.amazon.com/Art-Prolog-Second-Programming-Techniques/dp/0262193388][Leon Sterling - The Art of Prolog - 1986]]
+
+[[https://www.amazon.com/Art-Metaobject-Protocol-Gregor-Kiczales/dp/0262610744][Gregor Kiczales - The Art of the Metaobject Protocol - 1991]]
+
+[[https://www.amazon.com/Lisp-Advanced-Techniques-Common/dp/0130305529][Paul Graham - On Lisp: Advanced Techniques for Common Lisp - 1993]]
+
+[[https://www.amazon.com/Let-Over-Lambda-Doug-Hoyte/dp/1435712757][Doug Hoyte - Let Over Lambda - 2008]]
+
+[[https://www.amazon.com/Engine-Architecture-Third-Jason-Gregory/dp/1138035459][Jason Gregory - Game Engine Architecture - 2009]]
+
+**** Implementations
+
+[[https://www.amazon.com/Lambda-Calculus-Combinators-Introduction-Roger-Hindley/dp/0521898854][J. Roger Hindley - Lambda-Calculus and Combinators, an Introduction - 1986]]
+
+[[https://www.amazon.com/Purely-Functional-Data-Structures-Okasaki/dp/0521663504][Chris Okasaki - Purely Functional Data Structures - 1999]]
+
+[[https://www.amazon.com/Parallel-Concurrent-Programming-Haskell-Multithreaded/dp/1449335942][Simon Marlow - Parallel and Concurrent Programming in Haskell: Techniques for Multicore and Multithreaded Programming - 2013]]
+
+**** Miscellaneous
+
+[[https://www.amazon.com/Molecular-Biology-Gene-James-Watson/dp/0321762436][James Watson - Molecular Biology of the Gene - 1965]]
+
+[[https://www.amazon.ca/Molecular-Biology-Cell-Loose-Version/dp/0815345240][Bruce Alberts - Molecular Biology of the Cell - 1983]]
+
+[[https://www.amazon.com/Hackers-Heroes-Computer-Revolution-Anniversary/dp/1449388396][Steven Levy - Hackers: Heroes of the Computer Revolution - 1984]]
+
+[[https://www.amazon.ca/Human-Universals-Donald-Brown/dp/007008209X][Donald Brown - Human Universals - 1991]]
+
+[[https://web.mit.edu/~simsong/www/ugh.pdf][Simson Garfinkel - The UNIX-HATERS Handbook - 1994]]
+
+[[https://www.amazon.ca/Educated-Mind-Cognitive-Tools-Understanding/dp/0226190390][Kieran Egan - The Educated Mind: How Cognitive Tools Shape Our Understanding - 1998]]
+
+[[https://www.amazon.ca/21-Dog-Years-Cube-Dwellers/dp/074323815X][Mike Daisey - 21 Dog Years: A Cube Dweller's Tale - 2003]]
+
+[[https://www.amazon.com/Art-Deception-Controlling-Element-Security/dp/076454280X][Kevin D. Mitnick - The Art of Deception: Controlling the Human Element of Security - 2003]]
+
+*** Tech Talks
+
+#+BEGIN_QUOTE
+Perceptions which are at present insensible may grow some day: nothing is
+useless, and eternity provides great scope for change. -- Gottfried Wilhelm
+Liebniz
+#+END_QUOTE
+
+**** Foundations
+
+[[https://www.youtube.com/watch?v=yJDv-zdhzMY][Douglas Engelbart - The Mother of All Demos - 1968]]
+
+[[https://www.youtube.com/watch?v=lw6TaiXzHAE][Guy Steele - Growing a Language - OOPSLA 1998]]
+
+[[https://www.youtube.com/watch?v=dCuZkaaou0Q][Guy Steele - It's Time for a New Old Language - Clojure/Conj 2017]]
+
+[[https://www.youtube.com/watch?v=HB5TrK7A4pI][Gerald Sussman - We Really Don't Know How to Compute! - StrangeLoop 2011]]
+
+[[https://www.youtube.com/watch?v=hZ3gmh-d9oI][Ted Nelson - Computers for Cynics - 2012]]
+
+[[https://www.youtube.com/watch?v=ed7A7r6DBsM][Joe Armstrong - The How and Why of Fitting Things Together - Erlang Factory 2013]]
+
+[[https://www.youtube.com/watch?v=lKXe3HUG2l4][Joe Armstrong - The Mess We're In - StrangeLoop 2014]]
+
+[[https://www.youtube.com/watch?v=itKFrXghGuA][Joe Armstrong - Computing: The first 100 years - Full Stack Fest 2016]]
+
+[[https://www.youtube.com/watch?v=fhOHn9TClXY][Joe Armstrong interviews Alan Kay - Code Mesh 2016]]
+
+[[https://www.youtube.com/watch?v=TTM_b7EJg5E][Joe Armstrong - The Do's and Don'ts of Error Handling - GOTO 2018]]
+
+[[https://www.youtube.com/watch?v=rmueBVrLKcY][Joe Armstrong - Computer Science: A Guide for the Perplexed - GOTO 2018]]
+
+[[https://www.youtube.com/watch?v=WJzi9R_55Iw][Alan Kay - Computer Applications: A Dynamic Medium for Creative Thought - 1972]]
+
+[[https://www.youtube.com/watch?v=aYT2se94eU0][Alan Kay - The Computer Revolution Hasn't Happened Yet - OOPSLA 1997]]
+
+[[https://www.youtube.com/watch?v=gTAghAJcO1o][Alan Kay - The Future Doesn't Have to Be Incremental - ??]]
+
+[[https://www.youtube.com/watch?v=pUoBSC3uoeo][Alan Kay - Back to the Future of Software Development - 2003]]
+
+[[https://www.youtube.com/watch?v=ymF94cFfzUQ][Alan Kay - Turing Award Lecture - 2003]]
+
+[[https://www.youtube.com/watch?v=FvmTSpJU-Xc][Alan Kay - Normal Considered Harmful - UIUC 2009]]
+
+[[https://www.youtube.com/watch?v=YyIQKBzIuBY][Alan Kay - Programming and Scaling - ST 2011]]
+
+[[https://www.youtube.com/watch?v=aqotNrIp-Ik][Alan Kay - Could Computing Be Simpler Than It Seems To Be? - 2006]]
+
+[[https://www.youtube.com/watch?v=prIwpKL57dM][Alan Kay - Programming Languages & Programming - 2013]]
+
+[[https://www.youtube.com/watch?v=NdSD07U5uBs][Alan Kay - Power of Simplicity - ?? 2015]]
+
+[[https://www.youtube.com/watch?v=PUv66718DII][Bret Victor - Inventing on Principle - 2012]]
+
+[[https://www.youtube.com/watch?v=ZfytHvgHybA][Bret Victor - Stop Drawing Dead Fish - 2013]]
+
+[[https://www.youtube.com/watch?v=8pTEmbeENF4][Bret Victor - The Future of Programming - DBX 2013]]
+
+[[https://www.youtube.com/watch?v=ef2jpjTEB5U][Bret Victor - Drawing Dynamic Visualizations - Stanford HCI 2013]]
+
+[[https://www.youtube.com/watch?v=oUaOucZRlmE][Bret Victor - Media for Thinking the Unthinkable - MIT Media Lab 2013]]
+
+[[https://www.youtube.com/watch?v=agOdP2Bmieg][Bret Victor - The Humane Representation of Thought - UIST 2014]]
+
+**** The Art of Lisp
+
+[[https://www.youtube.com/watch?v=Mfsnlbd-4xQ][Chris Ford - Functional Composition - Clojure/Conj 2012]]
+
+[[https://www.youtube.com/watch?v=jACcgLfyiyM][Kálmán Réti - The History of Symbolics Lisp Machines (including a demo) - MIT 2012]]
+
+[[https://www.infoq.com/presentations/miniKanren/][Daniel P. Friedman - Relational Programming in miniKanren - StrangeLoop 2012]]
+
+[[https://www.youtube.com/watch?v=RVDCRlW1f1Y][William Byrd - Relational Interpreters, Program Synthesis, and Barliman - Code Mesh 2017]]
+
+[[https://www.youtube.com/watch?v=OyfBQmvr2Hc][William Byrd - On the Most Beautiful Program Ever Written - PWL 2017]]
+
+[[https://www.youtube.com/watch?v=AffW-7ika0E][William Byrd - Strange Dreams of Strange Loops - StrangeLoop 2021]]
+
+[[https://www.youtube.com/watch?v=LN0qG-i1iT0][Matthew Flatt - A Racket Perspective on Research, Education, and Production - Clojure/Conj 2019]]
+
+[[https://www.youtube.com/watch?v=43XaZEn2aLc][Shriram Krishnamurthi - On the Expressive Power of Programming Languages - PWL 2019]]
+
+[[https://www.infoq.com/presentations/Are-We-There-Yet-Rich-Hickey/][Rich Hickey - Are We There Yet? - JVM Languages Summit 2009]]
+
+[[https://www.youtube.com/watch?v=LKtk3HCgTa8][Rich Hickey - Simple Made Easy - StrangeLoop 2011]]
+
+[[https://www.youtube.com/watch?v=f84n5oFoZBc][Rich Hickey - Hammock Driven Development - Clojure/Conj 2010]]
+
+[[https://www.youtube.com/watch?v=ROor6_NGIWU][Rich Hickey - The Language of the System - Clojure/Conj 2012]]
+
+[[https://www.youtube.com/watch?v=-6BsiVyC1kM][Rich Hickey - The Values of Values - JaxConf 2012]]
+
+[[https://www.youtube.com/watch?v=Cym4TZwTCNU][Rich Hickey - Deconstructing the Database - JaxConf 2012]]
+
+[[https://www.youtube.com/watch?v=QCwqnjxqfmY][Rich Hickey - Design, Composition, and Performance - ETE 2013]]
+
+[[https://www.youtube.com/watch?v=6mTbuzafcII][Rich Hickey - Transducers - 2014]]
+
+[[https://www.youtube.com/watch?v=dtGzfYvBn3w][Rich Hickey - clojure.spec - LispNYC 2016]]
+
+[[https://www.youtube.com/watch?v=oyLBGkS5ICk][Rich Hickey - Spec-ulation - Clojure/Conj 2016]]
+
+[[https://www.youtube.com/watch?v=2V1FtfBDsLU][Rich Hickey - Effective Programs: 10 Years of Clojure - Clojure/Conj 2017]]
+
+[[https://www.youtube.com/watch?v=YR5WdGrpoug][Rich Hickey - Maybe Not - Clojure/Conj 2018]]
+
+[[https://www.youtube.com/watch?v=nD-QHbRWcoM][Rich Hickey - A History of CLojure with Q&A - HOPL 2021]]
+
+[[https://www.youtube.com/watch?v=cidchWg74Y4][Stuart Halloway - Simplicity Ain't Easy - Clojure/Conj 2010]]
+
+[[https://www.youtube.com/watch?v=noiGVQoyYHw][Stuart Halloway - Clojure in 10 Big Ideas - RuPy 2013]]
+
+[[https://www.infoq.com/presentations/The-Mapping-Dilemma/][David Nolen - The Mapping Dilemma - StrangeLoop 2011]]
+
+[[https://www.youtube.com/watch?v=TVJa-V6U-XI][David Nolen - Everything I Have Learned I Have Learned From Someone Else - LambdaJam 2013]]
+
+[[https://www.youtube.com/watch?v=SiFwRtCnxv4][David Nolen - Immutability: Putting the Dream Machine to Work - JSConf 2014]]
+
+[[https://www.youtube.com/watch?v=DMtwq3QtddY][David Nolen - The Functional Final Frontier - Clojure/West 2014]]
+
+[[https://www.youtube.com/watch?v=FKiEsJiTMtI][David Nolen - On Parsing With Derivatives - PWL 2016]]
+
+[[https://www.youtube.com/watch?v=tX4wg4wOFuU][David Nolen - Parasitic Programming Languages - Philly ETE 2017]]
+
+[[https://www.youtube.com/watch?v=77b47P8EpfA][David Nolen - Rethinking Identity with Clojure - Craft Conference 2019]]
+
+[[https://www.youtube.com/watch?v=HXfDK1OYpco][Timothy Baldridge - Clojure: Deep Walking Macros - 2013]]
+
+[[https://www.youtube.com/watch?v=KhRQmT22SSg][Timothy Baldridge - Data All The ASTs - Clojure/West 2014]]
+
+[[https://www.youtube.com/watch?v=1AjhFZVfB9c][Timothy Baldridge - Pixie: A Lightweight Lisp with 'Magical' Powers - StrangeLoop 2015]]
+
+[[https://www.youtube.com/watch?v=096pIlA3GDo][Timothy Baldridge - Core.Async in Use - Clojure/West 2017]]
+
+[[https://www.youtube.com/watch?v=j-kj2qwJa_E][Bruce Hauman - Developing ClojureScript with Figwheel - Clojure/West 2015]]
+
+[[https://www.youtube.com/watch?v=wXgdxCFDjD0][Chas Emerick - What Sucks about Clojure and Why You'll Love It Anyway - ??]]
+
+[[https://www.youtube.com/watch?v=gsffg5xxFQI][Derek Slager - ClojureScript for Skeptics - Clojure/Conj 2015]]
+
+[[https://www.youtube.com/watch?v=BThkk5zv0DE][Derek Slager - Why Clojure? - Clojure/West 2017]]
+
+[[https://www.youtube.com/watch?v=4WO5kJChg3w][A Conversation with Paul Graham - Moderated by Geoff Ralston]]
+
+**** The Art of Types
+
+[[https://vimeo.com/52831373][Pat Helland - Immutability Changes Everything - RICON 2012]]
+
+[[https://www.youtube.com/watch?v=IOiZatlZtGU][Philip Wadler - Propositions as Types - StrangeLoop 2015]]
+
+[[https://www.youtube.com/watch?v=AWeT_G04a0A][David Christiansen - Coding for Types: The Universe Pattern in Idris - Curry On 2015]]
+
+[[https://www.youtube.com/watch?v=uR_VzYxvbxg][Simon Peyton Jones - Into the Core: Squeezing Haskell into Nine Constructors - EUC 2016]]
+
+[[https://www.youtube.com/watch?v=ytPAlhnAKro][Christoph Hegemann - Type Inference From Scratch - f(by) 2019]]
+
+**** Systems in the Large
+
+[[https://www.youtube.com/watch?v=ZQ5_u8Lgvyk][Casey Muratori - Designing and Evaluating Reusable Components - 2004]]
+
+[[https://www.youtube.com/watch?v=aAb7hSCtvGw][Joshua Bloch - How to Design a Good API and Why it Matters - Google TechTalks 2007]]
+
+[[https://www.youtube.com/watch?v=3oQTSP4FngY][Zach Tellman - Always Be Composing - Clojure/Conj 2014]]
+
+[[https://www.youtube.com/watch?v=1bNOO3xxMc0][Zach Tellman - Everything Will Flow - Clojure/West 2015]]
+
+[[https://www.youtube.com/watch?v=x9pxbnFC4aQ][Zach Tellman - On Abstraction - ClojuTRE 2017]]
+
+[[https://www.youtube.com/watch?v=5CYeZ2kEiOI][Richard Feldman - From Rails to Elm and Haskell - ETE 2019]]
+
+[[https://www.youtube.com/watch?v=QyJZzq0v7Z4][Richard Feldman - Why Isn't Functional Programming the Norm? - Clojutre 2019]]
+
+[[https://www.youtube.com/watch?v=vzfy4EKwG_Y][Richard Feldman - Outperforming Imperative with Pure Functional Languages - StrangeLoop 2021]]
+
+[[https://www.youtube.com/watch?v=R2Aa4PivG0g][Peter Alvaro - I See What You Mean - StrangeLoop 2015]]
+
+[[https://www.youtube.com/watch?v=ndnvOElnyUg][Kevlin Henney - What Do You Mean? - ACCU 2019]]
+
+[[https://www.youtube.com/watch?v=qDNPQo9UmJA][Bobby Calderwood - From REST to CQRS with Clojure, Kafka, & Datomic - Clojure/Conj 2015]]
+
+[[https://www.youtube.com/watch?v=B1-gS0oEtYc][Bobby Calderwood - Commander: Better Distributed Applications through CQRS and Event Sourcing - StrangeLoop 2016]]
+
+**** Systems in the Small
+
+[[https://www.youtube.com/watch?v=rX0ItVEVjHc][Mike Acton - Data-Oriented Design and C++ - CppCon 2014]]
+
+[[https://www.youtube.com/watch?v=m4EB_k57g-I][Lars Bak - Pushing the Limits of Web Browsers - StrangeLoop 2012]]
+
+[[https://www.youtube.com/watch?v=yy8jQgmhbAU][Stoyan Nikolov - OOP Is Dead, Long Live Data-oriented Design - CppCon 2018]]
+
+[[https://www.youtube.com/watch?v=4AfRAVcThyA][Herb Sutter - Meta: Thoughts on Generative C++ - CppCon2017]]
+
+[[https://www.youtube.com/watch?v=ARYP83yNAWk][Herb Sutter - De-fragmenting C++: Making Exceptions and RTTI More Affordable and Usable - CppCon 2019]]
+
+[[https://www.youtube.com/watch?v=9hJkWwHDDxs][Fedor Pikus - The Speed of Concurrency (is Lock-Free Faster?) - CppCon 2016]]
+
+[[https://www.youtube.com/watch?v=ZQFzMfHIxng][Fedor Pikus - C++ Atomics, from Basic to Advanced. What do they Really Do? - CppCon 2017]]
+
+[[https://www.youtube.com/watch?v=m25p3EtBua4][Fedor Pikus - Design for Performance - CppCon 2018]]
+
+[[https://www.youtube.com/watch?v=bSkpMdDe4g4][Matt Godbolt - What Has My Compiler Done for Me Lately? Unbolting the Compiler's Lid - CppCon 2017]]
+
+[[https://www.youtube.com/watch?v=dOfucXtyEsU][Matt Godbolt - The Bits Between the Bits: How We Get to main() - CppCon 2018]]
+
+[[https://www.youtube.com/watch?v=HG6c4Kwbv4I][Matt Godbolt - Path Tracing Three Ways: A Study of C++ Style - CppCon 2019]]
+
+[[https://www.youtube.com/watch?v=w0sz5WbS5AM][Matt Godbolt - What Everyone Should Know About How Amazing Compilers Are - C++ on Sea 2019]]
+
+[[https://www.youtube.com/watch?v=WjTrfoiB0MQ][Andrei Alexandrescu - Declarative Control Flow - 2015]]
+
+[[https://www.youtube.com/watch?v=FJJTYQYB1JQ][Andrei Alexandrescu - Sorting Algorithms: Speed Is Found In The Minds of People - CppCon 2019]]
+
+[[https://www.youtube.com/watch?v=rHIkrotSwcc][Chandler Carruth - There Are No Zero-Cost Abstractions - CppCon 2019]]
+
+[[https://www.youtube.com/watch?v=2EWejmkKlxs][Chandler Carruth - Going Nowhere Faster - CppCon 2017]]
+
+[[https://www.youtube.com/watch?v=PNRju6_yn3o][Nicolai Josuttis - The Nightmare of Move Semantics for Trivial Classes - CppCon 2017]]
+
+[[https://www.youtube.com/watch?v=wQxj20X-tIU][Scott Meyers - Type Deduction and Why You Care - CppCon 2014]]
+
+[[https://www.youtube.com/watch?v=WDIkqP4JbkE][Scott Meyers - Cpu Caches and Why You Care - code::dive 2014]]
+
+[[https://www.youtube.com/watch?v=KAWA1DuvCnQ][Scott Meyers - The Last Thing D Needs - Dconf 2014]]
+
+[[https://www.youtube.com/watch?v=zBkNBP00wJE][Jason Turner - Rich Code for Tiny Computers - CppCon 2016]]
+
+**** Game Development
+
+[[https://www.youtube.com/watch?v=oSmqbnhHp1c][Dan Liebgold - Racket on the Playstation 3? It's Not What You Think! - RacketCon 2013]]
+
+[[https://www.youtube.com/watch?v=1PhArSujR_A][John Carmack - Keynote (part 4) - QuakeCon 2013]]
+
+[[https://www.youtube.com/watch?v=ydyztGZnbNs][John Carmack - Live Coding Session - Oculus Connect 2 2015]]
+
+[[https://www.youtube.com/watch?v=Y7-OoXqNYgY][Jason Gregory - Programming Context-Aware Dialogue in The Last of Us - GDC 2014]]
+
+[[https://archive.org/details/GDC2015Gyrling_201508][Christian Gyrling - Parallelizing the Naughty Dog Engine Using Fibers - GDC 2015]]
+
+[[https://www.youtube.com/watch?v=0nTDFLMLX9k][Natalya Tatarchuk - Destiny's Multithreaded Rendering Architecture - GDC 2015]]
+
+[[https://www.youtube.com/watch?v=X1T3IQ4N-3g][Jeff Preshing - How Ubisoft Develops Games for Multicore: Before and After C++11 - CppCon 2014]]
+
+[[https://www.youtube.com/watch?v=qYN6eduU06s][Nicolas Fleury - C++ in Huge AAA Games - CppCon 2014]]
+
+[[https://www.bilibili.com/video/BV1Vx411v7gY/][Yuriy - O'Donnell - FrameGraph: Extensible Rendering Architecture in Frostbite - GDC 2017]]
+
+[[https://www.youtube.com/watch?v=KRJkBxKv1VM][Dan Sumaili - Creating a Tools Pipeline for Horizon: Zero Dawn - GDC 2017]]
+
+[[https://www.youtube.com/watch?v=zrIY0eIyqmI][Timothy Ford - Overwatch Gameplay Architecture and Netcode - GDC 2017]]
+
+[[https://www.youtube.com/watch?v=5jP0z7Atww4][Dan Reed - Networking Scripted Weapons and Abilities in Overwatch - GDC 2017]]
+
+[[https://www.youtube.com/watch?v=7jb0FOcImdg][Michael Stallone - 8 Frames in 16ms: Rollback Networking in Mortal Kombat and Injustice 2 - GDC 2018]]
+
+[[https://www.youtube.com/watch?v=prXuyMCgbTc][Petri Purho - Exploring the Tech and Design of Noita - GDC 2019]]
+
+[[https://www.youtube.com/watch?v=Jf5O8S5GiOo][Arvi Teikari - Reading the rules of Baba Is You - 2020]]
+
+[[https://www.youtube.com/watch?v=vfPGuUDuwmo][mattbatwings - I Made a Multi-Line Renderer with just Redstone! - 2022]]
+
+[[https://www.youtube.com/watch?v=tJr_TD1BtF0][Ramsey Nasser - Clojure in Unity3D: Functional Video Game Development - StrangeLoop 2014]]
+
+**** Stories
+
+[[https://www.youtube.com/watch?v=NnkCujnYNSo][John Romero - Doom: A Classic Game Post-Mortem - GDC 2011]]
+
+[[https://www.youtube.com/watch?v=VqQgO4JXsGI][David Brevik - Diablo: Original Game Development - GDC 2016]]
+
+[[https://www.youtube.com/watch?v=cuNgTnfk-wU][David Brevik - A Devil Makes History: Classic Post Mortem on Diablo 2 - Devcom 2020]]
+
+[[https://www.youtube.com/watch?v=vid5yZRKzs0][Justin Fischer - Why Dark Souls Is The 'Ikea' Of Games - 2017]]
+
+[[https://www.youtube.com/watch?v=AJ-auWfJTts][Sid Meier - Classic Game Postmortem: Sid Meier's Civilization - GDC 2017]]
+
+[[https://www.youtube.com/watch?v=lnnsDi7Sxq0][Raph Koster - Classic Game Postmortem: Ultima Online - GDC 2018]]
+
+[[https://www.youtube.com/watch?v=rIXK3fRx4Zo][Louis Castle - Classic Game Postmortem: Command & Conquer - GDC 2019]]
+
+[[https://www.youtube.com/watch?v=_76lcBpDbvw][Razbuten - What Minecraft Is Like For Someone Who Doesn't Play Games - 2020]]
+
+[[https://www.youtube.com/watch?v=TPbroUDHG0s][Kevin Zurawel - Game Development in Eight Bits - StrangeLoop 2021]]
+
+**** Miscellaneous
+
+[[https://www.youtube.com/watch?v=kEx-gRfuhhk][Richard Feynman - The Character of Physical Law - Cornell University 1964]]
+
+[[https://www.youtube.com/watch?v=P6UKhR0T6cs][John Carmack - The Physics of Light and Rendering - QuakeCon 2013]]
+
+[[https://www.youtube.com/watch?v=X-iSQQgOd1A][Sebastian Lague - Coding Adventure: Ant and Slime Simulations - 2021]]
+
+[[https://www.youtube.com/watch?v=4LTtr45y7P0][Brian Upton - 30 Things I Hate About Your Game Pitch - 2017]]
+
+[[https://www.youtube.com/watch?v=a1zDuOPkMSw][Richard W. Hamming - You and Your Research - 1995]]
+
+[[https://www.youtube.com/watch?v=4XpnKHJAok8][Linus Torvalds - On Git - Google TechTalks 2007]]
+
+[[https://www.youtube.com/watch?v=ZTC_RxWN_xo][Steve Blank - Secret History of Silicon Valley - 2008]]
+
+[[https://www.youtube.com/watch?v=NGFhc8R_uO4][Tom Fernandez - Indistinguishable From Magic: Manufacturing Modern Computer Chips - HOPE 2009]]
+
+[[https://www.youtube.com/watch?v=FITJMJjASUs][Jim Weirich - Y Not: Adventures in Functional Programming - Ruby Conf 2012]]
+
+[[https://www.destroyallsoftware.com/talks/wat][Gary Bernhardt - Wat - CodeMash 2012]]
+
+[[https://www.destroyallsoftware.com/talks/the-birth-and-death-of-javascript][Gary Bernhardt - The Birth & Death of JavaScript - PyCon 2014]]
+
+[[https://www.youtube.com/watch?v=NP9AIUT9nos][Glenn Vanderburg - Real Software Engineering - Lone Star Ruby 2010]]
+
+[[https://www.youtube.com/watch?v=a-BOSpxYJ9M][Dave Thomas - Agile is Dead - GOTO 2015]]
+
+[[https://www.youtube.com/watch?v=FvMuPtuvP5w][Erik Meijer - One Hacker Way - GOTO 2015]]
+
+[[https://www.youtube.com/watch?v=JWD1Fpdd4Pc][Aaron Bieber - Evil Mode: Or, How I Learned to Stop Worrying and Love Emacs - Boston Vim Meetup 2015]]
+
+[[https://www.youtube.com/watch?v=EVkHgKCqAcI][Matt Might - Winning the War on Error: Solving Halting Problem, Curing Cancer - Code Mesh 2017]]
+
+[[https://www.youtube.com/watch?v=qOmmqu6_g3s][Ninja Nerd - Neurology | Neuron Anatomy & Function - 2021]]
+
+[[https://www.youtube.com/watch?v=w1-bDwNtG-I][Zed Shaw - The Imaginative Programmer - DjangoCon 2013]]
+
+[[https://www.youtube.com/watch?v=r9LCwI5iErE][Benjamin Zander - The Transforming Power of Classical Music - TED 2008]]
+
+** Todo Driven Development
+
+#+BEGIN_QUOTE
+We need a language that lets us scribble and smudge and smear, not a language
+where you have to sit with a teacup of types balanced on your knee and make
+polite conversation with a strict old aunt of a compiler. -- Paul Graham
+#+END_QUOTE
+
+A short report of previous works.
+
+Most code is throwaway code in the spirit of "deleted code is debugged code".
+These abandoned prototypes aren't for a lack of interest in their respective
+application domains, but left behind from growing frustrations with the tools.
+Mostly with my usage of the tools, but that's another story for another day.
+
+A handful of these experiments made it to GitHub:
+
+- [[https://github.com/lcodes/mpq.d/blob/master/mpq.d][mpq.d]] :: I needed test assets, nothing on the web worked, and I own the games.
+  The second of such implementations, I lost the first with a failed hard drive.
+- [[https://github.com/lcodes/flap-flap-bird/][flap-flap-bird]] :: Built in an afternoon, entirely developed as it was running.
+  Wanted a proof-of-concept for live game development, time-travel in few lines.
+- [[https://github.com/lcodes/janky][Janky]] :: An experiment to both learn Rust, and generate build files for Jank.
+  Great to think of performance, painful when the app is manipulating data bags.
+- [[https://github.com/lcodes/jank/blob/gfx-test/engine/app/GfxTest.cpp][Jank]] :: An experiment in how ridiculous C++ is for the simplest of tasks. How
+  hard can derusting C++ while learning Rust and PBR over multiple platforms be?
+- [[https://github.com/lcodes/blog/blob/master/Lisp.fs][Lisp.fs]] :: A weekend experiment to learn F# ended as a Scheme interpreter with
+  continuations, a semi-working microKanren inside that interpreter, and quines.
+- [[https://github.com/lcodes/blog/blob/master/vile.d][vile.d]] :: A one-file mess of an experiment for a dynamic Lisp in D. Ended up
+  not wanting to write bindings manually, so I instead wrote a full, and very
+  dumb and stupid, parser to clang's raw AST output. Translated all that junk to
+  a form the interpreter understands, and dynamically loaded and linked all the
+  matching symbols in C and Objective-C before seeing C++ is hopelessly mangled.
+  But it does show a D3D12 triangle from that, so it wasn't coded for nothing.
+- [[https://github.com/lcodes/dsnes][dsnes]] :: From wanting to learn SNES assembly to half a working emulator. Based
+  off bsnes, written in D, using imgui. Can boot roms, but quickly ends in an
+  infinite loop as the CPU deadlocks waiting for the sound chips to initialize.
+
+Some other experiments include WebGL2 and WebGPU renderers in ClojureScript,
+with shaders driven from Lisp macros to live code the entire thing at 60FPS.
+From implementing data formats and initializing device contexts to developing
+render passes, assembling shaders and finally running it all without restart.
+Furthermore, it's performant enough to effortlessly run circles around [[https://threejs.org/][Three]].
+
+Luckily, I had taken screenshots to share at the time, so I don't have to go
+search for the source code now. This is one project which did not make it to
+GitHub. I didn't want to upload so much media. Maybe in its next incarnation.
+
+These captures show something other than prog art, they are from an application
+entirely developed while it is running. Only rebooting it when I crash the GPU
+context, lose the handle to something important, or it starts consuming all CPU.
+It was even fully compatible with WebXR, but there's unfortunately no VR Emacs.
+
+*** Dream Driven Development
+
+#+BEGIN_QUOTE
+There is a theory which states that if ever anyone discovers exactly what the
+Universe is for and why it is here, it will instantly disappear and be replaced
+by something even more bizarre and inexplicable. -- Douglas Adams
+#+END_QUOTE
+
+The following is as close to a preview of what I'm trying to do as I have. I was
+totally not rewatching The Next Generation for the nth time at the time. Nope.
+
+[[./assets/first-webxr.jpg]]
+
+Once I got VR working, I quickly realized constantly putting on and removing the
+headset wasn't a fun way of experimenting. Iterations happen quicker than this.
+
+[[./assets/early-shader.png]]
+
+Nothing is off limits. Implemented a GPU particle system, including the data
+structures shared with the CPU, their mapping to browser ArrayBuffer objects
+and filled it while everything else kept ticking. A nice pause from a water
+shader which just refused to work.
+
+[[./assets/clojurescript-gpu-particles.png]]
+
+Physically Based Rendering was the application domain, and it ended up decently
+looking given the low-res assets I could find at the time. The environment was
+changed live from Emacs. Sending evaluation requests from selected code to the
+Clojure REPL, in turn remotely connected to the browser to execute the command
+and send the results back to Emacs for instant feedback.
+
+[[./assets/pbr-1.png]]
+[[./assets/pbr-2.png]]
+[[./assets/pbr-3.png]]
+
+Upgraded to a render graph, with glorious programmer tuned post-process effects.
+Every shader node is defined from a Lisp macro, the runtime tracks a graph of
+dependencies to generate GLSL and observers to regenerate precisely as little
+variants as needed when a node is redefined.
+
+[[./assets/too-much-pp.png]]
+
+Lisp macros generating an ECS data layout, query engine and update system.
+Thousands of entities in the browser, nothing optimized, few ms per frame.
+Abstracts away the high-performance, low-level buffers of the browser.
+
+Every line of every AABB is generated, ultimately in JavaScript, on every frame.
+Barely registers in the profiler. Target VM makes it possible to hot swap code,
+and so the algorithms can be tweaked as their results is seen, without pause.
+
+[[./assets/ecs-aabb.png]]
+
+And some videos of the shading and reflection environments in action. I watched
+such animation in loop for hours as I was developing them from another monitor.
+
+[[./assets/reflect-env.mp4]]
+
+[[./assets/shading.mp4]]
+
+[[./assets/browser-trek.mp4]]
+
+[[./assets/no-mans-web.mp4]]
+
+As for the current prototype of this language, while there is much to talk
+about, there isn't much to show at this point. I do have a working AST explorer,
+and the ability to load managed .NET assemblies into the system.
+
+[[./assets/le-inspect.png]]
+
+Since the system itself is a .NET assembly, it also ends up loading itself just
+like any other user library. A nice little feedback loop which will ultimately
+enable the language to grow itself once bootstrapped.
+
+[[./assets/self-reference.png]]
+
+Even a dynamic system needs to reach static hardware at some point. Currently
+experimenting with control flow representations, with an IL emitter awaiting.
+
+[[./assets/flow-graphviz.png]]
+
+** Summary
+
+#+BEGIN_QUOTE
+Software is getting slower more rapidly than hardware is getting faster. --
+Niklaus Wirth
+#+END_QUOTE
+
+The craft of programming languages is enjoyable for the universe of thoughts it
+does eventually open up. I used to complain about all the countless annoyances
+of everyday software development, write long emails and wall-of-texts at work,
+without ever really making much progress on a solution. Hindsight will say they
+were the intuitive steps on a long journey to process all of these references.
+
+The emerging form is slowly taking shape. The result is becoming more ambitious
+than what I had originally planned out to do. I quit work because I needed more
+free time to consume these resources and immediately filled it up prototyping,
+reading and even watching more content while doing everyday chores. Every item
+listed here can ultimately be cited in one way or another within the work I do.
+
+A change of perspective is always good. The solution to Plato's cave is simply
+to walk outside into the unknown. When the unknown is known it can eventually be
+named and now it's a part of the cave too. Welcome back. Almost half a year ago,
+I decided not just to walk outside this metaphorical cave, but to jump headfirst
+into the void without looking back.
+
+A colleague once told me I don't have a zone of comfort. While it's one of the
+best compliments I ever received, it's also not entirely, not completely true.
+
+This work is my zone of comfort. At least for the next two months it can be.
