@@ -561,6 +561,8 @@ Liebniz
 
 [[https://www.youtube.com/watch?v=AffW-7ika0E][William Byrd - Strange Dreams of Strange Loops - StrangeLoop 2021]]
 
+[[https://www.youtube.com/watch?v=Or_yKiI3Ha4][Matthew Flatt - Let's Build a Hygienic Macro Expander - StrangeLoop 2016]]
+
 [[https://www.youtube.com/watch?v=LN0qG-i1iT0][Matthew Flatt - A Racket Perspective on Research, Education, and Production - Clojure/Conj 2019]]
 
 [[https://www.youtube.com/watch?v=43XaZEn2aLc][Shriram Krishnamurthi - On the Expressive Power of Programming Languages - PWL 2019]]
@@ -659,6 +661,8 @@ Liebniz
 
 [[https://www.youtube.com/watch?v=R2Aa4PivG0g][Peter Alvaro - I See What You Mean - StrangeLoop 2015]]
 
+[[https://www.youtube.com/watch?v=otAcmD6XEEE][Kevlin Jenney - Procedural Programming: It's Back? It Never Went Away - Build Stuff 2018]]
+
 [[https://www.youtube.com/watch?v=ndnvOElnyUg][Kevlin Henney - What Do You Mean? - ACCU 2019]]
 
 [[https://www.youtube.com/watch?v=qDNPQo9UmJA][Bobby Calderwood - From REST to CQRS with Clojure, Kafka, & Datomic - Clojure/Conj 2015]]
@@ -727,7 +731,7 @@ Liebniz
 
 [[https://www.youtube.com/watch?v=qYN6eduU06s][Nicolas Fleury - C++ in Huge AAA Games - CppCon 2014]]
 
-[[https://www.bilibili.com/video/BV1Vx411v7gY/][Yuriy - O'Donnell - FrameGraph: Extensible Rendering Architecture in Frostbite - GDC 2017]]
+[[https://www.bilibili.com/video/BV1Vx411v7gY/][Yuriy O'Donnell - FrameGraph: Extensible Rendering Architecture in Frostbite - GDC 2017]]
 
 [[https://www.youtube.com/watch?v=KRJkBxKv1VM][Dan Sumaili - Creating a Tools Pipeline for Horizon: Zero Dawn - GDC 2017]]
 
@@ -852,11 +856,6 @@ Luckily, I had taken screenshots to share at the time, so I don't have to go
 search for the source code now. This is one project which did not make it to
 GitHub. I didn't want to upload so much media. Maybe in its next incarnation.
 
-These captures show something other than prog art, they are from an application
-entirely developed while it is running. Only rebooting it when I crash the GPU
-context, lose the handle to something important, or it starts consuming all CPU.
-It was even fully compatible with WebXR, but there's unfortunately no VR Emacs.
-
 *** Dream Driven Development
 
 #+BEGIN_QUOTE
@@ -864,6 +863,11 @@ There is a theory which states that if ever anyone discovers exactly what the
 Universe is for and why it is here, it will instantly disappear and be replaced
 by something even more bizarre and inexplicable. -- Douglas Adams
 #+END_QUOTE
+
+These captures show something other than prog art, they are from an application
+entirely developed while it is running. Only rebooting it when I crash the GPU
+context, lose the handle to something important, or it starts consuming all CPU.
+It was even fully compatible with WebXR, but there's unfortunately no VR Emacs.
 
 The following is as close to a preview of what I'm trying to do as I have. I was
 totally not rewatching The Next Generation for the nth time at the time. Nope.
