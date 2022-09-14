@@ -1,0 +1,86 @@
+#+title: Resume of Jeremie Pelletier
+
+* Past Experiences
+
+** Independent Researcher - Self Employed - March 2022 to Present
+
+Dedicated to three projects:
+- Reading, ideally at least an hour every day. Always related to the following:
+- Language design, decades of experience across very odd languages and paradigms.
+- Web game engine, decades of experience across half a dozen production-grade techs.
+
+** Software Engineer - Ubisoft Quebec - Feb 2020 to March 2022
+
+- Fix everything person. Quickly at ease in large, complex codebases.
+- Speedtree importer pipeline. Ported a second importer from another project later.
+- Watermark rendering pass used in pre-release versions to game journalists.
+- WebGPU renderer connected to the C++ engine and pulling data from there (in free time.)
+- Multi-project features to the asset database, consulting with various departments.
+- Mentoring an intern with daily check-ins and support.
+
+** Software Engineer - Warp World - Nov 2018 to Feb 2020
+
+- Built the new Electron client using ClojureScript & Re-frame.
+- Developed an OBS overlay to embed our content inside video streams.
+- Designed a high-performance TCP protocol to replace WebSocket & JSON.
+- Embedded the tech in UnrealEngine4, demo'd in Bloodstained at the Tokyo Game Show
+
+** Software Engineer - Curbside - August 2017 to October 2018
+
+- Various fixes and small features in the application backend in Clojure.
+- Architected the new analytics pipeline, also in Clojure, fully live coded at scale.
+
+** Software Engineer - Cortex Studio - May 2016 to July 2017
+
+- Mostly small consulting projects, full stack web applications in various techs.
+- Designed an interactive experience over 2D canvas, including the live backends.
+- Designed a VR engine in WebGL, using pixi to draw 2D graphs projected in 3D.
+- Designed an AR experience in WebGL, ultimately porting to Unity3D for better support.
+- Designed an eye-tracking experience in Unity3D.
+
+** Game Programmer - Frima Studio - September 2011 to May 2016
+
+- Refactored the game server's communications layer to be client-agnostic.
+- Designed the backend servers behind a suite of games launched with Windows 8
+- First to successfully perform microtransactions on Azure Marketplace
+- Early Azure user, before public access, deployed linux before official linux support
+- 2D skeletal animation system, importer and editor tools for ConMan: The Game
+- Peer-to-peer networking in UDP to support multiplayer minigames in a larger MMO
+
+* Techs & Tools
+
+** App Domains
+  - Systems :: Wiring the right elements in the proper order to get desired behaviours.
+  - Compilers :: Tower of interpreters between the mental model and the computer model.
+  - Databases :: Knowledge graph from which long-lived systems emerge, without reboots.
+  - Toolchains :: Traditional means of connecting static elements; systems are dynamic.
+  - Analytics :: Networked graph of append-only streams mapped into materialized views.
+  - Full Stack :: Web dev, frontend and backend. From implementing HTTP to user clicks.
+  - Networking :: The knowledge a computer you didn't know existed can crash a program.
+  - Cloud Scale :: "If the flow rates are times a million, does the system still work?"
+  - UI / UX :: Developer and user facing. From IMGUI to the DOM. [[https://day8.github.io/re-frame/re-frame/][re-frame]] is damn good.
+  - Security :: The adventures of Alice and Bob in which they try to earn some privacy.
+  - Graphics :: The study of recursive mirrors with the rendering equation and teapots.
+  - Physics :: The study of feedback loops with an approximated integration of reality.
+  - Animations :: When reality is too complex, simple interpolation of key facts works.
+  - Simulations :: Because everything is a game in life. And these are large codebases.
+
+** Editor Dev ::
+  - Emacs (I live in here!)
+  - Vim (I edit text here!)
+  - Browsers (Developer tools & live connected REPL!)
+  - Visual Studio (I debug here when the REPL fails me!)
+  - Visual Studio Code (I vacation here from time to time!)
+
+** Languages ::
+  - Assembly :: SNES ([[https://github.com/lcodes/dsnes][half a working emulator, long ago]]), x86 (very long ago)
+  - Intermediate :: LLVM IR, Rust MIR, Haskell Core, Lisp S-Expressions
+  - Native :: C/C++, Objective-C/C++, D, Rust
+  - Managed :: C#, Java, Clojure
+  - Web :: JavaScript, TypeScript, CoffeeScript, ActionScript, ClojureScript, HTML5, CSS3
+  - Admin :: Batch scripts (please, no more), Shell scripts (stringly typed languages!)
+  - Relational :: SQL, Datalog, [[https://github.com/lcodes/blog/blob/master/Lisp.fs][microKanren]], Redshift
+
+** Systems ::
+  - Platform :: Windows, macOS, linux, Android, iOS, tvOS, Stadia, PSVita, PS4, PS5, XB1, XB1 Series X, Nintendo Switch (over 20+ years)
+  - Database :: Datomic, Redis, SQLite, PostgreSQL, MySQL, MSSQL, MongoDB (we all make mistakes)
