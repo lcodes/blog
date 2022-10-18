@@ -1,0 +1,530 @@
+#+TITLE: Data the Ultimate
+
+Something is wrong with data. It is raw, pure undiluted information. It is form.
+Data doesn't do anything. It just is. Data presents information. Data represents
+information. Data is omnipresent in computing. Data has a single state, its one
+default state, its only state. Data is constantly at rest. Data the purely lazy.
+
+Lambdas were discovered. Able to curry the lazyness into constant motion. Lambda
+has the fundamental property of moving data. You give a lambda data and it gives
+back data. Lambda has the fundamental property of being data. You give a lambda
+another lambda and it gives back a lambda. Lambda has the fundamental property
+of being composable. Lambda is unified. Lambda is relatable. Lambda is ultimate.
+
+Without function form can't be useful. Without form function can't be explained.
+Data without code is as useful as code without data. Both are waiting for the
+other to show up in order to execute and evaluate, to analyze and validate, to
+parse and emit, to query and change, to play and interact with, to be valuable.
+
+Lambda was king for a while, and then we had to invent performance requirements.
+Lambda lost to the kingdom of nouns. Object the ultimate? A class maps at least
+two or three concepts at once. Lambda the objected method. Lambda the forgotten.
+
+What happened to data, then? Lambda used to be king, and data flowed everywhere.
+But then it suddenly needed structure, and encapsulation, and inheritance, and
+interfaces. Data the scaling problem. Data the prisoner of online flame wars. A
+datum has no place in modern software development. We have elevated ourselves to
+thinking in terms of types. Compile time checks replaced runtime introspection.
+
+Finally, software was stable, it just worked, and users lived happily ever after.
+
+The end.
+
+[[./assets/programming.jpeg]]
+
+Well no. That's not how any of this turned out. Lexical scoping was simple and
+elegant, now every language has conflicting rules, sometimes within themselves.
+Composition was simple and elegant, now combined exponentially to static types.
+And then something magical happened. Lambdas were discovered for a second time.
+
+Lambdas have simple scoping. Lambdas have simple composition. Lambdas are data.
+We can't imagine a modern language without support for lexically scoped lambdas.
+They don't have the complexity of objects, they're less work to edit and change,
+they express what's going on in more direct terms. In different terms. Not all
+is bad, we learned the value of types along the journey. Typed lambdas for all!
+
+Lambdas have simple encapsulation. Lambdas are scalable. So much we put them in
+the cloud as first class processes. We actively work on type systems to describe
+them. Data is flowing at scale, errors are costly, and so is low performance. A
+lambda is code. It is a function. Function completes form in context. The cycle
+of binary life continuously iterates and recurses. We now focus on code, almost
+exclusively. Data is a solved and typed problem. Or is it? If it is, then why is
+development periodically reiterated and cursed?
+
+Software development is an interesting subject to discuss. We're all solving
+problems, building systems of nodes in a web, then creating bridges to connect
+processes and finally growing the ecosystem in place. The mere fact that I can
+write this introduction here and now, and later run a command to share it with
+the world is proof these systems do exist and work. Data is flowing. At scale.
+
+What's the problem, then? If it's not broken, don't fix it. Easy.
+
+There exists parsers for text and loaders for binary. Easy. Done. Next!
+
+Well, data is more than text or binary. Data is information. Data is meant to be
+communicated. Data is first communicated to people and only then is it coded to
+computers. Data is an idea. An idea can model a sunset picture or an overdrive
+guitar solo we imagine. An idea can model the interconnections of a system or
+the execution trace of an algorithm we conceive. An idea stores the scripts for
+actors in a movie or the melodies to instruments in a music score we enjoy. An
+idea tells us about the frequency, latency and bandwidth of memory accesses when
+iterating between design and real world experiences. Ideas are unbounded data.
+
+If these examples are so easy to imagine, why is it they're so complex to code?
+
+Why do we need apps to do image processing, to share files, to draw on a 2D or
+3D canvas, to communicate? Because it's not so easy to go from text and binary
+to problems being solved. Interacting with data is a complex problem to solve in
+and of itself, it turns out. Merely looking at all the work required to consume
+and produce data is enough to get lost in the details. Little time remains to
+think about, well, using the data. And so it often has one use. How can this be?
+
+Sure, there's consoles and debuggers and inspectors. They show the bits and the
+pieces, but not the images nor the sounds. The idea existing above memory isn't
+obvious, if at all. An array of floats is not the same as a bar chart. A debug
+string is not the same as a preview thumbnail. A dictionary of nodes is not the
+same as its graphviz output. Why isn't data visualization a standard part of
+every developer's toolkit? Well because such things have nothing to do with
+producing good, fast, efficient code!
+
+What about sharing data files? Files also happen to be either text or binary.
+Files contain data. Text is parsed and binary is loaded. Now this data is in
+memory. Then what? Often this data comes from language or library code, a JSON
+message or a YAML file, and in many cases isn't in the shape the application
+expects it to be in. The data is now in memory, but what does it mean? There is
+no distinction between strings, dates, identifiers, urls, enum values, and other
+stringly typed values. Maybe the format has changed and the app is out of date.
+Maybe the data is invalid. Maybe it's been forged to escape out of bounds.
+
+If it's not broken, don't fix it. Easy.
+
+We trust apps to interact with our data for us. Easy. Done. Next!
+
+[[./assets/alien-tech.jpg]]
+
+Where are the apps now? On the cloud, in the browser or on mobile phones. This
+can't be all that bad, right, surely these three locations don't all overlap at
+once? Web apps accessed from a pocket device talking to armies of servers are
+more than common, they're the norm. Using computers is done via the web. It all
+overlaps. What happened to the desktop? It didn't scale out of its operating
+system. They're a requirement for a few specialized application domains. Laptops
+are good enough for everyday use, the web is good enough for everyday apps.
+
+Not all is perfect. For example, the JavaScript ecosystem reinvents itself as
+quickly as trends come and go. This is certainly more interactive than directly
+interfacing to an OS's UI toolkit, or worse, having to choose one on linux. It
+is a better development experience than wxWidgets or Qt. An ecosystem evolving
+quickly is also an ecosystem with a lot of data points to improve on developer
+experience. Decisions based on trends are a part of our trade. We're following
+trends to reuse existing results. To reduce decision-making efforts. To solve
+one problem in one domain without time to solve all problems all others.
+
+But do we understand the logical tradeoffs emerging from our social trendoffs?
+
+There's good and bad in every decision. The chances of Qt being around in the
+distant future feels greater than that of the average JavaScript framework. This
+has value too. Dear imgui has been around for years and constantly improves in
+quality and features. Change is a doubly edged sword. We value the stability and
+steady improvements from rare changes, but we also value the insights and leaps
+of moving fast with alternatives. Neither of these approaches prevent breaking
+changes or compose into a clear big picture which scales into future centuries.
+
+I don't generally like the term "web scale" as it sounds vague, almost as if
+we're trying to point to the very limits of our understanding of the concept of
+scale. But the problem is that such a limit is different for different people at
+different points in time. The term web scale doesn't effectively communicate
+scale, at least not precisely enough to drive engineering requirements.
+
+Scale is an interesting concept to discuss. Every industry has its own facet of
+scale. The problems being solved are different. The requirements are different.
+The tradeoffs being made are different. The trends being followed are different.
+Scale becomes meaningful when traditional solutions begin to break down. When
+their form is no longer precise enough for the context. That's when new ideas
+emerge, new solutions are found, and that's where industries diverge from one
+another. They each have different perspectives over what scale means for them.
+
+It's easy to picture yourself walking, then running, then riding a horse, then
+driving a car, then flying on a plane, and, if Elon is successful, finally going
+off into the unknown in a spacecraft. This kind of scale is easy to imagine. No
+technical background required. They're all part of our every day life to varying
+degrees. They've already been invented, or are being worked on and talked about.
+This is common wisdom. If you want to go really fast, you don't work on faster
+horses but instead work on inventing cars. Easier said than done. Hindsight is
+not the same as foresight. Cars were invented long ago. But so were computers.
+
+The difference is that you can drive a car while sitting. Cars removed walking
+and running from the transport equation. Flying on a plane is back to sitting,
+ironically. Now you don't have to do anything but enjoy the free time and the
+view. Their goal of getting from point A to point B is the same, but then our
+need to travel great distances in short periods of time got so ambitious that
+new methods had to be invented. New methods and the existing best practices end
+up in conflict. You can't run somewhere and travel on a plane simultaneously.
+These actions are modally exclusive, yet their goal on an abstract level is
+exactly the same. Going from point A to point B. Transport. Movement.
+
+Computers, if I may pause for a brief, incomplete and mostly wrong comparison,
+feel like a spacecraft powered by legions of runners so immense they cloud the
+datacenters. These are our armies of mechanical soldiers in virtual reality.
+Complete with the general frontend servers and their major database systems.
+Scout applications are browsing, querying for new users to relate to the local
+platform and share in its resources. Our own second order age of data empires.
+
+[[./assets/wololo.jpg]]
+
+Computers have been used to solve important, hard and complex problems at scale.
+Somewhere in the process, layers of indirections later, we created new problems.
+We're doing modern software development using methods invented from limitations
+of the previous century in mind. Small batch tools doing simple transformations.
+How small are these batches now? How complex are their transformations now? How
+many of them is there now? How interconnected has it become? Are the connections
+clear? Computers may be spacecrafts from the future, but they also come with the
+requirements of being an expert pilot, driver, rider and a world class runner. A
+blast from the past. How can complexity be accidental? Stretching isn't scaling.
+
+Scale problems happens when requirements can't be met with the current paradigm.
+
+Scaling solutions happens after the traditional approach is completely replaced.
+
+Science is constantly evolving, techniques change, industries rise and fall, it
+will not slow down anytime soon either. Quite the contrary, while our sciences
+of natural phenomenon progress at their usual pace, sciences of the artificial
+are progressing at an ever increasing pace. Changes which we're hardwired to
+adapt for over generations now happen over decades, years and sometimes months.
+
+Under all this is a more abstract foundation changing less frequently, a meta
+level of science, the science used to explain the science. The fundamental laws
+other laws come from. Mathematics. Oh no. We developers don't like mathematics.
+That's why we don't use Haskell; mathematics isn't pragmatics. Also how is one
+to find talent for this language? What about Rust? Clojure? Elm? Julia? Idris?
+
+The specific language doesn't matter, as long as it's well understood and can
+solve problems. Languages and concepts only need to be learned once. Applying
+them is then our day to day work. Mathematics can be hard to learn. It takes a
+long time to develop and train the corresponding intuition. But once it is done,
+you better stand aside, we're about to do science! Which science? Well, science!
+
+An interesting question, there are so many sciences to pick from. They're views
+into different worlds. These worlds do need to reconcile at the end of the day.
+There is a unified goal to compose theories. Or is it a composable goal to unify
+theories? The method and the result have the same abstract shape. The result is
+the method for a new generation. They both share the same underlying language.
+Mathematics describe logical patterns. Applied to sciences, they then describe
+logical systems and their environment. What does this have to do with software?
+
+If it's not broken, don't fix it. Easy.
+
+We just buy the app or subscribe to the service. Easy. Done. Next!
+
+Mathematics have been around longer than applications. And applications are more
+than server backends and web frontends. Applications are more than text. Binary
+is, before being data, a numbering system. Binary is mathematics. Oh no. Again.
+We developers don't like mathematics. And so we framework our system languages.
+What's different, then? Why are mathematics so scary and niche and weird? What
+does mathematics have which is unique? Functional composition and unification.
+Didn't I just write off Haskell as unpragmatic? What does that make mathematics?
+
+A scary word. Years of study. Single letter variables, using the greek alphabet.
+In spite of this, they optimized learn once and then use every day. We optimized
+get started fast, build once and ship everywhere. How easy is our software to
+refactor compared to mathematics? Functional composition is valuable at scale.
+Relational unification is scalable value. Writing mountains of code is never the
+issue, moving them around is. Mount Everest barely moves millimeters every year.
+
+When it comes to science, constant evolution is also the foundation. It is also
+on a slow and long timeline. However, one key difference here is thaat evolution
+is done through systematic growth. New additions have the requirement of being
+compatible with, well, everything else. Definitions seldom change or disappear.
+One falsification and it's back to the design board. Newton's theory of motion
+did not need to replace existing mathematics to define itself. Einstein's theory
+of relativity did not replace mathematics either, but it did end up replacing
+Newton's theory at scale. Mathematics is the framework for our understanding of
+reality. Does it make its axioms, theorems and branches our layers of libraries?
+
+What's going on here? Scale has an interesting effect. To go higher in scale, we
+need to go deeper in abstraction. We forget precise numbers for a moment as we
+learn how to think at a different order of magnitude. But without a phenomenon
+or vision in mind to break tradition, nothing new can be seen. Furthermore,
+without coming back to an understanding of numbers in context all we end up with
+are costly indirections. The default mode is always invisible when it is the
+only state known. There is no transition when going nowhere. Nothing doesn't
+come from something. Something doesn't come from nothing. Surely, there must
+exist an easy framework or methodology to learn in a weekend to guide us through
+the entire process of development. Scientists have science, artists have art.
+
+If it's not broken, don't fix it. Easy.
+
+Simple, you just abstract the abstraction method. Easy. Done. Next.
+
+[[./assets/science.jpg]]
+
+Sounds impossible? It's called the scientific method. Surely it can be coded.
+
+Didn't we just go down one level of abstraction from science to mathematics?
+What could be more abstract than mathematics? It's the one true language of the
+known universe. It's our best approximation of reality. It defines how deeply we
+are able to analyze reality. But is it the complete picture of the reality we
+live in? Of course not, we're completely blind to most of what happens around
+us. That's why the scientific method exists. Our best abstraction of science.
+The building rules for the seeds of composition and unification, through which
+more building rules are made. These are the features of every developer's dream
+environment. Why do we grow incompatible platforms, languages and applications?
+
+What else seeks such simplification over time? Music theory comes to mind. Just
+about everything else can be explained in terms relative to the one major scale.
+Discipline to practice the instrument reaches a point where it becomes simpler
+to think while playing than trying to compose using theory written on a score.
+After more practice and study, composition happens in phases. New ideas emerge
+which are then explained by new theory. A melody harmonized on the piano over
+minutes can be analyzed and then imagined at scale being played by an orchestra,
+and finally written to a full score. A conductor hears precisely who missed a
+note in a choir after years or decades of experience. Iterations are realtime.
+
+But wait, I hear some of you say, music is tasteful art and software is logical.
+It's commonly believed you can learn to code but one has to be born with talent.
+Then why is it so hard to find programming talent? Or talent in any domain, for
+that matter? A larger population should translate to more Mozarts, more experts.
+Can you name a famous living score composer other than Hans Zimmer? Talent is
+unique, history continuously proves it. Should we then hire developers the same
+way we hire score composers or movie directors? Might as well hire Clojure devs.
+
+This is the hacker dream. The 10x developer idea. The long term systems thinker.
+The people who enjoy discussing software to the point of alienating other devs.
+Part of the process has no clear goal, other than to learn from pure curiosity.
+Without new inputs, it's hard to produce different outputs. This is where every
+single person can develop unique talents as we're all intuitively curious about
+different things. This is directly at odds with the idea of replaceable talent.
+Unique talents need to compose and unify into productive teams and this is hard.
+
+Have we figured how to work around this? Standards, shared knowledge, accessible
+experiences and better learning resources improve our ability to communicate and
+share our work. Programs are understood and maintained by the work of individual
+people. Programs are also work which we contribute to in teams and across many
+disciplines, without losing our ability to learn and practice unique talents in
+the process. We're engineering our own sciences of the artificial as we learn.
+How is this any different than solving problems using natural sciences?
+
+[[./assets/elementary.jpg]]
+
+If it's not broken, don't fix it. Easy.
+
+We gather requirements, design to their spec and ship it. Easy. Done. Next!
+
+Requirements come in many forms. Games have strict hardware constraints on a
+single machine and a wide variety of hardware capabilities, almost none of which
+are present in the cloud where hardware is uniform and as a service. Developer
+time costs more than cloud time and local performance is sacrificed when access
+to distributed parallelism is present. When apps are stateless, user requests
+carry small payloads, and new servers can be started and stopped automatically,
+it's then understandable different development tradeoffs are going to be made.
+
+But now there's containers, and serverless, and nocode. And while such trends
+look interesting, I can't help but feel we're trying to escape the tarpit by
+assuming complexity times complexity equals simplicity at scale. It's not. Nope.
+Optimizing developer convenience in such a way blurs our understanding of the
+bigger picture. Of course large teams with big numbers of external dependencies
+are going to be common, how else could we wire all this accidental complexity?
+
+Databases have strict software constraints over time and space, almost none of
+which are present in compilers where software comes out in batches. A database
+rebooting is a service temporarily breaking its uptime guarantee. It's costly.
+Developer time costs more than compiler time, but something is strange here. We
+can't simply add more compilers to scale development the same way we can add
+more cloud to run our production programs. We can't simply add more developers
+and expect development metrics to improve. We tried, and it made things worse.
+
+Gathering requirements is now a complex task. Scaling development is hard and
+complex, otherwise it would be solved already and most software would just work.
+Hiring is constantly an issue. How many applicants fail basic programming tests?
+I bet you answered most. The issue is, knowing how to write code is only the
+beginning. Domain knowledge and expertise is more important. The potential to
+learn and adapt even more so. And then, as if there weren't enough requirements,
+they need to communicate well. So why is a specific language important to know?
+
+We all want to limit our differences and make it simpler for new hires to learn
+and adapt. The faster they can become productive, the better. Without rushing
+the process either, of course. It's often the reason used to justify choosing
+technology based on popularity. It's easy to understand, if most people are
+already using it, then it must be working and solving a real problem and little
+training will be required to get new hires up to production velocity.
+
+If it's not broken, don't fix it. Easy.
+
+We have different platforms, languages and frameworks. Easy. Done. Next!
+
+But that's not nearly enough, isn't it? Problems are being solved, but few of
+the solutions functionally compose with each other. Little of the data unifies
+across applications. A single project is a tower of complexity and non-trivial
+to maintain. What of the sum of all software projects humanity has to maintain?
+The duplication of work involved is enough to imagine new realms of nightmares.
+There's no project manager for the Internet. This is both a good and bad thing.
+How are we to build the next generation of systems when they are now spending
+more time gossiping to each other than solving actual real world problems?
+
+From a game developer's perspective, the apps ecosystem looks weird.
+
+From cloud developer's perspective, the games ecosystem looks weird.
+
+From a web developer's perspective, the cloud ecosystem looks weird.
+
+From a database developer's perspective, the web ecosystem looks weird.
+
+From a compiler developer's perspective, the database ecosystem looks weird.
+
+From an app developer's perspective, the compiler ecosystem looks weird.
+
+From the user's perspective, the app launchers ecosystem looks weird.
+
+From a hardware developer's perspective, all of the above looks weird.
+
+Conway's Law is web scale. Or web scale obeys Conway's Law. It's all relative.
+
+From the non technical perspective, this is as meta and magical as any art form.
+
+These different domains and their preferred programming paradigms are competing
+schools of thought. They match thought patterns the same way a musician thinks
+in music harmonies, a painter in color layers and so on. We think our patterns
+are simple and logical. It's the other patterns which are weird and complex. The
+ones we're not using. The ones we're not looking at. The ones we can't think in.
+
+We happily churn through endless layers of preprocessing, text templates, code
+generators, a growing number of build steps, boilerplate and scaffolding we
+don't mind writing the first time, examples and procedures to add new program
+definitions. How many batch processes are pipelined to produce a single static
+artifact? Why is there a need for a full listing of tutorials on how to define,
+register, wire and then use a kind of object the type system couldn't directly
+model? Why is there three languages involved to tell a GPU what to do? Why don't
+we get unification at scale, where's the scalable composition of mathematics?
+
+I like unification. It feels logical. At some fixed point, the meta has to end.
+But the meta has infinite levels, and infinity is not effectively computable. Or
+is it? Infinity is hastily thrown away, normalized, bounded, clamped, scaled and
+generally ignored. How do you normalize infinite infinities? This is getting
+recursive. I like unification. It feels logical.
+
+[[./assets/yunocombinator.png]]
+
+If it's not broken, don't fix it. Easy.
+
+Logic. First, then second and finally higher order. Logic. Easy. Done. Next!
+
+Computers are logical, even when we're not. Hardware does precisely what it is
+told to do. No more, no less. There's no distinction between code and data. No
+distinction between this or that language. No distinction between one platform
+and another. Hardware is expressive enough for every potential program able to
+fit within its design specifications. Software isn't any different.
+
+Why does that sound illogical, then? If software is expressive enough for all
+programs, why do we need so many programming languages and paradigms? A computer
+is composed of devices, some of which are directly programmable in user space.
+These devices come from separate vendors. They are selected and assembled in
+premade batches or mixed and matched into a custom PC. Functional composition of
+complex and unified systems. People with little technical knowledge assemble
+computers to boot. Imagine that. It just works. Why is software any different?
+
+Does that sound impossible? Assembly is expressive enough for all software apps
+targeting the CPU's instruction set and performance specifications. But we don't
+want to code in assembly, most of the time. Nowadays it's use come either as a
+hobby, from an effort to squeeze performance or to access parts of the hardware
+not exposed otherwise. The bulk of modern assembly is now emitted from general
+purpose, high-level languages near the end of a static development toolchain.
+
+This was certainly true over two decades ago. But not anymore. There's still a
+fair amount of static code around. However, the bulk of modern assembly is now
+emitted from JIT compilers. It's from the .NET virtual machine on our laptops,
+from the Java and Erlang virtual machines in the clouds, and from the JavaScript
+virtual machine running the web. LLVM's intermediate language can model all our
+static programs, but here the norm is long running processes frequently loading
+and unloading code, partial reboots, runtime reflection and garbage collection,
+in hostile environments where data isn't trusted and errors must be recovered.
+
+This was certainly true over a decade ago. Now just about every language cross
+compiles to other platforms. The benefits of sharing and reusing an ecosystem
+outweighs all the efforts required to make it work. On one side we have native
+ahead of time compilation of managed code, and on the other we have runtimes
+within runtimes as native emerges back on the web. Where does it end? They all
+address problems with code, but not the fundamental problems coming from data.
+We've gone from the one local operating system to many distributed ecosystems.
+
+When was the last time a CPU instruction had to be added? How often do we need
+more turing completeness? We don't know the answer and our software and apps are
+still working after a hardware upgrade. How often does the project break after a
+library upgrade, a SDK upgrade or even a compiler upgrade? How can hardware get
+composition of unified systems so right and software get it so wrong? We have
+static types, and test suites, and continuous integration of code, and automatic
+deployment of builds, and version control, and best practices and methodologies!
+
+Where are the static types in physics? In music? In storytelling? Where is the
+test suite for painting? For speaking English? What does continuous integration
+mean in chemistry? How does automatic deployment help movie production? Writing
+a book? Learning a new skill? Why do familiar development techniques suddenly
+feel weird and unnatural? We invented all these techniques. We conjured them.
+They feel unnatural because they're artificial. They could be anything else.
+
+[[./assets/moo.png]]
+
+We put emphasis on code at compile time, and data at runtime. This is the order
+of things. It feels traditional. But these are two distinct thought patterns at
+two distinct time periods. We use the compiler for code, the debugger for data.
+The type system checks the construction of data, the test suite its transitions.
+This model has a clear separation between code and data. A distinction so clear
+it had the result of removing lambda functions from various languages for years.
+
+Lambdas first came when the hardware wasn't entirely ready for them, I think.
+When they did come back, it felt just like a fresh and novel idea. A fresh idea
+from a century ago. Code as data? Why would anyone want that? Why would anyone
+need that? We were perfectly fine declaring classes and members, instantiating
+them and passing them around. It didn't feel like extra work because we didn't
+know about higher order functions. We had first order data, second order types.
+
+What happened to object classes? Inheritance is frowned upon, unless its through
+interfaces. Composition is preferred but now its structural, not functional. We
+compose classes through data members instead of inheritance. Is there really a
+difference? Structural composition changes the types, and functional composition
+does not. Think of async/await and how tasks compose, the resulting type is also
+a task. The same isn't true of classes. The composition of the class A inside a
+class B yields another class C. Could you imagine Tetris without clearing lines?
+
+Composition is a noble goal. Losing unification in the process is limiting our
+ability to reason at scale. What makes one kind of composition scalable and not
+the other? Both use types. But they use types differently. Structures model the
+shape of data, functions model the flow of data. Functions don't specify types
+for their structures. They specify their inputs and outputs parameters and their
+relations. Functions make relations, relations generate goals, goals are unified
+into reified results. One function is data to a higher order. Data in, data out.
+
+How can this be? Data is at the center of everything we do. It's the I in IT !
+
+How can I identify a problem with data when I can't express it in few simple
+words? This is where it gets meta. Data can be used to represent, among other
+things, data structures. Wait, isn't this recursive? How can data be the content
+and the representation at the same time? The building rule and the seed? Is an
+egg also a chicken? A chicken is certainly not an egg. This breaks all sorts of
+paradoxes, not least of which is Doug Hofstadter's distinction of use-mention.
+But then what is a compiler if not the very stage where data structures are
+represented by other data structures? Compilers break through the paradox by
+existing in the previous generation. Their execution produces executables.
+
+The systems equivalent is a bootstrap, and unsurprisingly this one is also a
+paradox. How can a process requiring itself to exist come into existence? The
+common image is of a language whose compiler is written in itself. It is also
+the point when Emacs became able to edit its running process. Or when a chicken
+starts laying eggs, and now we have a branch of science just to study chickens.
+
+If it's not broken, don't fix it.
+
+There's no universal data model to break in the first place. Easy? Done? Next?
+
+Next time indeed. This is a clear problem statement to end this article on. Our
+code is data. Our data structures are data. Our processes are data. Their value
+is at runtime as well as compile time. Not only do we use different techniques
+for these different phases, we also use different tools and models. Different
+methods of development, different patterns of thought. This is all too complex.
+
+Abstract thoughts are useful to expand on a context, to break out of tradition.
+Next time we can expand on concrete implementation examples towards a solution.
+
+For now, I have a statement I need to medidate on.
+
+Our Information Technology is missing a standard Information Model to unify it.
+
+[[./assets/data.jpg]]
