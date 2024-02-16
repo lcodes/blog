@@ -1,0 +1,397 @@
+#+TITLE: 6 Lessons Learned On Starting A Business
+
+* Discipline
+
+As I write this, construction noises are raging on. The skyscraper next door
+used to host quiet government offices, but got sold after COVID and has now been
+under renovations 5 days a week, from 7AM to late afternoon, for the entire last
+year. Now, it's all jackhammers, industrial compressors, heavy machinery, buck
+hoists, and people shouting to communicate over all the noise. In short; not quiet.
+
+I'm learning they have two more years to go. Fuck.
+
+I put on earplugs. The noise goes right through. Fuck.
+
+My work chair is still shaking from the noise. Fuck.
+
+"Well, just relocate then!" my brain tells me. Wish I could afford doing this.
+
+"Take your laptop and go work elsewhere!" it says now. Wish I had a laptop.
+
+My bank account says I have less than nothing left. That can't be good.
+
+This is perhaps the hardest lesson to learn. Circumstances are never going to be
+perfect. You have to work with what you have, and how you feel, while finding a
+way to perform to the best of your abilities.
+
+I am often reminded of Alex Hormozi's words of wisdom, "this is what hard feels
+like," in times like this. Sure, it'd be easier to do anything else right now,
+but that's not how you realize your dreams, that's not how you achieve goals.
+
+When I quit my job to pursue a vision fulltime, with months of leeway ahead of
+me, this is not how I envisioned it would turn out. But if everything always
+went according to plan, life would also get predictably boring. Goals are only
+worthy if there's elements of risk, uncertainty and doubt associated to them.
+
+What this means is unless these elements are present, you have not left your
+comfort zone, and therefore aren't growing into your full potential. Growth, in
+a way, is deciding to leave the ordinary world and going on a journey towards
+the extraordinary world. Discipline is the will to persist until a breakthrough.
+
+At this point, you're the fledgling freshly thrown out of the nest, falling
+towards the ground at the speed of gravity. You have this moment to learn how to
+fly. The past and the future disappear into a blur, you're living here and now.
+
+As scary as it sounds, it's an inevitable feeling when doing something new.
+Better embrace it, accept this is the way things are, and give it your best.
+
+But, how do you know you're performing at your best? How do you know whether
+you're on the right path? And how does personal growth relate to all of this?
+
+This is when the next lesson comes in.
+
+* Feedback Cycles
+
+Unlike the fledgling of the previous section, you have more than a quick moment
+to make it work. This is an advantage, if you learn to leverage its potential.
+
+Imagine you have a school exam or a business report due next month. Do you wait
+until the day before the deadline to get started? Or do you start right now and
+see how much you can improve towards it every day? The choice seems obvious.
+
+And yet, I'll admit I used to be in the first camp. School, from its habit of
+testing knowledge more than validating understanding, makes it easy to cheat and
+cram your mind with all the relevant data the night before an exam and succeed.
+
+"This is boring, I'll skip class and go learn to code at home instead." This
+line of thought will teach you how programming works, certainly, but it won't
+teach you how to grow a business even if its main activity involves software.
+
+And this is a terrible habit to develop. Because it becomes cursed the second
+you leave school. There's a reason why students often learn the most valuable
+lessons during internships instead of the years of study leading to them. The
+bar for quality, performance and achievemnt gets raised so much, it makes the
+school look like playing a video game on easy mode.
+
+"Now the real Dark Souls begins." As they say. The true challenge starts now.
+
+The higher up the ladder you work yourself to, the harsher the challenges get.
+
+This is something I didn't fully realize until starting a business. Because now
+there's not a backlog of tasks to do ready and waiting for me to attack every
+day. Turns out deciding what to work on is harder than doing the work itself.
+
+Throwing weeks of work away feels worse when you also planned said work.
+
+On the bright side, there's a method you can learn and apply to simplify this.
+
+There are three main activities in a startup, at least when it comes to value
+innovation. That is, creating the product or service to solve a problem your
+customers are having, while finding product-market fit making it profitable.
+
+The lesson here is the quicker you can validate what you're developing against
+customer feedback, the faster you can realign your aim towards your goals.
+
+You need a strong set of metrics to inform your decisions, which means at every
+step in the building process, you're having a second process of gathering
+measurements and a third process of analyzing them into learning lessons.
+
+How do you know you're measuring the right metrics? You put the product, even if
+it's incomplete, buggy, and slow, in front of potential customers. Their
+reactions will inform you better than assumptions and suppositions ever could.
+If they ask for features you already have planned, then you know you're on the
+right track. If they ask questions about what they're seeing, you have valuable
+information on what to simplify, and what to prioritize for the next cycle.
+
+It can save you months of work going down a path nobody ends up using.
+
+It allows you to concentrate your efforts on what the market finds valuable.
+
+It helps you introduce "never seen before" innovations with the right approach.
+
+In essence, you are crossing the chasm from having a concept in your mind, and
+understanding how to build a bridge, brick by brick, so users see the potential.
+
+Imagine you're training as an archer, there's the apple sitting on a tree at a
+hundred yards from you. You feel the wind, the tension on the bow, your breath
+becomes louder as you focus. You have one hour of practice scheduled, what do
+you do next? Are you waiting until you have perfect aim before making a shot, or
+are you taking hundreds of shots? Which do you think yields the best results?
+
+Put another way, first you ready your bow, then you fire an arrow, and next you
+adjust your aim for the next shot. Doing so in a loop, on repeat, until your
+instructor comes back to ask "how does that feel?" and gives you the next hint.
+
+It's one thing to gather knowledge in isolation, and another to validate this
+knowledge against reality in order to transmute experience into understanding.
+
+This is the next lesson.
+
+* Learning by Doing
+
+I know it's hard to begin developing a new skill, a new talent. It's comforting
+to tell yourself some people have it while others don't. But this ignores an
+important element of mastery; the hard work and the long hours those we consider
+to be naturally gifted had to put behind their craft to constantly level it up.
+
+This can lead to consuming more content on how to get started than on starting.
+
+YouTube videos, blogs, tutorials, books: the content to consume is everywhere.
+The will to sit down and start, planning time blocks every day consistently over
+an extended period of time, where extended means at least 30 days, is rarer. So
+rare, you'd consider it an unfair advantage when realizing how rare doing it is.
+
+This works not only for the main activity of your business, or your craft. But
+also to any complementary skill you can imagine. The secret here is that these
+skills compound over time, as you find your own unique ways to synergize them
+and combine one skill into another to create something only you can do.
+
+Take blogging, for example, I enjoy writing and sharing, but I was also afraid
+of putting my words and ideas out there. I did it in the past, but without the
+consistency needed to get to a point where it feels comfortable and easier. I'm
+sure you can relate with one or more skill you've tried in your own life.
+
+Recently, I committed myself to record one video on camera, every day. You'd be
+laughing to see me pace around the apartment on the first day, trying to find
+every reason to delay the inevitable. "I could eat first, and do the dishes,
+then watch only one Stargate episode, and then read one chapter, and then I'll
+do it, for sure."
+
+Sounds familiar? If I had succumbed to these thoughts, I would still have the
+fear. The thing with fear is, if you avoid it, it only gets worse and grows
+bigger until you change your decision to not doing it after all. While on the
+other hand, if you decide to feel the fear and do it anyways, it goes away.
+
+You have to accept it's going to suck, but also that it's only temporary. You
+were able to learn to walk and talk as a kid, how often did you fail doing it?
+
+Why should learning new skills feel any different? Well, as adults we developed
+a conscience with a nasty habit of trying to talk us away from change. The
+moment you decide to do something new, something different, a voice pops up in
+your mind telling you about all the things you're currently good at.
+
+All the things you could be doing instead. Don't listen to that voice.
+
+The lesson here is that while starting is hard, it's also the hardest. This
+means as you sit down to do the thing you decided to do, no matter how
+uncomfortable it feels, you can rest assured it will get better and easier.
+
+You don't try to push that voice away, because this only creates more chatter in
+your mind. Instead, you ignore it, get to work, and understand it will get
+replaced, in time, as you make progress. Before you know it, the voice in your
+head is congratulating you, feeling good about itself and looking forward to
+doing it again.
+
+And you know what? I no longer feel the fear of getting in front of a camera.
+Now I have yet to publish any content in video form, but that will be coming.
+The point is, what initially were hours of getting ready is now mere seconds.
+
+However, as you're doing the work, you may notice distractions here and there.
+They try to steal your focus by pulling it towards any other element inside your
+environment. This is another problem worth solving.
+
+This is what we're talking about next.
+
+* Focus on One Thing
+
+Ever had your mind racing in all directions at once? I know the feeling.
+
+I've learned this means the goals we set aren't defined with enough clarity.
+What helps, more than anything else, is to write down your goals. Having them
+outside of your mind while you're able to directly observe them adds focus.
+If writing your goals is hard, it means working on them is even harder.
+
+Try shooting an arrow with a blindfold on, you're guaranteed to miss. If you can
+see the goal, how are you going to tell if you're aiming in the right direction?
+
+The ideal goals to set are the long term ones, because then act as a compass you
+can use to align every shorter term goal you have and decisions you make. The
+more your long term goals scares you, the better. It means you're after
+something worthwhile, a destiny where you'll have to grow to be worthy of it.
+
+Remember that everything surrounding us once started as an idea, no matter how
+crazy it sounds. The invention of cars, skyscrapers, computers, mobile devices,
+and anything manmade you can think of was once only an thought. The seed of an
+idea inside the mind of someone with enough commitment to see it realized.
+
+Don't be afraid to dream big and act boldly.
+
+As you commit yourself towards a goal, you'll find yourself prioritizing tasks
+over smaller time periods in the years, months, weeks and even for every day.
+
+This is where distractions come into play, they're a constant reminder you could
+be doing something else with your time. Things you already know the outcome of.
+
+The reason for this is because going after your goal involves an element of the
+unknown. It comes with fear, uncertainty and doubt. But this is natural; you've
+never done it before. If it was common, then the rewards wouldn't be worth it.
+
+Our environments are influencing us more than we'd like to admit. You have to
+learn to say "NO" to everything except the plans you commit yourself to. Within
+reason, of course. It's good to have unfocused time, periods where you allow for
+serendipities to enter your mind, periods where you find the balance between
+pushing yourself and recovering your strength.
+
+Environment is not just the objects surrounding us, but also the people we
+associate with. Environment is anything able to excerpt an influence on you.
+Knowing this, you can then use it to your advantage by creating an environment
+whose influence on you pushes you towards achieving your goals, lifing you up.
+
+This lesson is maybe the hardest one to apply, but also the one with the biggest
+payoff. Here's some techniques I learned to use for myself.
+
+First, realize when you're affected by distractions. Notice your mind wandering
+away. It can be tempting to put yourself down in these times, but doing the
+opposite is more valuable. As you notice your distractions, you're able to label
+them and see an improvement in how quickly you notice and act over them.
+
+The way to act on distractions is to classify them, write them down so they're
+now outside your mind, tell yourself you'll come back to it later, and refocus
+on work. The more you do this, the easier and faster the process becomes, until
+you can spend hours in deeply focused work each day. As a bonus, by the time you
+come back to your notes, the interest for the distraction often fades away.
+
+Put your phone away. Put it on silent mode and throw it in another room, at
+least keep it out of reach where you have to get up to go get it. We often
+underestimate how much focus the thought of checking for notifications takes.
+
+Get a timer running, not one counting down but instead one counting up. This is
+because while you associate goals with a deadline, you associate improvements in
+focus with improving. That is, doing better than the last time. A timer counting
+down limits you to doing as good as the last time. You want to push the limits.
+
+Say you begin small and decide you're going to work out 5 minutes each day. It
+might not seem much to someone already working out every day, but if you're just
+starting out it's a lot more encouraging than facing a full hour 5 times a week.
+
+Your goal, then, is to reach 5 minutes, and to be extra-ordinary you only have
+to keep going afterwards. Remember that ordinary is the way you're used to do
+things, so anything pushing past that is extra-ordinary. You'll see how you have
+the ability to summon an extra minute of efforts, it's almost magical.
+
+Soon your 5 minutes is pushing to 10, and then it's pushing to 20, and by the
+time you reach 30 minutes it starts feeling good. You're even looking forward to
+doing it, and the thought of not doing it feels like a part of you is missing.
+
+You also want to keep track of your daily progress. First, because what you
+measure is also what you improved, as you've seen from feedback cycles. Second,
+because when you see a streak on the calendar, the need to continue the streak
+overpowers the desire to skip one day.
+
+Put this progression in a place that's highly visible. I use a whiteboard.
+
+Think of it as running quests inside a video game. How often do you check your
+quest log? Some games even go as far as keeping tracking indicators on screen.
+
+If you can do it in a virtual world, you can certainly do it in the real one.
+
+Related to focus, the amount of content you consume also affects your ability to
+concentrate on one thing for extended periods of time. Next we'll see how to
+simplify your environment in order to make focusing each day become easier.
+
+* Information Overload
+
+Do you ever feel like you're running with a mind fog? You're learning knowledge
+but find it hard to transform it into understanding, to make it your own.
+
+You could be consuming more content than you are producing. It happened to me.
+
+But consuming content is like having your own personal army of mentors, you say.
+Sure, I understand the feeling almost too well, and also how it can be a doubly
+edged sword.
+
+A good teacher gives you knowledge, but a great teacher gives you understanding.
+
+Imagine you're learning to play the guitar, or the piano, or how to improve your
+golf swing. Now as your coach I watch you for 5 minutes, then spend 20 minutes
+explaining everything you're doing wrong and the things you must do to improve.
+
+How are you feeling? Overwhelmed, right?
+
+Instead of developing confidence over one aspect of the craft, you're now asking
+yourself dozens of questions about the whole.
+
+"Am I playing this note right?"
+
+"What are people thinking of this melody?"
+
+"Oh no, I missed a note, I'm doomed!"
+
+"Focus on the ball, make sure to distribute your weight, swing from the waist ..."
+
+This is what information overload feels like.
+
+Too much knowledge, not enough time to practice each part of it individually.
+
+Unfortunately, we've also optimized computers to enhance this experience. We
+even named the industry after this: Information (Overload) Technologies.
+
+What you want is a coach who gives you one piece of knowledge, then goes away
+while you practice that one thing over and over, hundreds of times.
+
+Ever seen a kid practice basketball? They look as if they're bouncing the ball
+up and down without doing much else, and from a distance it does look boring.
+
+But if you were to go inside their minds, you'd see it racing with feedback.
+
+Bounce 10. "Less pressure on the hand."
+
+Bounce 20. "Relax the hand, use the wrist more."
+
+Bounce 30. "Use the elbow to make the wrist stronger."
+
+Bounce 50. "Begin at the shoulder to focus more energy."
+
+Bounce 10000. Now everyone else thinks you're naturally talented.
+
+That's one piece of knowledge, bouncing a ball, with iterations of mastery.
+
+This is what understanding feels like. You can't communicate it using words.
+
+This lesson is about finding a balance between consuming and producing. At one
+point, nothing beats sitting down and practice a skill by yourself, in solitude.
+
+It's important if you're working towards achieving a long-term goal. Because it
+provides the growth necessary to grow into the person able to realize the goal.
+
+Consuming less helps you focus on doing one thing at a time.
+
+Consuming less helps gives you time to produce more, and learn by doing.
+
+Consuming less helps you measure what you're doing, and getting feedback from it.
+
+Consuming less helps you develop discipline, to keep going when things get though.
+
+* Doing Something Different
+
+Sooner or later, by applying these lessons, you're finding your life's purpose.
+
+There's no manual, no content, no nothing on how to do it. Imagine inventing
+cars when everyone is using horses as a commodity. How do you explain to them
+how the idea of cars is better? You don't. You build a prototype and show it.
+
+Remember the feedback cycle? This is what I want to improve as a business.
+
+I have a plan, in my head, on how to solve this. It's been growing for decades
+now, and I'm beginning to understand how to turn it into a viable product.
+
+Every day, I'm seeing more evidence there's a market for my research. Now I'm
+applying the lessons I shared while working on a prototype to show a solution.
+
+[[./assets/formats-from-70s.png]]
+
+In sharing these lessons I've learned along the way, I hope I can make you save
+time and help you learn them faster than I did.
+
+If I can encourage one person to follow their dreams, then this is a success.
+
+* Support
+
+If you enjoyed this entry, you can also help me to keep going:
+
+Share this with your friends if you think they'll benefit from it.
+
+Follow me on Twitter [[https://twitter.com/Lambda_Coder][@Lambda_Coder]], where you can interact with me.
+
+Donate on Paypal to [[https://www.paypal.com/paypalme/my/settings?flow=cmV0dXJuVXJsPWh0dHBzOi8vd3d3LnBheXBhbC5jb20vbXlhY2NvdW50L3RyYW5zZmVyL2hvbWVwYWdlL3JlcXVlc3QmY2FuY2VsVXJsPWh0dHBzOi8vd3d3LnBheXBhbC5jb20vbXlhY2NvdW50L3RyYW5zZmVyL2hvbWVwYWdlL3JlcXVlc3Q=][jeremiep@gmail.com]], where you can keep me alive.
+
