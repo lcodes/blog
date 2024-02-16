@@ -201,18 +201,20 @@ What helps, more than anything else, is to write down your goals. Having them
 outside of your mind while you're able to directly observe them adds focus.
 If writing your goals is hard, it means working on them is even harder.
 
-Try shooting an arrow with a blindfold on, you're guaranteed to miss. If you can
+Writing it down allows you to get used to the idea. To reflect back on it.
+
+Try shooting an arrow with a blindfold on, you're guaranteed to miss. If you can't
 see the goal, how are you going to tell if you're aiming in the right direction?
 
-The ideal goals to set are the long term ones, because then act as a compass you
+The ideal goals to set are the long term ones, because they act as a compass you
 can use to align every shorter term goal you have and decisions you make. The
 more your long term goals scares you, the better. It means you're after
 something worthwhile, a destiny where you'll have to grow to be worthy of it.
 
 Remember that everything surrounding us once started as an idea, no matter how
 crazy it sounds. The invention of cars, skyscrapers, computers, mobile devices,
-and anything manmade you can think of was once only an thought. The seed of an
-idea inside the mind of someone with enough commitment to see it realized.
+and anything manmade you can think of was once only a thought. The seed of an
+idea inside the mind of someone with enough commitment grows into realization.
 
 Don't be afraid to dream big and act boldly.
 
@@ -274,7 +276,7 @@ time you reach 30 minutes it starts feeling good. You're even looking forward to
 doing it, and the thought of not doing it feels like a part of you is missing.
 
 You also want to keep track of your daily progress. First, because what you
-measure is also what you improved, as you've seen from feedback cycles. Second,
+measure is also what you improve, as you've seen from feedback cycles. Second,
 because when you see a streak on the calendar, the need to continue the streak
 overpowers the desire to skip one day.
 
@@ -287,7 +289,7 @@ If you can do it in a virtual world, you can certainly do it in the real one.
 
 Related to focus, the amount of content you consume also affects your ability to
 concentrate on one thing for extended periods of time. Next we'll see how to
-simplify your environment in order to make focusing each day become easier.
+re-frame your mindset with the benefits of practicing only one thing at a time.
 
 * Information Overload
 
@@ -298,9 +300,16 @@ You could be consuming more content than you are producing. It happened to me.
 
 But consuming content is like having your own personal army of mentors, you say.
 Sure, I understand the feeling almost too well, and also how it can be a doubly
-edged sword.
+edged sword. In the absence of a mentor as a person, we fall back to content.
+
+But there's a world of difference between consuming content, and having a coach
+who can see, with clarity, what is the one thing you can improve next to the
+greatest benefit.
 
 A good teacher gives you knowledge, but a great teacher gives you understanding.
+
+Coincidentally, this is also the definition of a great manager. They don't do
+the work for you, but instead help you improve at doing it the best you can.
 
 Imagine you're learning to play the guitar, or the piano, or how to improve your
 golf swing. Now as your coach I watch you for 5 minutes, then spend 20 minutes
@@ -370,7 +379,18 @@ There's no manual, no content, no nothing on how to do it. Imagine inventing
 cars when everyone is using horses as a commodity. How do you explain to them
 how the idea of cars is better? You don't. You build a prototype and show it.
 
+This is a crucial lesson. There's immense value in providing value to others.
+But to get there, you have to communicate it with clarity to your customers.
+
+The best way to communicate an idea is not to explain it, it's to show it. Then
+you can explain it by answering questions and leading your customers along the
+journey from where they are now to the point where their problem get solved.
+
+Easier said than done.
+
 Remember the feedback cycle? This is what I want to improve as a business.
+
+Everything we do involves feedback loops. I want software which empowers this.
 
 I have a plan, in my head, on how to solve this. It's been growing for decades
 now, and I'm beginning to understand how to turn it into a viable product.
@@ -380,12 +400,12 @@ applying the lessons I shared while working on a prototype to show a solution.
 
 [[./assets/formats-from-70s.png]]
 
+* Conclusion
+
 In sharing these lessons I've learned along the way, I hope I can make you save
 time and help you learn them faster than I did.
 
 If I can encourage one person to follow their dreams, then this is a success.
-
-* Support
 
 If you enjoyed this entry, you can also help me to keep going:
 
@@ -393,5 +413,4 @@ Share this with your friends if you think they'll benefit from it.
 
 Follow me on Twitter [[https://twitter.com/Lambda_Coder][@Lambda_Coder]], where you can interact with me.
 
-Donate on Paypal to [[https://www.paypal.com/paypalme/my/settings?flow=cmV0dXJuVXJsPWh0dHBzOi8vd3d3LnBheXBhbC5jb20vbXlhY2NvdW50L3RyYW5zZmVyL2hvbWVwYWdlL3JlcXVlc3QmY2FuY2VsVXJsPWh0dHBzOi8vd3d3LnBheXBhbC5jb20vbXlhY2NvdW50L3RyYW5zZmVyL2hvbWVwYWdlL3JlcXVlc3Q=][jeremiep@gmail.com]], where you can keep me alive.
-
+Donate on Paypal to [[https://www.paypal.com/donate/?business=SWZC7AZVNDUY8&no_recurring=0&item_name=Researching+a+brand+new+approach+to+software+development+and+application+usage.+And+sharing+the+lessons+learned+along+the+way.&currency_code=CAD][jeremiep@gmail.com]], where you can keep me alive.
